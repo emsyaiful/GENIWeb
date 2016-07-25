@@ -14,3 +14,4 @@
 Route::get('/', function () {
     return view('pages/home');
 });
+Route::get('/getUser', 'UserController@getUser');
