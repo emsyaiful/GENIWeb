@@ -11,9 +11,7 @@ use App\Models\Userlist;
 class UserController extends Controller
 {
     public function getUser(){
-    	$user = new Userlist;
-    	$user->get();
-
+    	$user = Userlist::all();
     	return Response::json($user);
     }
 }
