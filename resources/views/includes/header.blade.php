@@ -7,9 +7,9 @@
       <div class="carousel-inner">
         <div class="item active" style="background-image: url(images/slider/1.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Welcome to <span>Oxygen</span></h1>
-            <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">Selamat Datang di <span>GEN1</span></h1>
+            <p class="animated fadeInRightBig">Aplikasi keuangan yang mudah dipelajari, mudah diakses dan terpercaya segi keamanannya</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Mulai Sekarang</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/2.jpg)">
