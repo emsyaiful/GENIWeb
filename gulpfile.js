@@ -1,4 +1,4 @@
-var elixir = require('laravel-elixir');
+// var elixir = require('laravel-elixir');
 
 /*
  |--------------------------------------------------------------------------
@@ -11,6 +11,18 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
-    mix.sass('app.scss');
+// elixir(function(mix) {
+//     mix.sass('app.scss');
+// });
+
+var gulp = require('gulp'),
+    gp_concat = require('gulp-concat'),
+    gp_rename = require('gulp-rename');
+
+gulp.task('app-js', function(){
+    return gulp.src(['resources/ngJs/*.js'])
+        .pipe(gp_concat('app.js'))
+        .pipe(gulp.dest('public/'))
 });
+
+gulp.task('default', ['app-js'], function(){});
