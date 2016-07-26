@@ -12,14 +12,14 @@
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Mulai Sekarang</a>
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/2.jpg)">
+        <div class="item" style="background-image: url(images/slider/4.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">Say Hello to <span>Oxygen</span></h1>
             <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
           </div>
         </div>
-        <div class="item" style="background-image: url(images/slider/3.jpg)">
+        <div class="item" style="background-image: url(images/slider/5.jpg)">
           <div class="caption">
             <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
             <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+            <h1><img class="img-responsive" src="images/logo_geni2.png" alt="logo" width="28%"></h1>
           </a>                    
         </div>
         <div class="collapse navbar-collapse">
