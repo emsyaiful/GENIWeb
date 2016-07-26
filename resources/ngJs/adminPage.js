@@ -4,7 +4,6 @@ app.controller('adminPageController', function($rootScope, $scope, backend, $mod
 			if (err) swal('Error', 'Ada kesalahan', 'error');
 			else {
 				$scope.data = response;
-				console.log($scope.data);
 			}
 		});
 	}

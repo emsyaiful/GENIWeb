@@ -1,8 +1,11 @@
-var app = angular.module('mainApp', ['ui.bootstrap', 'ngRoute', 'angular-loading', 'ngAnimate']);
+var app = angular.module('mainApp', ['ngRoute']);
 
-app.config(['$routeProvider', function($routeProvider) {
+app.config(function ($routeProvider) {
 	$routeProvider.when('/admin', {
-		templateUrl: '/admin/adminPage.html'
+		templateUrl: 'admin/adminPage.html',
 		controller: 'adminPageController'
-	});
-}]);
+	})
+	.otherwise({
+		redirectTo: '/admin/adminPage.html'
+	})
+});

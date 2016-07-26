@@ -19,10 +19,15 @@ var gulp = require('gulp'),
     gp_concat = require('gulp-concat'),
     gp_rename = require('gulp-rename');
 
-gulp.task('app-js', function(){
-    return gulp.src(['resources/ngJs/*.js'])
+gulp.task('script', function(){
+    gulp.src(['resources/ngJs/*.js'])
         .pipe(gp_concat('app.js'))
         .pipe(gulp.dest('public/'))
+        .pipe(livereload());
 });
 
-gulp.task('default', ['app-js'], function(){});
+gulp.task('watch', function() {
+	gulp.watch('resources/ngJs/*.js', ['script']);
+});
+
+gulp.task('default', ['watch']);
