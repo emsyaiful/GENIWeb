@@ -1,4 +1,4 @@
-<!--.preloader-->
+<!-- .preloader-->
   <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
   <!--/.preloader-->
 
@@ -9,6 +9,7 @@
           <div class="caption">
             <h1 class="animated fadeInLeftBig">Selamat Datang di <span>GEN1</span></h1>
             <p class="animated fadeInRightBig">Aplikasi keuangan yang mudah dipelajari, mudah diakses dan terpercaya segi keamanannya</p>
+            <!-- <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Mulai Sekarang</a> -->
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Mulai Sekarang</a>
           </div>
         </div>
@@ -48,15 +49,20 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="#services">Service</a></li> 
-            <li class="scroll"><a href="#about-us">About Us</a></li>                     
-            <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-            <li class="scroll"><a href="#team">Team</a></li>
-            <li class="scroll"><a href="#blog">Blog</a></li>
-            <li class="scroll"><a href="#contact">Contact</a></li>       
+            <li class="scroll active"><a href="#home">Beranda</a></li>
+            <li class="scroll"><a href="#services">Fitur</a></li> 
+            <li class="scroll"><a href="#about-us">Berita</a></li>                     
+            <li class="dropdown navbar-rightlagi">
+                    <a href="#portofolio">Bantuan & Dukungan</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="scroll" href="sad#feature">Dokumentasi</a></li>
+                        <li><a class="scroll" href="as#map">FAQ</a></li>
+                        <li><a class="scroll" href="#contact">Contact Us</a></li>
+                    </ul>
+            </li>
+            <li class="scroll"><a href="#team">Masuk</a></li>
           </ul>
         </div>
       </div>
     </div><!--/#main-nav-->
-  </header><!--/#home-->
+  </header><!--/#home

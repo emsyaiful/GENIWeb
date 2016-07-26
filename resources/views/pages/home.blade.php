@@ -1,13 +1,13 @@
 @extends('layouts.master')
 @section('content')
-
+<br><br><br>
 <section id="services">
     <div class="container">
-      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-        <div class="row">
+      <div class="row">
+        <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2>Our Services</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+            <h2>FITUR GEN1</h2>
+            <p>Gen1 terdapat modul yang diperlukan untuk finance & Accounting. Anda dapat menggunakannya dimanapun anda berada, karena Gen1 menggunakan Cloud System Integration.</p><br>
           </div>
         </div> 
       </div>
@@ -71,9 +71,10 @@
       </div>
     </div>
   </section><!--/#services-->
+
   <section id="about-us" class="parallax">
     <div class="container">
-      <div class="row">
+      <div class="row"><br><br>
         <div class="col-sm-6">
           <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
             <h2>About us</h2>
@@ -303,7 +304,7 @@
   <section id="team">
     <div class="container">
       <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
+        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms"><br><br><br>
           <h2>The Team</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
