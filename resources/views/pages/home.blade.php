@@ -18,8 +18,8 @@
               <i class="fa fa-flask"></i>
             </div>
             <div class="service-info">
-              <h3>Brand Identity</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>User Friendly</h3>
+              <p>Sistem dibuat semudah anda ketika menggunakannya. Mudah untuk dipelajari dan digunakan.</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
@@ -27,8 +27,8 @@
               <i class="fa fa-umbrella"></i>
             </div>
             <div class="service-info">
-              <h3>Creative Idea</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>Multi User</h3>
+              <p>Sistem Gen1 dapat diakses dengan multi user, dimana akses data usaha anda dapat dilakukan oleh banyak user dari perusahaan anda.</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
@@ -36,8 +36,8 @@
               <i class="fa fa-cloud"></i>
             </div>
             <div class="service-info">
-              <h3>Awesome Support</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>Cloud System Integration</h3>
+              <p>Sistem Gen1 terintegrasi dengan server cloud, dimana data yang anda simpan sangat aman. Dan kapanpun anda membutuhkan data anda akan selalu tersedia.</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
@@ -45,8 +45,8 @@
               <i class="fa fa-coffee"></i>
             </div>
             <div class="service-info">
-              <h3>Professional Design</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>Real Time</h3>
+              <p>Sistem akan selalu memberikan akses data secara real time yang ter-update kepada anda dan seluruh user anda.</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
@@ -54,8 +54,8 @@
               <i class="fa fa-bitbucket"></i>
             </div>
             <div class="service-info">
-              <h3>App Development</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>General Ledger Report</h3>
+              <p>Sistem Gen1 modul Finance & Accounting menyediakan fitur General Ledger Report, dimana anda dapat memonitor seluruh data keuangan anda kapanpun dan dimanapun.</p>
             </div>
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
@@ -63,8 +63,8 @@
               <i class="fa fa-gift"></i>
             </div>
             <div class="service-info">
-              <h3>Clean Code</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+              <h3>Opening Balance Setup</h3>
+              <p>System Gen1 modul Finance & Accounting menyediakan Opening Balance Setup, dimana anda dapat melakukan setup saldo awal pada saat pertama kali anda menggunakan modul ini.</p>
             </div>
           </div>
         </div>
