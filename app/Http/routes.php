@@ -16,4 +16,5 @@ Route::get('/', function () {
     Blade::setContentTags('[[[', ']]]');
     return view('pages/home');
 });
+
 Route::get('/getUser', 'UserController@getUser');
