@@ -33,3 +33,37 @@
   <script type="text/javascript" src="js/jquery.countTo.js"></script>
   <script type="text/javascript" src="js/lightbox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  
+  <style>
+	ul.nav li.dropdown:hover ul.dropdown-menu {
+        display: block;
+    }
+
+    .dropdown ul.dropdown-menu{
+
+
+        background-color:rgb(2, 143, 204);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .dropdown ul.dropdown-menu li a{    
+        color: #fff;
+
+    }
+
+    .dropdown-backdrop{    
+        position:static;
+
+    }
+
+    .dropdown ul.dropdown-menu li a:hover{    
+        background-color:rgb(31, 102, 153);
+
+    }
+
+    .dropdown ul.dropdown-menu li a:active{    
+
+        background-color:rgb(31, 102, 153);
+    }
+  </style>
