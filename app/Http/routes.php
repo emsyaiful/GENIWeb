@@ -12,6 +12,8 @@
 */
 
 Route::get('/', function () {
+	Blade::setEscapedContentTags('[[', ']]');
+    Blade::setContentTags('[[[', ']]]');
     return view('pages/home');
 });
 Route::get('/getUser', 'UserController@getUser');

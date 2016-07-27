@@ -1,10 +1,7 @@
-app.controller('adminPageController', function($rootScope, $scope, backend, $modal) {
-	$scope.loadData = function() {
-		backend.get('/getUser', {}, function(err, response){
-			if (err) swal('Error', 'Ada kesalahan', 'error');
-			else {
-				$scope.data = response;
-			}
-		});
-	}
-});
+app.controller('adminController', function($scope, $rootScope, $http) {
+	$http({method: 'GET', url: 'getUser'})
+	.success(function(data, status, headers, config) {
+		$scope.data = data;
+		$scope.loading = false;
+	});
+})
