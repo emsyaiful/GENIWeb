@@ -17,4 +17,17 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
+// api
+Route::group(['prefix' => 'api'], function()
+{
+	Route::post('register', 'AuthenticateController@register');
+	Route::get('login', 'AuthenticateController@login');
+	Route::group(['middleware'  => 'jwt-auth'], function(){
+		Route::get('get_user_details', 'AuthenticateController@getUser_details');
+	});
+});
+
+// data
 Route::get('/getUser', 'UserController@getUser');
+
+Route::get('/hash', 'UserController@hash');
