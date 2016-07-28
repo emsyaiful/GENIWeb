@@ -6,7 +6,7 @@
       <div class="row">
         <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <div class="text-center col-sm-8 col-sm-offset-2">
-            <h2>{{data[0].user_name}}</h2>
+            <h2>Fitur Dari GEN1</h2>
             <p>Gen1 terdapat modul yang diperlukan untuk finance & Accounting. Anda dapat menggunakannya dimanapun anda berada, karena Gen1 menggunakan Cloud System Integration.</p><br>
           </div>
         </div> 
@@ -72,7 +72,7 @@
     </div>
   </section><!--/#services-->
 
-  <section id="about-us" class="parallax">
+  <!-- <section id="about-us" class="parallax">
     <div class="container">
       <div class="row"><br><br>
         <div class="col-sm-6">
@@ -112,13 +112,13 @@
         </div>
       </div>
     </div>
-  </section><!--/#about-us-->
+  </section>--> <!--/#about-us-->
 
   <section id="portfolio">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <h2>Our Portfolio</h2>
+          <h2>Berita</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
         </div>
       </div> 
@@ -630,13 +630,15 @@
   </section><!--/#blog-->
 
   <section id="contact">
-    <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+    <!-- <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div> -->
     <div id="contact-us" class="parallax">
       <div class="container">
         <div class="row">
-          <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>Contact Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+        <br>
+          <div class="text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>Hubungi Kami</h2>
+            <p>Sekarang adalah saat yang sempurna untuk menghubungi kami.
+            Mungkin kami sibuk, tapi anda akan selalu menjadi prioritas utama kami.</p>
           </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
@@ -646,36 +648,42 @@
                 <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                      <input type="text" name="name" class="form-control" placeholder="Nama" required="required" style="color:black">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+                      <input type="email" name="email" class="form-control" placeholder="Alamat Email" required="required" style="color:black">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                  <input type="text" name="subject" class="form-control" placeholder="Subyek" required="required" style="color:black">
                 </div>
                 <div class="form-group">
-                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter your message" required="required"></textarea>
+                  <textarea name="message" id="message" class="form-control" rows="4" placeholder="Isi Pesan" required="required" style="color:black"></textarea>
                 </div>                        
                 <div class="form-group">
-                  <button type="submit" class="btn-submit">Send Now</button>
+                  <button type="submit" class="btn-submit">Kirim</button>
                 </div>
               </form>   
             </div>
             <div class="col-sm-6">
+              <div id="google-map" class="wow fadeIn" data-latitude="-7.280136" data-longitude="112.684398" data-wow-duration="1000ms" data-wow-delay="400ms"></div><br>
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                <div class="col-sm-6">
                 <ul class="address">
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> 2400 South Avenue A </li>
-                  <li><i class="fa fa-phone"></i> <span> Phone:</span> +928 336 2000  </li>
-                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:someone@yoursite.com"> support@oxygen.com</a></li>
-                  <li><i class="fa fa-globe"></i> <span> Website:</span> <a href="#">www.sitename.com</a></li>
+                  <li><i class="fa fa-map-marker"></i> <span> Alamat:</span> Darmo Villa B-5 Jl. Simpang Darmo Permai Selatan Surabaya </li>
                 </ul>
-              </div>                            
+                </div>
+                <div class="col-sm-6">
+                <ul class="address">
+                  <li><i class="fa fa-phone"></i> <span> Telp:</span> 031 7314646  </li>
+                  <li><i class="fa fa-globe"></i> <span> Fax:</span> 031 7314747 </li>
+                  <li><i class="fa fa-envelope"></i> <span> Email:</span><a href="mailto:info@bios-it.co.id"> info@bios-it.co.id</a></li>
+                </ul>
+                </div>
+              </div>            
             </div>
           </div>
         </div>

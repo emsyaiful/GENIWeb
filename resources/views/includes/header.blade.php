@@ -49,18 +49,18 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">                 
-            <li class="scroll active"><a href="#home">Beranda</a></li>
+            <li class="scroll"><a href="#home">Beranda</a></li>
             <li class="scroll"><a href="#services">Fitur</a></li> 
-            <li class="scroll"><a href="#about-us">Berita</a></li>                     
-            <li class="dropdown navbar-rightlagi">
-                    <a href="#portofolio">Bantuan & Dukungan</a>
+            <li class="scroll"><a href="#portfolio">Berita</a></li>                     
+            <li class="scroll dropdown navbar-rightlagi">
+                    <a href="#">Bantuan & Dukungan</a>
                     <ul class="dropdown-menu">
                         <li><a class="scroll" href="sad#feature">Dokumentasi</a></li>
                         <li><a class="scroll" href="as#map">FAQ</a></li>
                         <li><a class="scroll" href="#contact">Contact Us</a></li>
                     </ul>
             </li>
-            <li class="scroll"><a href="#team">Masuk</a></li>
+            <li><a href="#team">Masuk</a></li>
           </ul>
         </div>
       </div>

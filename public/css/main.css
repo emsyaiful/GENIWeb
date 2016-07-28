@@ -874,15 +874,17 @@ section {
 }
 
 #contact-us .heading {
-  padding-top: 95px;
+  padding-top: 55px;
 }
 
 .form-control {
-  background-color: transparent;
+  background-color: #e6f0ff;
+  opacity: .9;
   border-color: rgba(255,255,255,.1);
   height: 50px;
   border-radius: 0;
   box-shadow: none;
+  color: #000000;
 }
 
 textarea.form-control {
