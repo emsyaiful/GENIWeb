@@ -124,13 +124,23 @@ jQuery(function($) {
 	form.submit(function(event){
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
+		var name = $('#name').val();
+		var email = $('#email').val();
+		var subject = $('#subject').val();
+		var message = $('#message').val();
 		$.ajax({
-			url: $(this).attr('action'),
+			type: "POST",
+			url: "/contactus",
+			data: {name:name,email:email,subject:subject,message:message},
 			beforeSend: function(){
-				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Email is sending...</p>').fadeIn() );
+				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Mengirim pesan ...</p>').fadeIn() );
 			}
 		}).done(function(data){
-			form_status.html('<p class="text-success">Thank you for contact us. As early as possible  we will contact you</p>').delay(3000).fadeOut();
+			form_status.html('<p class="text-success" style="color:#fff">Terima kasih sudah menghubungi kami.</p>').delay(3000).fadeOut();
+			$('#name').val('');
+			$('#email').val('');
+			$('#subject').val('');
+			$('#message').val('');
 		});
 	});
 
