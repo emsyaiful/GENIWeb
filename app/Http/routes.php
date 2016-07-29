@@ -17,7 +17,21 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
+Route::get('/index', function () {
+	Blade::setEscapedContentTags('[[', ']]');
+    Blade::setContentTags('[[[', ']]]');
+    return view('pages/home');
+});
+
 Route::post('/contactus', 'UserController@contactUs');
+
+Route::get('/detailberita', function(){
+	return view('pages/portfolio');
+});
+
+Route::get('/faq', function(){
+	return view('pages/faq');
+});
 
 // api
 Route::group(['prefix' => 'api'], function()

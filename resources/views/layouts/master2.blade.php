@@ -11,7 +11,6 @@
 
 		<!-- Header -->
 		<header id="home">
-			@include('includes.slider')
 			@include('includes.header')
 		</header>
 		
