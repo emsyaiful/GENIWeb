@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('pages/home');
 });
 
+Route::post('/contactus', 'UserController@contactUs');
+
 // api
 Route::group(['prefix' => 'api'], function()
 {
@@ -31,3 +33,10 @@ Route::group(['prefix' => 'api'], function()
 Route::get('/getUser', 'UserController@getUser');
 
 Route::get('/hash', 'UserController@hash');
+
+Route::get('/twitter', function () {
+    return redirect('http://twitter.com/it_bios');
+});
+Route::get('/facebook', function () {
+    return redirect('http://facebook.com/Bina-Informasi-Optima-Solusindo-141167359572632');
+});

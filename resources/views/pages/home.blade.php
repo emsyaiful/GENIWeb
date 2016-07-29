@@ -301,7 +301,7 @@
     </div><!-- /#portfolio-single-wrap -->
   </section><!--/#portfolio-->
 
-  <section id="team">
+  <!-- <section id="team">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms"><br><br><br>
@@ -398,9 +398,9 @@
         </div>
       </div>            
     </div>
-  </section><!--/#team-->
+  </section> --><!--/#team-->
 
-  <section id="features" class="parallax">
+<!--   <section id="features" class="parallax">
     <div class="container">
       <div class="row count">
         <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
@@ -425,9 +425,9 @@
         </div>                 
       </div>
     </div>
-  </section><!--/#features-->
+  </section> --><!--/#features-->
 
-  <section id="pricing">
+<!--   <section id="pricing">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
@@ -500,9 +500,9 @@
         </div>
       </div>
     </div>
-  </section><!--/#pricing-->
+  </section> --><!--/#pricing-->
 
-  <section id="twitter" class="parallax">
+<!--   <section id="twitter" class="parallax">
     <div>
       <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
       <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
@@ -530,9 +530,9 @@
         </div>
       </div>
     </div>
-  </section><!--/#twitter-->
+  </section> --><!--/#twitter-->
 
-  <section id="blog">
+<!--   <section id="blog">
     <div class="container">
       <div class="row">
         <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
@@ -627,7 +627,7 @@
         </div>                
       </div>
     </div>
-  </section><!--/#blog-->
+  </section> --><!--/#blog-->
 
   <section id="contact">
     <!-- <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div> -->
@@ -644,26 +644,27 @@
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
           <div class="row">
             <div class="col-sm-6">
-              <form id="main-contact-form" name="contact-form" method="post" action="#">
+              <form id="main-contact-form" name="contact-form" method="post">
                 <div class="row  wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="text" name="name" class="form-control" placeholder="Nama" required="required" style="color:black">
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Nama" required="required" style="color:black">
                     </div>
                   </div>
                   <div class="col-sm-6">
                     <div class="form-group">
-                      <input type="email" name="email" class="form-control" placeholder="Alamat Email" required="required" style="color:black">
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Alamat Email" required="required" style="color:black">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Subyek" required="required" style="color:black">
+                  <input type="text" name="subject" id="subject" class="form-control" placeholder="Subyek" required="required" style="color:black">
                 </div>
                 <div class="form-group">
                   <textarea name="message" id="message" class="form-control" rows="4" placeholder="Isi Pesan" required="required" style="color:black"></textarea>
                 </div>                        
                 <div class="form-group">
+                  <!-- <div id="success"></div> -->
                   <button type="submit" class="btn-submit">Kirim</button>
                 </div>
               </form>   

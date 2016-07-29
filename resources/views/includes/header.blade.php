@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <h1><img class="img-responsive" src="images/logo_geni2.png" alt="logo" width="28%"></h1>
           </a>                    
         </div>
@@ -60,7 +60,7 @@
                         <li><a class="scroll" href="#contact">Contact Us</a></li>
                     </ul>
             </li>
-            <li><a href="#team">Masuk</a></li>
+            <li><a href="#">Masuk</a></li>
           </ul>
         </div>
       </div>

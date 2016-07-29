@@ -25,6 +25,7 @@ class AuthenticateController extends Controller
     	if (!$token = JWTAuth::attempt($input)) {
             return response()->json(['result' => 'wrong email or password.']);
         }
+        	
         	return response()->json(compact($token));
     }
     public function getUser_details(Request $request)
