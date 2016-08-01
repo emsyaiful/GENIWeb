@@ -37,10 +37,9 @@ Route::get('/faq', function(){
 Route::group(['prefix' => 'api'], function()
 {
 	Route::post('register', 'AuthenticateController@register');
-	Route::get('login', 'AuthenticateController@login');
-	Route::group(['middleware'  => 'jwt-auth'], function(){
-		Route::get('get_user_details', 'AuthenticateController@getUser_details');
-	});
+	Route::post('login', 'AuthenticateController@login');
+	Route::post('reset', 'AuthenticateController@restPass');
+	Route::get('reset', 'AuthenticateController@restPass');
 });
 
 // data
