@@ -21,7 +21,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="scroll" href="sad#feature">Dokumentasi</a></li>
                         <li><a class="scroll" href="/faq">FAQ</a></li>
-                        <li><a class="scroll" href="/index#contact">Contact Us</a></li>
+                        <li><a class="scroll" href="/index#contact">Kontak</a></li>
                     </ul>
             </li>
             <li><a href="#">Masuk</a></li>

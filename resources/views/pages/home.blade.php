@@ -15,7 +15,7 @@
         <div class="row">
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="service-icon">
-              <i class="fa fa-flask"></i>
+              <i class="fa fa-user"></i>
             </div>
             <div class="service-info">
               <h3>User Friendly</h3>
@@ -24,7 +24,7 @@
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
             <div class="service-icon">
-              <i class="fa fa-umbrella"></i>
+              <i class="fa fa-users"></i>
             </div>
             <div class="service-info">
               <h3>Multi User</h3>
@@ -33,7 +33,7 @@
           </div>
           <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="550ms">
             <div class="service-icon">
-              <i class="fa fa-cloud"></i>
+              <i class="fa fa-cloud-upload"></i>
             </div>
             <div class="service-info">
               <h3>Cloud System Integration</h3>
@@ -42,7 +42,7 @@
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
             <div class="service-icon">
-              <i class="fa fa-coffee"></i>
+              <i class="fa fa-clock-o"></i>
             </div>
             <div class="service-info">
               <h3>Real Time</h3>
@@ -51,7 +51,7 @@
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="750ms">
             <div class="service-icon">
-              <i class="fa fa-bitbucket"></i>
+              <i class="fa fa-book"></i>
             </div>
             <div class="service-info">
               <h3>General Ledger Report</h3>
@@ -60,7 +60,7 @@
           </div>
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="850ms">
             <div class="service-icon">
-              <i class="fa fa-gift"></i>
+              <i class="fa fa-cogs"></i>
             </div>
             <div class="service-info">
               <h3>Opening Balance Setup</h3>
