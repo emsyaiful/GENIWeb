@@ -1,18 +1,16 @@
 var app = angular.module('mainApp', ['ngRoute'])
 
-app.config(function ($routeProvider) {
-	$routeProvider.when('/admin', {
-		templateUrl: 'admin/admin.blade.php',
-		controller: 'adminUserController'
+app.config(['$routeProvider', function($routeProvider) {
+	$routeProvider
+	.when('/admin', {
+		templateUrl: 'admin/adminPage.html',
+		controller: 'adminController'
 	})
-	.otherwise({
-		redirectTo: '/admin/adminPage.html'
-	})
+}]);
+app.controller('loginController', function($scope, $rootScope, $http) {	
+	$scope.message = 'ini adalah login'
 });
-app.controller('adminController', function($scope, $rootScope, $http) {
-	$http({method: 'GET', url: 'getUser'})
-	.success(function(data, status, headers, config) {
-		$scope.data = data;
-		$scope.loading = false;
-	});
-})
+
+app.controller('adminController', function($scope) {
+	$scope.message = 'ini adalah admin page'
+});

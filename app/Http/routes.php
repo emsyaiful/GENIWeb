@@ -33,6 +33,9 @@ Route::get('/faq', function(){
 	return view('pages/faq');
 });
 
+Route::get('/login', function(){
+	return view('admin/login');
+});
 // api
 Route::group(['prefix' => 'api'], function()
 {
@@ -43,8 +46,6 @@ Route::group(['prefix' => 'api'], function()
 });
 
 // data
-Route::get('/getUser', 'UserController@getUser');
-
 Route::get('/hash', 'UserController@hash');
 
 Route::get('/twitter', function () {

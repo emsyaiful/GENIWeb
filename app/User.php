@@ -11,10 +11,10 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $table = 'login';
+    protected $table = 'gen_0101_user';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'username', 'password',
+        'password', 'user_email', 'user_name', 'user_company', 'user_typecompany', 'user_useraddresscompany', 'user_timecreated', 'user_tokenrest', 'user_isactive', 'user_isadmin'
     ];
 
     /**

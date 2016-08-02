@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
 <br><br><br>
-<section id="services" ng-app="mainApp">
-    <div class="container" ng-controller="adminController">
+<section id="services">
+    <div class="container">
       <div class="row">
         <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
           <div class="text-center col-sm-8 col-sm-offset-2">
