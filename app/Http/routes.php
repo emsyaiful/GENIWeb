@@ -33,9 +33,10 @@ Route::get('/faq', function(){
 	return view('pages/faq');
 });
 
-Route::get('/login', function(){
+Route::get('/cobacoba', function(){
 	return view('admin/login');
 });
+
 // api
 Route::group(['prefix' => 'api'], function()
 {
