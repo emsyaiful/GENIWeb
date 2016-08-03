@@ -33,6 +33,10 @@ Route::get('/faq', function(){
 	return view('pages/faq');
 });
 
+Route::get('/doc', function(){
+	return view('pages/doc');
+});
+
 Route::get('/cobacoba', function(){
 	return view('admin/login');
 });

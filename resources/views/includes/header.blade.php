@@ -19,7 +19,7 @@
             <li class="scroll dropdown navbar-rightlagi">
                     <a href="#">Bantuan & Dukungan</a>
                     <ul class="dropdown-menu">
-                        <li><a class="scroll" href="sad#feature">Dokumentasi</a></li>
+                        <li><a class="scroll" href="/doc">Dokumentasi</a></li>
                         <li><a class="scroll" href="/faq">FAQ</a></li>
                         <li><a class="scroll" href="/index#contact">Kontak</a></li>
                     </ul>
