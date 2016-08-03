@@ -4,6 +4,7 @@
         <div class="footer-logo">
           <center><a href="/"><img class="img-responsive" src="images/logo_geni2.png" alt="" width="35%"></a></center>
         </div>
+        <p>&copy; PT. Bina Informasi Optima Solusindo 2016</p>
         <div class="social-icons">
           <ul>
             <li title="BIOS Twitter's Account"><a class="twitter" href="/twitter" target="_blank"><i class="fa fa-twitter"></i></a></li> 
@@ -12,18 +13,18 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
+    <!-- <div class="footer-bottom">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
             <p>&copy; PT. Bina Informasi Optima Solusindo 2016</p>
           </div>
           <div class="col-sm-6">
-            <!-- <p class="pull-right">Designed by <a href="http://www.themeum.com/">Themeum</a></p> -->
+            
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </footer>
 
   

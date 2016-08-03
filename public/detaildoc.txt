@@ -1,0 +1,868 @@
+                        <div class="panel" id="setupcompany">
+                            <div class="content_section">
+                                <h2>Setup Company</h2>
+
+                                <ul class="list">
+                                    <li>Setelah login pertama kali, anda akan melihat form setup company</li>
+                                    <li>Isi data identitas perusahaan anda dengan minimal required field (*) terisi</li>
+                                    <li>Kemudian klik next</li>
+                                    <li>Tentukan period fiscal anda pada form period fiscal</li>
+                                    <li>Kemudian klik next</li>
+                                    <li>Muncul pop-up konfirmasi untuk menyelesaikan setting awal anda atau tetap melanjutkan untuk menginputkan saldo awal anda. Bila anda ingin menginputkan saldo awal, klik create outstanding transaction. Bila anda merasa tidak memerlukan saldo awal, klik Finish Setup</li>
+                                    <li>Pembuatan Outstanding Transaction hanya berlaku satu kali yaitu di awal ketika anda setup company, dan apabila anda telah memilih finish setup maka anda tidak akan bisa mengisikan saldo awal</li>
+                                </ul>
+                                <a href="#1CompanySetup"class="portfolio-link" data-toggle="modal"><img src="docimg/img/1CompanySetup.jpg" width="100%" height="100%"></a><br><br><br>
+                            </div>
+
+                            <!--                            <div class="content_section last_section">
+                                                            <h2>Testimonial</h2>
+                                                            <blockquote>
+                                                                <p>Fusce nec felis id lacus sollicitudin vulputate. Proin tincidunt, arcu id pellentesque accumsan, neque dolor imperdiet ligula, quis viverra tellus nulla a odio. Curabitur vitae enim risus, at placerat turpis. Mauris feugiat suscipit tempus fringilla, felis in velit. Aliquam a leo nec massa pharetra pulvinar.</p>
+                                                                <cite>Thomas - <span>Designer</span></cite> </blockquote>
+                                                        </div>-->
+                        </div> <!-- end of aboutus -->
+
+                        <div class="panel" id="introoutstanding">
+                            <h2>Outstanding</h2>
+                            <p><em>Digunakan untuk memasukkan saldo awal perusahaan anda sebelum anda melakukan daily transaction. Yang akan anda lakukan diantaranya membuat master datanya terlebih dahulu, seperti business partner dan currency. Untuk master data COA dan period, system telah menyediakan format default. Setelah menyiapkan master data, anda dapat mulai membuat AP dan AR outstanding, dan juga pada jurnal outstanding. Pada fase ini, anda tidak dapat melihat hasilnya dalam bentuk report. Namun system telah menyediakan summary transaksi yang anda inputkan melalui tombol summary outstanding pada  .</em></p>
+
+                        </div> <!-- end of services -->
+
+                        <div class="panel" id="createmasterdata">
+                            <h2>Create Master Data</h2>
+                            <div class="content_section">
+                                <h4 style="color: #F9B84A;"><i>Description Button</i></h4><hr><br>
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Button</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><img src="docimg/img/search.png"></td>
+                                            <td>Digunakan untuk view data pada index, dan atau untuk mencari data pada form transaksi dan report</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="docimg/img/edit.png"> & <img src="docimg/img/edit2.png" width="40%"></td>
+                                            <td>Digunakan untuk update data yang telah di save</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="docimg/img/remove.png"></td>
+                                            <td>Digunakan untuk menghapus data</td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="docimg/img/summary.png"></td>
+                                            <td>Digunakan untuk melihat summary outstanding yang berisi summary AP/AR History dan balance sheet</td>
+                                        </tr>
+                                    </tbody>
+                                </table><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Business Partner</i></h4><hr><br>
+                                <ul class="list" style="list-style: circle;">
+                                    <li>Tekan tombol create, dan system akan menampilkan form business partner</li>
+                                    <li>Pada business partner dapat membuat vendor dan customer sekaligus, tergantung pada saat anda menentukan business partner type</li>
+                                    <li>Isi data business partner dengan minimal required field (*) terisi </li>
+                                    <li>Beberapa yang perlu diperhatikan, yaitu :
+                                        <ul class="sub-list">
+                                            <li>Active : Account yang masih aktif digunakan akan di check, dan bila account tersebut tidak digunakan anda dapat uncheck agar account tersebut tidak muncul pada saat transaksi berlangsung</li>
+                                        </ul>
+                                    </li>
+                                    <li>Tambahkan loaction dengan klik add line</li>
+                                    <li>Bila telah complete, klik save</li>
+
+                                </ul>
+                                <a href="#buspart" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/buspart.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Currency</i></h4><hr><br>
+                                Berikut langkah-langkah dalam membuat currency baru :
+                                <ul class="list">
+                                    <li>Tekan tombol create, dan system akan menampilkan form currency</li>
+                                    <li>Isi data currency dengan minimal required field (*) terisi</li>
+                                    <li>Beberapa yang perlu diperhatikan, yaitu :
+                                        <ul class="sub-list">
+                                            <li>Active : Account yang masih aktif digunakan akan di check, dan bila account tersebut tidak digunakan anda dapat uncheck agar account tersebut tidak muncul pada saat transaksi berlangsung</li>
+                                        </ul>
+                                    </li>
+                                    <li>Bila telah complete, klik save</li>
+
+                                </ul>
+                                <a href="#formcurrency" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/formcurrency.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Period</i></h4><hr><br>
+                                Pada saat anda melakukan setup company, system juga melakukan setup default yang salah satunya pada period. Namun anda masih dapat membuat period baru dengan mengikuti langkah – langkah berikut :
+                                <ul class="list">
+                                    <li>Tekan tombol create, dan system akan menampilkan form period</li>
+                                    <li>Isi data period dengan minimal required field (*) terisi</li>
+                                    <li>Beberapa yang perlu diperhatikan, yaitu :
+                                        <ul class="sub-list">
+                                            <li>Active : Account yang masih aktif digunakan akan di check, dan bila account tersebut tidak digunakan anda dapat uncheck agar account tersebut tidak muncul pada saat transaksi berlangsung</li>
+                                        </ul>
+                                    </li>
+                                    <li>Bila telah complete, klik save</li>
+
+                                </ul>
+                                <a href="#13FormPeriod" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/13FormPeriod.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Chart of Account</i></h4><hr><br>
+                                Pada saat anda melakukan setup company, system juga melakukan setup default yang salah satunya pada COA. Namun anda masih dapat membuat COA baru dengan mengikuti langkah – langkah berikut :
+                                <ul class="list">
+                                    <li>Tekan tombol create, dan system akan menampilkan form Coa</li>
+                                    <li>Isi data Coa dengan minimal required field (*) terisi</li>
+                                    <li>Beberapa yang perlu diperhatikan, yaitu :
+                                        <ul class="sub-list">
+                                            <li>Active : Account yang masih aktif digunakan akan di check, dan bila account tersebut tidak digunakan anda dapat uncheck agar account tersebut tidak muncul pada saat transaksi berlangsung</li>
+                                            <li>Parent : Digunakan untuk account yang memiliki account parent, dan bila tidak memiliki parent maka account tersebut berdiri sendiri dan atau bisa memiliki child of account</li>
+                                        </ul>
+
+                                    </li>
+                                    <li>Bila telah complete, klik save</li>
+
+                                </ul>
+                                <a href="#14FormCOA" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/14FormCOA.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+                            </div>
+                        </div>
+
+                        <!-- ap outstanding --->
+                        <div class="panel" id="transaction">
+                            <h2>Transaction</h2>
+                            <div class="content_section">
+                                <h4 style="color: #F9B84A;"><i>Account Payable Outstanding</i></h4><hr><br>
+                                AP Outstanding yang anda buat tidak akan membentuk jurnal, karena AP ini digunakan untuk saldo awal anda. Untuk melakukan pembuatan account payable outstanding, dapat mengikuti langkah-langkah berikut :
+                                <ul class="list">
+                                    <li>Tekan tombol create, dan system akan menampilkan form Account Payable</li>
+                                    <li>Isi field yang ada dengan minimal required field (*) terisi</li>
+                                    <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                        <ul class="sub-list">
+                                            <li>Required field (*) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        </ul>
+
+                                    </li>
+                                    <li>Field yang di isi telah complete, klik save</li>
+                                </ul>
+                                <a href="#5FormAPOutstanding" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/5FormAPOutstanding.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+
+                                <h4 style="color: #F9B84A;"><i>Account Receivable Outstanding</i></h4><hr><br>
+                                AR Outstanding yang anda buat tidak akan membentuk jurnal, karena AR ini digunakan untuk saldo awal anda. Untuk melakukan pembuatan account receivable outstanding, dapat mengikuti langkah-langkah berikut :
+                                <ul class="list">
+                                    <li>Tekan tombol create, dan system akan menampilkan form Account Receivable</li>
+                                    <li>Isi field yang ada dengan minimal required field (*) terisi</li>
+                                    <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                        <ul class="sub-list">
+                                            <li>Required field (*) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        </ul>
+
+                                    </li>
+                                    <li>Field yang di isi telah complete, klik save</li>
+                                </ul>
+                                <a href="#7FormAROutstanding" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/7FormAROutstanding.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Jurnal Outstanding</i></h4><hr><br>
+                                Untuk melakukan pembuatan jurnal outstanding, dapat mengikuti langkah-langkah berikut :
+                                <ul class="list">
+                                    <li>Klik Create, maka system akan menampilkan halaman form jurnal</li>
+                                    <li>Isi field yang ada dengan minimal required field (*) terisi</li>
+                                    <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                        <ul class="sub-list">
+                                            <li>Required field (*) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        </ul>
+
+                                    </li>
+                                    <li>Field yang di isi telah complete, klik save</li>
+                                </ul>
+                                <a href="#9FormJurnalOutstanding" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/9FormJurnalOutstanding.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                                <h4 style="color: #F9B84A;"><i>Summary Outstanding</i></h4><hr><br>
+                                Data yang anda inputkan pada transaction outstanding dapat anda lihat summary nya, dengan mengikuti langkah –langkah berikut :
+                                <ul class="list">
+                                    <li>Klik pada <img src="docimg/img/summary.png" width="4%" height="4%"></li>
+                                    <li>Maka system akan menampilkan summary dari AP/AR history dan balance sheet</li>
+                                    <li>Bila data yang anda inputkan sudah cukup, anda dapat menyelesaikannya dengan cara klik pada finish creating outstanding document</li>
+                                    <li>Perlu anda ketahui, bila anda telah klik finish creating outstanding document, maka anda tidak dapat membatalkan dan atau merevisi saldo awal anda.</li>
+                                </ul>
+
+                                <a href="#OutstandingSummary" class="portfolio-link" data-toggle="modal">
+                                    <img src="docimg/img/OutstandingSummary.jpg" width="100%" height="100%">
+                                </a><br><br><br>
+
+                            </div>
+                        </div>
+
+                        <div class="panel" id="masterdata">
+                            <h2>Master Data</h2>
+                            <h4 style="color: #F9B84A;"><i>Description Button</i></h4><hr><br>
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Button</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="docimg/img/search.png"></td>
+                                        <td>Digunakan untuk view data pada index, dan atau untuk mencari data pada form transaksi dan report</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/edit.png"> & <img src="docimg/img/edit2.png" width="40%"></td>
+                                        <td>Digunakan untuk update data yang telah di save</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/remove.png"></td>
+                                        <td>Digunakan untuk menghapus data</td>
+                                    </tr>
+                                </tbody>
+                            </table><br><br>
+
+                            <h4 style="color: #F9B84A;"><i>Create New Product</i></h4><hr><br>
+                            Di dalam master data product terdapat 2 jenis type, yaitu charge dan inventory. Inventory bisa berupa benda atau barang yang dapat diperjual-belikan. 
+                            Sedangkan charge dapat berupa jasa atau services yang dapat dijual atau digunakan sendiri. Berikut langkah-langkah dalam membuat product baru :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form product</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Active : Centang apabila product tersebut aktif digunakan, dan uncheck bila product tersebut tidak lagi aktif digunakan. 
+                                            Hal ini akan berdampak pada saat anda membuat transaksi baru, anda dapat menentukan product mana saja yang tidak harus muncul.
+                                        </li>
+                                        <li>Can be purchased : centang apabila product hanya digunakan sendiri atau tidak untuk di jual kembali</li>
+                                        <li>Can be sold : centang apabila product dapat di jual.</li>
+                                        <li>Untuk ‘Can be purchased’ dan ‘can be sold’, dalam 1 product dapat di centang keduanya dan atau dapat dicentang hanya salah satu saja.</li>
+                                        <li>Unit of Measure : pilihan satuan product. Dan dapat ditambahkan UOM baru dengan cara klik pada create new UOM, 
+                                            kemudian isi field yang tersedia dan klik save.
+                                        </li>
+                                        <li>Account product di isi sesuai type ‘Can be purchased’ dan ‘can be sold’</li>
+                                    </ul>
+                                </li>
+                                <li>Field yang di isi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_product" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_product.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h4 style="color: #F9B84A;"><i>Create New Tax</i></h4><hr><br>
+                            Berikut langkah-langkah dalam membuat master data tax baru :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form tax</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Active : : Centang apabila tax tersebut aktif digunakan, dan uncheck bila tax tersebut tidak lagi aktif digunakan. 
+                                            Hal ini akan berdampak pada saat anda membuat transaksi baru, anda dapat menentukan tax mana saja yang tidak harus muncul.
+                                        </li>
+                                        <li>Tax Type : pilih tipe tax tersebut termasuk tax untuk sales atau purchase</li>                                            
+                                    </ul>
+                                </li>
+                                <li>Field yang di isi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_tax" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_tax.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h4 style="color: #F9B84A;"><i>Account Setting</i></h4><hr><br>
+                            Pada saat anda melakukan setup company, system juga melakukan setup default yang salah satunya pada account setting. 
+                            Namun anda masih dapat merubah settingan tersebut dengan mengikuti langkah – langkah berikut :
+                            <ul class="list">
+                                <li>Klik pada <img src="docimg/img/search.png"> account setting yang akan di rubah, kemudian pilih account anda</li>
+                                <li>Bila telah selesai, klik save</li>
+                            </ul>
+                            <a href="#form_account_setting" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_account_setting.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h4 style="color: #F9B84A;"><i>Cash Flow Setting</i></h4><hr><br>
+                            Cash Flow Setting merupakan setting account yang akan ditampilkan pada report cash flow anda. Pada saat anda melakukan setup company, 
+                            system juga melakukan setup default yang salah satunya pada Cash Flow setting. 
+                            Namun anda masih dapat merubah settingan tersebut dengan mengikuti langkah – langkah berikut :<br><br>
+                            <a href="#cash_flow_setting1" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/cash_flow_setting1.jpg" width="100%">
+                            </a>
+                            <br><br>
+                            <ul class="list">
+                                <li>Untuk merubah cash flow setting default dapat klik pada nama account, kemudian pilih account anda</li>
+                                <li>Untuk menambah account pada cash flow setting, dapat dengan klik add line kemudian pilih account anda dan isi nama alias account tersebut</li>
+                                <li>Bila telah selesai, klik save</li>
+                            </ul>
+                            <a href="#form_cashflow_setting" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_cashflow_setting.jpg" width="100%">
+                            </a><br><br><br>
+
+                        </div>
+
+                        <div class="panel" id="desc_button">
+                            <h2>Description Button</h2>
+                            <!--<h4 style="color: #F9B84A;"><i>Description Button</i></h4><hr><br>-->
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Button</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="docimg/img/search.png"></td>
+                                        <td>Digunakan untuk view data pada index, dan atau untuk mencari data pada form transaksi dan report</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/edit.png"> & <img src="docimg/img/edit2.png" width="40%"></td>
+                                        <td>Digunakan untuk update data yang telah di save</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/remove.png"></td>
+                                        <td>Digunakan untuk menghapus data</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/post.png"> & <img src="docimg/img/post2.png" width="40%"></td>
+                                        <td>Digunakan untuk posting transaksi</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/unpost.png"> & <img src="docimg/img/unpost2.png" width="40%"></td>
+                                        <td>Digunakan untuk membatalkan posting transaksi</td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="docimg/img/void.png"> & <img src="docimg/img/void2.png" width="40%"></td>
+                                        <td>Digunakan untuk void transaksi yang telah terposting, dan otomatis mengeluarkan jurnal pembalik</td>
+                                    </tr>
+                                </tbody>
+                            </table><br><br>
+                            <!--                                
+                                                            <h4 style="color: #F9B84A;"><i>Account Payable (AP)</i></h4><hr>
+                                                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                                                            Pada saat anda membuat Account Payable baru dan di save, maka system akan otomatis membentuk jurnal. 
+                                                            Untuk melakukan pembuatan account payable, dapat mengikuti langkah-langkah berikut :
+                                                            <ul class="list">
+                                                                <li>Klik Create, maka system akan menampilkan halaman form account payable</li>
+                                                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                                                <li>Untuk menambah line, klik pada add line</li>
+                                                                <li>Untuk menambah biaya lain (others), klik pada add line kemudian pilih account dan isi amount</li>
+                                                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                                                    <ul class="sub-list">
+                                                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                                                        <li>Add tax : digunakan apabila product tersebut di bebankan tax</li>
+                                                                        <li>Discount : digunakan untuk pemberian discount dalam bentuk nominal angka</li>
+                                                                        <li>Field yang di isi telah complete, klik save</li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li>Untuk menambah line, klik pada add line</li>
+                                                            </ul>
+                                                            <a href="#form_ap" class="portfolio-link" data-toggle="modal">
+                                                                <img src="docimg/img/form_ap.jpg" width="100%">
+                                                            </a><br><br><br>
+                                                            
+                                                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                                                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                                                            <br><br>
+                                                            
+                                                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                                                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                                                            <ul class="list">
+                                                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                                                <li>Bila telah selesai anda revisi, klik save</li>
+                                                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, agar di lakukan unposting terlebih dahulu.</li>
+                                                            </ul>
+                                                            <br>
+                                                            
+                                                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                                                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                                                            <ul class="list">
+                                                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                                                            </ul>
+                                                            <br><br>-->
+                        </div>
+
+                        <div class="panel" id="ap">
+                            <h2>Account Payable (AP)</h2>
+                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                            Pada saat anda membuat Account Payable baru dan di save, maka system akan otomatis membentuk jurnal. 
+                            Untuk melakukan pembuatan account payable, dapat mengikuti langkah-langkah berikut :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form account payable</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Untuk menambah line, klik pada add line</li>
+                                <li>Untuk menambah biaya lain (others), klik pada add line kemudian pilih account dan isi amount</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        <li>Add tax : digunakan apabila product tersebut di bebankan tax</li>
+                                        <li>Discount : digunakan untuk pemberian discount dalam bentuk nominal angka</li>
+                                    </ul>
+                                </li>
+                                <li>Field yang di isi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_ap" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_ap.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                <li>Bila telah selesai anda revisi, klik save</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, agar di lakukan unposting terlebih dahulu.</li>
+                            </ul>
+                            <br>
+
+                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Posting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan Posting dengan cara klik tombol Posting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Unposting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan pembatalan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan pembatalan posting dengan cara klik tombol unposting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Void</i></h5>
+                            Data yang telah anda posting, anda dapat melakukan void pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila terdapat kesalahan pada transaksi yang telah di posting, maka anda dapat melakukan void dengan cara klik tombol void</li>
+                                <li>Maka system akan otomatis menerbitkan jurnal pembaliknya</li>
+                            </ul>
+                            <br><br>
+                        </div>
+
+                        <div class="panel" id="ar">
+                            <h2>Account Receivable (AR)</h2>
+                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                            Pada saat anda membuat Account Receivable baru dan di save, maka system akan otomatis membentuk jurnal. 
+                            Untuk melakukan pembuatan account receivable, dapat mengikuti langkah-langkah berikut :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form account receivable</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Untuk menambah line, klik pada add line</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        <li>Add tax : digunakan apabila product tersebut di bebankan tax</li>
+                                        <li>Discount : digunakan untuk pemberian discount dalam bentuk nominal angkaa</li>
+                                    </ul>
+                                </li>
+                                <li>Field yang diisi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_ar" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_ar.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                <li>Bila telah selesai anda revisi, klik save</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, 
+                                    agar dilakukan unposting terlebih dahulu.</li>
+                            </ul>
+                            <br>
+
+                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Posting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan Posting dengan cara klik tombol Posting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Unposting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan pembatalan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan pembatalan posting dengan cara klik tombol unposting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Void</i></h5>
+                            Data yang telah anda posting, anda dapat melakukan void pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila terdapat kesalahan pada transaksi yang telah di posting, maka anda dapat melakukan void dengan cara klik tombol void</li>
+                                <li>Maka system akan otomatis menerbitkan jurnal pembaliknya</li>
+                            </ul>
+                            <br><br>
+                        </div>
+
+                        <div class="panel" id="payment">
+                            <h2>Payment</h2>
+                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                            Pada saat anda membuat Payment baru dan di save, maka system akan otomatis membentuk jurnal. 
+                            Untuk melakukan pembuatan payment, dapat mengikuti langkah-langkah berikut :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form payment</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Untuk menambah line, klik pada add line</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        <li>Payment exchange rate : digunakan untuk pembayaran yang menggunakan beda currency dengan invoice, dengan cara mengisi exchange rate saat ini. 
+                                            Misal pada saat AP menggunakan currency USD, dan pada saat pembayaran menggunakan idr maka 
+                                            agar diisikan besarnya exchange rate pada saat pembayaran</li>
+                                        <li>Write-off : digunakan untuk pembayaran tambahan, seperti pph dsb.
+                                    </ul>
+                                </li>
+                                <li>Field yang diisi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_payment" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_payment.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                <li>Bila telah selesai anda revisi, klik save</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, 
+                                    agar dilakukan unposting terlebih dahulu.</li>
+                            </ul>
+                            <br>
+
+                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Posting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan Posting dengan cara klik tombol Posting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Unposting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan pembatalan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan pembatalan posting dengan cara klik tombol unposting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Void</i></h5>
+                            Data yang telah anda posting, anda dapat melakukan void pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila terdapat kesalahan pada transaksi yang telah di posting, maka anda dapat melakukan void dengan cara klik tombol void</li>
+                                <li>Maka system akan otomatis menerbitkan jurnal pembaliknya</li>
+                            </ul>
+                            <br><br>
+                        </div>
+
+                        <div class="panel" id="receipt">
+                            <h2>Receipt</h2>
+                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                            Pada saat anda membuat Payment baru dan di save, maka system akan otomatis membentuk jurnal. 
+                            Untuk melakukan pembuatan payment, dapat mengikuti langkah-langkah berikut :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form payment</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Untuk menambah line, klik pada add line</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                        <li>Payment exchange rate : digunakan untuk pembayaran yang menggunakan beda currency dengan invoice, dengan cara mengisi exchange rate saat ini. 
+                                            Misal pada saat AP menggunakan currency USD, dan pada saat pembayaran menggunakan idr maka 
+                                            agar diisikan besarnya exchange rate pada saat pembayaran</li>
+                                        <li>Write-off : digunakan untuk pembayaran tambahan, seperti pph dsb.                                            
+                                    </ul>
+                                </li>
+                                <li>Field yang diisi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_receipt" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_receipt.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                <li>Bila telah selesai anda revisi, klik save</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, 
+                                    agar dilakukan unposting terlebih dahulu.</li>
+                            </ul>
+                            <br>
+
+                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Posting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan Posting dengan cara klik tombol Posting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Unposting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan pembatalan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan pembatalan posting dengan cara klik tombol unposting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Void</i></h5>
+                            Data yang telah anda posting, anda dapat melakukan void pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila terdapat kesalahan pada transaksi yang telah di posting, maka anda dapat melakukan void dengan cara klik tombol void</li>
+                                <li>Maka system akan otomatis menerbitkan jurnal pembaliknya</li>
+                            </ul>
+                            <br><br>
+                        </div>
+
+                        <div class="panel" id="je">
+                            <h2>Journal Entry</h2>
+                            <h5 style="color: #36aae7;"><i>Create New</i></h5>
+                            Untuk melakukan pembuatan journal entry, dapat mengikuti langkah-langkah berikut :
+                            <ul class="list">
+                                <li>Klik Create, maka system akan menampilkan halaman form journal entry</li>
+                                <li>Isi field yang ada dengan minimal required field (<span style="color:red;">*</span>) terisi</li>
+                                <li>Untuk menambah line, klik pada add line</li>
+                                <li>Dengan memperhatikan beberapa hal seperti berikut :
+                                    <ul class="sub-list">
+                                        <li>Required field (<span style="color:red;">*</span>) :  merupakan field yang wajib di isi dan berlaku juga pada line</li>
+                                    </ul>
+                                </li>
+                                <li>Field yang diisi telah complete, klik save</li>
+                            </ul>
+                            <a href="#form_je" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/form_je.jpg" width="100%">
+                            </a><br><br><br>
+
+                            <h5 style="color: #36aae7;"><i>View</i></h5>
+                            Untuk melihat data yang telah di save, dapat klik <img src="docimg/img/search.png">  maka anda akan dibawa ke halaman view tersebut.
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Update</i></h5>
+                            Data yang anda save, anda dapat melakukan revisi pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan revisi dengan cara klik tombol update</li>
+                                <li>Bila telah selesai anda revisi, klik save</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat diupdate tidak dalam status posting. Dan bila dalam keadaan posting, 
+                                    agar dilakukan unposting terlebih dahulu.</li>
+                            </ul>
+                            <br>
+
+                            <h5 style="color: #36aae7;"><i>Delete</i></h5>
+                            Data yang telah anda save, anda dapat melakukan delete pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila ada kesalahan, anda dapat melakukan delete dengan cara klik tombol delete</li>
+                                <li>Perlu diperhatikan, bahwa transaksi yang dapat didelete tidak dalam status posting.</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Posting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan Posting dengan cara klik tombol Posting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Unposting</i></h5>
+                            Data yang telah anda save, anda dapat melakukan pembatalan posting pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Anda dapat melakukan pembatalan posting dengan cara klik tombol unposting</li>
+                            </ul>
+                            <br><br>
+
+                            <h5 style="color: #36aae7;"><i>Void</i></h5>
+                            Data yang telah anda posting, anda dapat melakukan void pada transaksi tersebut dengan mengikuti langkah – langkah berikut : 
+                            <ul class="list">
+                                <li>Klik tombol view, dan cek kembali pada data tersebut</li>
+                                <li>Bila terdapat kesalahan pada transaksi yang telah di posting, maka anda dapat melakukan void dengan cara klik tombol void</li>
+                                <li>Maka system akan otomatis menerbitkan jurnal pembaliknya</li>
+                            </ul>
+                            <br><br>
+                        </div>
+
+                        <div class="panel" id="apaging">
+                            <h2>AP Aging</h2>
+                            Digunakan untuk melihat lama invoice AP yang belum terbayar. Report ini bisa di generate berdasarkan tiap vendor atau currency dengan periode yang telah ditentukan. 
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#ap_aging" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/ap_aging.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+
+                        <div class="panel" id="araging">
+                            <h2>AR Aging</h2>
+                            Digunakan untuk melihat lama invoice AR yang belum dibayar. Report ini bisa di generate berdasarkan tiap customer atau currency dengan periode yang telah ditentukan. 
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#ar_aging" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/ar_aging.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="apdue">
+                            <h2>AP Due</h2>
+                            Digunakan untuk melihat due date invoice AP yang belum terbayar. Report ini bisa di generate berdasarkan tiap vendor atau currency dengan periode yang telah ditentukan.
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#ap_due" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/ap_due.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="ardue">
+                            <h2>AR Due</h2>
+                            Digunakan untuk melihat due date invoice AR yang belum dibayar. Report ini bisa di generate berdasarkan tiap customer atau currency dengan periode yang telah ditentukan.
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#ar_due" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/ar_due.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="profit_loss">
+                            <h2>Profit & Loss</h2>
+                            Digunakan untuk melihat laporan laba rugi perusahaan selama periode saat ini yang dibandingkan dengan periode sebelumnya dan year-to-date. Report ini bisa di generate 
+                            berdasarkan periode yang telah ditentukan. Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#profitloss" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/profitloss.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="balance_sheet">
+                            <h2>Balance Sheet</h2>
+                            Digunakan untuk melihat laporan balance sheet perusahaan selama periode yang di tentukan. Report ini bisa di generate berdasarkan periode yang telah ditentukan. 
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#bs" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/bs.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="trial_balance">
+                            <h2>Trial Balance</h2>
+                            Digunakan untuk melihat laporan trial balance perusahaan selama periode yang di tentukan. Report ini bisa di generate berdasarkan periode yang telah ditentukan.
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#tb" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/tb.jpg" width="100%">
+                            </a><br><br><br>
+                            <a href="#tb2" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/tb2.jpg" width="100%">
+                            </a><br><br><br>
+                            <a href="#tb3" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/tb3.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="gl_report">
+                            <h2>GL Report</h2>
+                            Digunakan untuk melihat GL Report perusahaan selama periode yang di tentukan. Report ini bisa di generate berdasarkan range account dan periode yang telah ditentukan. 
+                            Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#glreport" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/glreport.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="ap_history">
+                            <h2>AP History</h2>
+                            Digunakan untuk melihat history invoice AP yang belum dan yang sudah terbayar, berikut dengan dokumen payment. 
+                            Report ini bisa di generate berdasarkan tiap vendor atau currency dengan periode yang telah ditentukan. Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#aphistory" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/aphistory.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="ar_history">
+                            <h2>AR History</h2>
+                            Digunakan untuk melihat history invoice AR yang belum dan yang sudah dibayar, berikut dengan dokumen receipt. 
+                            Report ini bisa di generate berdasarkan tiap customer atau currency dengan periode yang telah ditentukan. Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#arhistory" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/arhistory.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
+                        
+                        <div class="panel" id="cashflow">
+                            <h2>Cash Flow</h2>
+                            Digunakan untuk melihat Cash Flow perusahaan selama periode yang di tentukan. Report ini bisa di generate 
+                            berdasarkan periode yang telah ditentukan. Dari hasil generate tersebut dapat di print report dengan format PDF.
+                            <br><br><br>
+                            <a href="#cf_report" class="portfolio-link" data-toggle="modal">
+                                <img src="docimg/img/cf_report.jpg" width="100%">
+                            </a><br><br><br>
+                        </div>
