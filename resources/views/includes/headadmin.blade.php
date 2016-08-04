@@ -5,6 +5,7 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="admin/css/vendor.css">
+        <link rel="stylesheet" id="theme-style" href="admin/css/app.css">
         <!-- Theme initialization -->
         <script>
             var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
