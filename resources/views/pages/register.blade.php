@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
-		<title>Masuk</title>
+		<title>Daftar</title>
 		@include('includes.head')
 		<link href="css/login.css" rel="stylesheet">
 	</head>
@@ -13,16 +13,19 @@
                 <p id="profile-name" class="profile-name-card"></p>
                 <form class="form-signin">
                     <span id="reauth-email" class="reauth-email"></span>
-                    <input type="email" name="user_email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="text" name="user_name" id="inputNama" class="form-control" placeholder="Your Name" required autofocus>
+                    <input type="email" name="user_email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                    <input type="text" name="user_company" id="inputCName" class="form-control" placeholder="Your Company Name" required>
+                    <input type="text" name="user_type" id="inputCType" class="form-control" placeholder="Your Company Type" required>
+                    <textarea placeholder="Your Company Address" id="inputCAddr" name="user_addr" required></textarea>
                     <!-- <div id="remember" class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me
                         </label>
                     </div> -->
-                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign Up</button>
                 </form><!-- /form -->
-                Belum punya akun? Daftar 
+                Sudah punya akun? Masuk 
                 <a href="#" class="forgot-password">
                     di sini
                 </a>
