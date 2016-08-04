@@ -1,4 +1,11 @@
-app.controller('loginController', function($scope) {
-	$scope.message = 'ini adalah login page'
-	console.log($scope.message)
+app.controller('loginController', function($scope, $http) {
+	$scope.submit = function() {
+		$http.post('api/login', $scope.data).success(function(data, status, headers, config) {
+			$scope.user = data
+			$scope.status = status
+        }).error(function(data, status, headers, config){
+        	$scope.status = status
+        	console.log($scope.status)
+        });
+	};
 });
