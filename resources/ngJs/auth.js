@@ -13,8 +13,12 @@ app.controller('registerController', function($scope, $http) {
 	$scope.status = ''
 	$scope.submit = function() {
 		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {
-			$scope.status = data
-			console.log($scope.status)
+			
+			if (data == 'exist') {
+				$scope.status = data
+			} else {
+				swal('Sukses', 'Registrasi berhasil', 'success');
+			}
         })
 	};
 });
