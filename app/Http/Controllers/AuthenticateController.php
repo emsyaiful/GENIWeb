@@ -10,18 +10,22 @@ use App\Models\Userlist;
 use App\User;
 use Hash;
 use JWTAuth;
-use Input;
 
 class AuthenticateController extends Controller
 {
     public function register(Request $request)
-    {        
-    	$input = $request->all();
-    	$input['password'] = Hash::make('defaultPass');
-        $genRest = $input['user_email'].'defaultPass';
-        $input['user_tokenrest'] = Hash::make($genRest);
-    	User::create($input);
-        return response()->json(['result'=>true]);
+    {   
+        $input = $request->all();
+        if (User::where('user_email', '=', $input['user_email'])->exists()) {
+            return response()->json(['result' => 'exist']);
+        }else {
+            $input = $request->all();
+            $input['password'] = Hash::make('defaultPass');
+            $genRest = $input['user_email'].'defaultPass';
+            $input['user_tokenrest'] = Hash::make($genRest);
+            User::create($input);
+            return response()->json(['result'=>true]);
+        }
     }
     public function login(Request $request)
     {
