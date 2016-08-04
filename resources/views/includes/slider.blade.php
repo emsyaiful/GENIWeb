@@ -10,9 +10,9 @@
         </div>
         <div class="item" style="background-image: url(images/slider/4.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig">Say Hello to <span>Oxygen</span></h1>
-            <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+            <h1 class="animated fadeInLeftBig">Belum Punya Akun?</h1>
+            <p class="animated fadeInRightBig">Silakan Daftar Sekarang</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Daftar</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/5.jpg)">
