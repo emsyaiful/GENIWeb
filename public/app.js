@@ -7,10 +7,8 @@ app.config(['$routeProvider', function($routeProvider) {
 		controller: 'adminController'
 	})
 }]);
-app.controller('loginController', function($scope, $rootScope, $http) {	
-	$scope.message = 'ini adalah login'
-});
 
-app.controller('adminController', function($scope) {
-	$scope.message = 'ini adalah admin page'
+app.controller('loginController', function($scope) {
+	$scope.message = 'ini adalah login page'
+	console.log($scope.message)
 });

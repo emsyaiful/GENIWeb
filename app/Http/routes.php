@@ -10,16 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Blade::setEscapedContentTags('[[', ']]');
+Blade::setContentTags('[[[', ']]]');
 
 Route::get('/', function () {
-	Blade::setEscapedContentTags('[[', ']]');
-    Blade::setContentTags('[[[', ']]]');
-    return view('pages/home');
-});
-
-Route::get('/index', function () {
-	Blade::setEscapedContentTags('[[', ']]');
-    Blade::setContentTags('[[[', ']]]');
     return view('pages/home');
 });
 
@@ -35,6 +29,10 @@ Route::get('/faq', function(){
 
 Route::get('/doc', function(){
 	return view('pages/doc');
+});
+
+Route::get('/login', function() {
+	return view('pages/login');
 });
 
 Route::get('/cobacoba', function(){
