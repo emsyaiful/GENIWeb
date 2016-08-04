@@ -10,7 +10,7 @@
             	@include('includes.headeradmin')
             	@include('includes.sidebaradmin')
             	<!-- Content -->
-            	<article class="content dashboard-page">
+            	<article class="content dashboard-page" ng-app="mainApp">
 					@yield('content')
 				</article>
 

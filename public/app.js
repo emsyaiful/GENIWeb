@@ -2,12 +2,14 @@ var app = angular.module('mainApp', ['ngRoute'])
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
-	.when('/admin', {
-		templateUrl: 'admin/adminPage.html',
-		controller: 'adminController'
+	.when('/mgUser', {
+		templateUrl: 'ngView/mgUser.html',
+		controller: 'mgUserController'
 	})
 }]);
-
+app.controller('mgUserController', function($scope, $http) {
+	$scope.message = 'ini admin page lho ya'
+});
 app.controller('loginController', function($scope, $http) {
 	$scope.submit = function() {
 		$http.post('api/login', $scope.data).success(function(data, status, headers, config) {

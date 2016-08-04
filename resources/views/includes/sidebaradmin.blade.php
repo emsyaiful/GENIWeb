@@ -7,7 +7,7 @@
         <nav class="menu">
             <ul class="nav metismenu" id="sidebar-menu">
                 <li class="active">
-                    <a href="index.html"> <i class="fa fa-home"></i> Dashboard </a>
+                    <a href="#mgUser"> <i class="fa fa-home"></i> Dashboard </a>
                 </li>
                 <li>
                     <a href=""> <i class="fa fa-th-large"></i> Items Manager <i class="fa arrow"></i> </a>

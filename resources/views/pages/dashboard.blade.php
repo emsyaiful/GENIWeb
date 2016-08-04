@@ -1,6 +1,4 @@
 @extends('layouts.masteradmin')
 @section('content')
-
-wiuwiu
-
+<div ng-view></div>
 @stop
