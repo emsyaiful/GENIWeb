@@ -8,20 +8,6 @@
 <link rel="stylesheet" id="theme-style" href="admin/css/app.css">
 <link rel="stylesheet" type="text/css" href="bower_components/angular-loading-bar/src/loading-bar.css">
 <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
-<!-- Theme initialization -->
-<script>
-    var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
-    {};
-    var themeName = themeSettings.themeName || '';
-    if (themeName)
-    {
-        document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app-' + themeName + '.css">');
-    }
-    else
-    {
-        document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app.css">');
-    }
-</script>
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>

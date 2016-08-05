@@ -7,3 +7,4 @@
         </ul>
     </div>
 </footer>
+<link rel="stylesheet" id="theme-style" href="admin/css/app.css">
