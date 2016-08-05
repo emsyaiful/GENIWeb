@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="bower_components/angular-loading-bar/src/loading-bar.css">
 <link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
 <link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog.min.css">
-<link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog-theme-default.min.css">
+<link rel="stylesheet" type="text/css" href="bower_components/ng-dialog/css/ngDialog-theme-default.css">
 <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
 <script type="text/javascript" src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
