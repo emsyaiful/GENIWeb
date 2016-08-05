@@ -19,15 +19,15 @@
 			            </tr>
 			        </thead>
 			        <tbody>
-			            <tr>
-			                <th scope="row">1</th>
-			                <td>Mark</td>
-			                <td>Otto</td>
-			                <td>@mdo</td>
-			                <td>Mark</td>
-			                <td>Otto</td>
-			                <td>@mdo</td>
-			                <td>&nbsp;<i class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-trash"></i></td>
+			            <tr ng-repeat="data in user">
+			                <th>{{$index+1}}</th>
+			                <td>{{data.user_name}}</td>
+			                <td>{{data.user_email}}</td>
+			                <td>{{data.user_company}}</td>
+			                <td>{{data.user_typecompany}}</td>
+			                <td>{{data.user_addresscompany}}</td>
+			                <td>{{data.user_timecreated}}</td>
+			                <td>&nbsp;<i ng-click="edit(data)" class="fa fa-pencil-square-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-trash"></i></td>
 			            </tr>
 			        </tbody>
 			    </table>

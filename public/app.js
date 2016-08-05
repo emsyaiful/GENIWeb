@@ -1,4 +1,4 @@
-var app = angular.module('mainApp', ['ngRoute'])
+var app = angular.module('mainApp', ['ngRoute', 'ngDialog'])
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
@@ -7,9 +7,22 @@ app.config(['$routeProvider', function($routeProvider) {
 		controller: 'mgUserController'
 	})
 }]);
-app.controller('mgUserController', function($scope, $http) {
-	$scope.message = 'ini admin page lho ya'
+app.controller('mgUserController', function($scope, $http, ngDialog) {
+	$http.get('api/getUser', {}).success(function(data, status, headers, config) {
+		$scope.user = data
+		$scope.status = status
+    }).error(function(data, status, headers, config){
+    	swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    });
+    $scope.edit = function($user) {
+    	console.log($user);
+    	ngDialog.open({
+    		template: 'ngView/dialog/editDialog.html',
+    		className: 'ngdialog-theme-default'
+    	});
+    }
 });
+
 app.controller('loginController', function($scope, $http) {
 	$scope.submit = function() {
 		$http.post('api/login', $scope.data).success(function(data, status, headers, config) {

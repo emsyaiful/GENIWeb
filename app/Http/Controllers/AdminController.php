@@ -15,7 +15,6 @@ class AdminController extends Controller
 		$user = User::where($where)->get();
 		return response()->json($user);
 	}
-
 	public function alterUser(Request $request) {
 		$input = $request->all();
 		$id = $input['id'];
