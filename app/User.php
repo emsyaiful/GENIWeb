@@ -14,7 +14,7 @@ class User extends Authenticatable
     protected $table = 'gen_0101_user';
     protected $primaryKey = 'id';
     protected $fillable = [
-        'password', 'user_email', 'user_name', 'user_company', 'user_typecompany', 'user_useraddresscompany', 'user_timecreated', 'user_tokenrest', 'user_isactive', 'user_isadmin'
+        'password', 'user_email', 'user_name', 'user_company', 'user_typecompany', 'user_addresscompany', 'user_timecreated', 'user_tokenrest', 'user_isactive', 'user_isadmin', 'deleted_at'
     ];
 
     /**

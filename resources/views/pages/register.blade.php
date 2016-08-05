@@ -15,7 +15,7 @@
                     <input ng-model="data.user_email" type="email" name="user_email" id="inputEmail" class="form-control" placeholder="Email address" required>
                     <input ng-model="data.user_company" type="text" name="user_company" id="inputCName" class="form-control" placeholder="Your Company Name" required>
                     <input ng-model="data.user_typecompany" type="text" name="user_type" id="inputCType" class="form-control" placeholder="Your Company Type" required>
-                    <textarea ng-model="data.user_useraddresscompany" placeholder="Your Company Address" id="inputCAddr" name="user_addr" class="form-control" required style="height:44px"></textarea>
+                    <textarea ng-model="data.user_addresscompany" placeholder="Your Company Address" id="inputCAddr" name="user_addr" class="form-control" required style="height:44px"></textarea>
                     <!-- <div id="remember" class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Remember me

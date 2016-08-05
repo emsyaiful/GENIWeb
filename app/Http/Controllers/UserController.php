@@ -13,11 +13,6 @@ use App\User;
 
 class UserController extends Controller
 {
-    public function getUser(){
-    	$user = Userlist::all();
-    	return Response::json($user);
-    }
-
     public function hash() {
     	$login = User::all();
     	foreach ($login as $key => $value) {
