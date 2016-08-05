@@ -50,10 +50,15 @@ Route::get('/register', function() {
 // api
 Route::group(['prefix' => 'api'], function()
 {
+	// authentification
 	Route::post('register', 'AuthenticateController@register');
 	Route::post('login', 'AuthenticateController@login');
 	Route::post('reset', 'AuthenticateController@restPass');
 	Route::get('reset', 'AuthenticateController@restPass');
+
+	// admin page
+	Route::get('/getUser', 'AdminController@getUser');
+	Route::post('/alterUser', 'AdminController@alterUser');
 });
 
 // data
