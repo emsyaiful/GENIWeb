@@ -1,0 +1,40 @@
+<div class="container">
+	<div class="card">
+		<div class="card-block">
+			<div class="col-md-2 col-md-offset-11" style="margin-bottom: 20px;">
+	            <button class="btn btn-outline btn-primary btn-lg " ui-sref="create" uib-tooltip="Create"><i class="fa fa-file-text"></i></button>
+	        </div>
+			<div class="card-title-block">
+				<h3 class="title">Daftar Berita</h3>
+			</div>
+			<section class="example">
+			    <table class="table table-hover">
+			        <thead style="font-size:14px">
+			            <tr>
+			                <th>No.</th>
+			                <th>Title</th>
+			                <th>Content</th>
+			                <th>Image</th>
+			                <th>Posting Time</th>
+			                <th>Action</th>
+			            </tr>
+			        </thead>
+			        <tbody style="font-size:13px">
+			            <tr ng-repeat="data in data">
+			                <th>1</th>
+			                <td>dimakan harimau</td>
+			                <td>hari jumat, pulang dari kbs terus dimakan harimau</td>
+			                <td>d/aa/aa</td>
+			                <td>20-01-16</td>
+			                <td style="font-size:16px">
+			                	<i ng-click="" class="fa fa-pencil-square-o" onmouseover='this.style.cursor="pointer"'></i>
+			                	&nbsp;&nbsp;
+			                	<i ng-click="" class="fa fa-trash" onmouseover='this.style.cursor="pointer"'></i>
+			                </td>
+			            </tr>
+			        </tbody>
+			    </table>
+			</section>
+		</div>
+	</div>
+</div>
