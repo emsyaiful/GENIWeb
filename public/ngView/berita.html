@@ -2,7 +2,7 @@
 	<div class="card">
 		<div class="card-block">
 			<div class="col-md-2 col-md-offset-11" style="margin-bottom: 20px;">
-	            <button class="btn btn-outline btn-primary btn-lg " ui-sref="create" uib-tooltip="Create"><i class="fa fa-file-text"></i></button>
+	            <button ng-click="new()" class="btn btn-outline btn-primary btn-lg " ui-sref="create" uib-tooltip="Create"><i class="fa fa-file-text"></i></button>
 	        </div>
 			<div class="card-title-block">
 				<h3 class="title">Daftar Berita</h3>
@@ -20,7 +20,7 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr ng-repeat="data in data">
+			            <tr>
 			                <th>1</th>
 			                <td>dimakan harimau</td>
 			                <td>hari jumat, pulang dari kbs terus dimakan harimau</td>

@@ -18,4 +18,8 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'ngView/riwayatBayar.html',
 		controller: 'riwayatBController'
 	})
+	.when('/berita', {
+		templateUrl: 'ngView/berita.html',
+		controller: 'beritaController'
+	})
 }]);
