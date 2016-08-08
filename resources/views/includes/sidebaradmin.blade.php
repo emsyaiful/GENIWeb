@@ -16,13 +16,13 @@
                     </ul>
                 </li>
                 <li>
-                    <a href=""> <i class="fa fa-fax fa-fw"></i> Tagihan</a>
+                    <a href="#tagihan"> <i class="fa fa-fax fa-fw"></i> Tagihan</a>
                 </li>
                 <li>
                     <a href=""> <i class="fa fa-credit-card"></i> Pembayaran <i class="fa arrow"></i> </a>
                     <ul>
-                        <li> <a href="charts-flot.html">Daftar Pembayaran</a> </li>
-                        <li> <a href="charts-morris.html">Riwayat Pembayaran</a> </li>
+                        <li> <a href="#daftarBayar">Daftar Pembayaran</a> </li>
+                        <li> <a href="#riwayatBayar">Riwayat Pembayaran</a> </li>
                     </ul>
                 </li>
                 <li>
