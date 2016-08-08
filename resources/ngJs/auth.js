@@ -12,8 +12,7 @@ app.controller('loginController', function($scope, $http) {
 app.controller('registerController', function($scope, $http) {
 	$scope.status = ''
 	$scope.submit = function() {
-		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {
-			
+		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {	
 			if (data == 'exist') {
 				$scope.status = data
 			} else {

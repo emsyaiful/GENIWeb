@@ -57,8 +57,9 @@ Route::group(['prefix' => 'api'], function()
 	Route::get('reset', 'AuthenticateController@restPass');
 
 	// admin page
-	Route::get('/getUser', 'AdminController@getUser');
-	Route::post('/alterUser', 'AdminController@alterUser');
+	Route::get('getUser', 'AdminController@getUser');
+	Route::put('alterUser', 'AdminController@alterUser');
+	Route::put('delUser', 'AdminController@delUser');
 });
 
 // data

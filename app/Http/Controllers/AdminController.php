@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use JWTAuth;
+use Carbon;
 
 class AdminController extends Controller
 {
@@ -19,12 +20,18 @@ class AdminController extends Controller
 		$input = $request->all();
 		$id = $input['id'];
 		$user = User::find($id);
-		$user->user_name = $input['name'];
-		$user->user_email = $input['email'];
-		$user->user_company = $input['company'];
-		$user->user_addresscompany = $input['address'];
-		$user->user_typecompany = $input['typecompany'];
+		$user->user_name = $input['user_name'];
+		$user->user_email = $input['user_email'];
+		$user->user_company = $input['user_company'];
+		$user->user_addresscompany = $input['user_addresscompany'];
+		$user->user_typecompany = $input['user_typecompany'];
 		$user->save();
-		return response()->json(['result'=>true]);
+	}
+	public function delUser(Request $request) {
+		$input = $request->all();
+		$id = $input['id'];
+		$user = User::find($id);
+		$user->deleted_at = Carbon\Carbon::now();
+		$user->save();
 	}
 }

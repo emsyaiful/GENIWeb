@@ -7,7 +7,7 @@ app.config(['$routeProvider', function($routeProvider) {
 		controller: 'mgUserController'
 	})
 }]);
-app.controller('mgUserController', function($scope, $http, ngDialog) {
+app.controller('mgUserController', function($scope, $http, $rootScope, ngDialog) {
 	$http.get('api/getUser', {}).success(function(data, status, headers, config) {
 		$scope.user = data
 		$scope.status = status
@@ -15,11 +15,37 @@ app.controller('mgUserController', function($scope, $http, ngDialog) {
     	swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
     });
     $scope.edit = function($user) {
-    	console.log($user);
+    	$rootScope.editUser = $user
     	ngDialog.open({
     		template: 'ngView/dialog/editDialog.html',
     		className: 'ngdialog-theme-default'
     	});
+    }
+    $scope.delete = function($user) {
+        swal({
+            title: "Anda yakin?",
+            text: "Pengguna "+$user.user_name+" akan dihapus!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false },
+            function(){
+                $http.put('api/delUser', $user, {}).success(function(data, status, headers, config) {   
+            swal('Sukses', 'Pengguna telah dihapus', 'success');
+                }).error(function(data, status, headers, config){
+                    swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
+                });
+            });
+    }
+});
+app.controller('edtUserController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.submit = function() {
+        $http.put('api/alterUser', $scope.editUser, {}).success(function(data, status, headers, config) {   
+            swal('Sukses', 'Penyuntingan data berhasil', 'success');
+        }).error(function(data, status, headers, config){
+            swal('Error', 'Ada kesalahan dalam penyuntingan data', 'error');
+        });
     }
 });
 
@@ -37,8 +63,7 @@ app.controller('loginController', function($scope, $http) {
 app.controller('registerController', function($scope, $http) {
 	$scope.status = ''
 	$scope.submit = function() {
-		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {
-			
+		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {	
 			if (data == 'exist') {
 				$scope.status = data
 			} else {
