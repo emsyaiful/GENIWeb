@@ -81,7 +81,11 @@ app.controller('daftarBController', function($scope, $http, $rootScope, ngDialog
     }
 });
 app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialog) {
-    $scope.message = 'ini pesan tagihan'
+    $http.get('api/riwayat', {}).success(function(data, status, headers, config) {
+        $scope.data = data
+    }).error(function(data, status, headers, config){
+        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    });
 });
 
 app.controller('loginController', function($scope, $http) {

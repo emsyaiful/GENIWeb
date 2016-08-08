@@ -46,4 +46,9 @@ class AdminController extends Controller
 		$payment->payment_isconfirmed = 1;
 		$payment->save();
 	}
+	public function getRiwayat() {
+		$where = array('payment_isconfirmed' => 1);
+		$riwayat = Payment::where($where)->get();
+		return response()->json($riwayat);
+	}
 }

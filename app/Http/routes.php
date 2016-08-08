@@ -62,6 +62,7 @@ Route::group(['prefix' => 'api'], function()
 	Route::put('delUser', 'AdminController@delUser');
 	Route::get('payment', 'AdminController@getPay');
 	Route::put('payment', 'AdminController@confirmPay');
+	Route::get('riwayat', 'AdminController@getRiwayat');
 });
 
 // data
