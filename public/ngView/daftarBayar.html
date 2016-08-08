@@ -1,4 +1,4 @@
-<div class="container" ng-controller="">
+<div class="container">
 	<div class="card">
 		<div class="card-block">
 			<div class="card-title-block">
@@ -15,21 +15,21 @@
 			                <th>Description</th>
 			                <th>Payslip</th>
 			                <th>Payment Date</th>
-                            <th>Status</th>
+                            <!-- <th>Status</th> -->
                             <th>Action</th>
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr ng-repeat="">
-			                <th>1</th>
-			                <td>wiuwiu</td>
-			                <td>sasa</td>
-			                <td>BRI</td>
-			                <td>wiuwiwuwiwuwu</td>
-			                <td>1192121</td>
-			                <td>lek iso datepicker</td>
-			                <td>confirmed / not confirmed</td>
-			                <td>button gawe confirm</td>
+			            <tr ng-repeat="pay in data">
+			                <th>{{$index+1}}</th>
+			                <td>{{pay.payment_username}}</td>
+			                <td>{{pay.payment_email}}</td>
+			                <td>{{pay.payment_bank}}</td>
+			                <td>{{pay.payment_description}}</td>
+			                <td>{{pay.payment_payslip}}</td>
+			                <td>{{pay.payment_timecreated}}</td>
+			                <td ng-if="pay.payment_isconfirmed == 0" ng-click="confirm(pay)"><button class="btn btn-danger">Not Confirmed</button></td>
+			                <td ng-if="pay.payment_isconfirmed != 0"><button class="btn btn-success" disabled>Confirmed</button></td>
 			            </tr>
 			        </tbody>
 			    </table>

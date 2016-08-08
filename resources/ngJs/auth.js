@@ -1,6 +1,6 @@
 app.controller('loginController', function($scope, $http) {
 	$scope.submit = function() {
-		$http.post('api/login', $scope.data).success(function(data, status, headers, config) {
+		$http.post('api/login', $scope.data, {}).success(function(data, status, headers, config) {
 			$scope.user = data
 			$scope.status = status
         }).error(function(data, status, headers, config){
@@ -12,7 +12,7 @@ app.controller('loginController', function($scope, $http) {
 app.controller('registerController', function($scope, $http) {
 	$scope.status = ''
 	$scope.submit = function() {
-		$http.post('api/register', $scope.data).success(function(data, status, headers, config) {	
+		$http.post('api/register', $scope.data, {}).success(function(data, status, headers, config) {	
 			if (data == 'exist') {
 				$scope.status = data
 			} else {

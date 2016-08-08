@@ -39,3 +39,26 @@ app.controller('edtUserController', function($scope, $http, $rootScope, ngDialog
         });
     }
 });
+app.controller('tagihanController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.message = 'ini pesan tagihan'
+});
+app.controller('daftarBController', function($scope, $http, $rootScope, ngDialog) {
+    $http.get('api/payment', {}).success(function(data, status, headers, config) {
+        $scope.data = data
+    }).error(function(data, status, headers, config){
+        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    });
+    $scope.confirm = function($payment) {
+        $http.put('api/payment', $payment, {}).success(function(data, status, headers, config) {
+            $http.get('api/payment', {}).success(function(data, status, headers, config) {
+                $scope.data = data
+            })
+            swal('Sukses', 'Konfirmasi pembayaran berhasil', 'success');
+        }).error(function(data, status, headers, config){
+            swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+        });
+    }
+});
+app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.message = 'ini pesan tagihan'
+});

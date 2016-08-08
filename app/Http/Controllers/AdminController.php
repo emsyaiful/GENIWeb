@@ -8,10 +8,11 @@ use App\Http\Requests;
 use App\User;
 use JWTAuth;
 use Carbon;
+use App\Models\Payment;
 
 class AdminController extends Controller
 {
-	public function getUser(Request $request) {
+	public function getUser() {
 		$where = array('deleted_at' => null);
 		$user = User::where($where)->get();
 		return response()->json($user);
@@ -33,5 +34,16 @@ class AdminController extends Controller
 		$user = User::find($id);
 		$user->deleted_at = Carbon\Carbon::now();
 		$user->save();
+	}
+	public function getPay() {
+		$payment = Payment::all();
+		return response()->json($payment);
+	}
+	public function confirmPay(Request $request) {
+		$input = $request->all();
+		$id = $input['payment_id'];
+		$payment = Payment::find($id);
+		$payment->payment_isconfirmed = 1;
+		$payment->save();
 	}
 }

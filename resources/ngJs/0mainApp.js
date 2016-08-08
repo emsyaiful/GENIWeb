@@ -6,4 +6,16 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'ngView/mgUser.html',
 		controller: 'mgUserController'
 	})
+	.when('/tagihan', {
+		templateUrl: 'ngView/tagihan.html',
+		controller: 'tagihanController'
+	})
+	.when('/daftarBayar', {
+		templateUrl: 'ngView/daftarBayar.html',
+		controller: 'daftarBController'
+	})
+	.when('/riwayatBayar', {
+		templateUrl: 'ngView/riwayatBayar.html',
+		controller: 'riwayatBController'
+	})
 }]);
