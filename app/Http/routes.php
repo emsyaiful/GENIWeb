@@ -47,6 +47,10 @@ Route::get('/register', function() {
 	return view('pages/register');
 });
 
+Route::get('/konfirmasi', function() {
+	return view('pages/konfirmasi');
+});
+
 // api
 Route::group(['prefix' => 'api'], function()
 {
