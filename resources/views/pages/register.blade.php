@@ -24,7 +24,7 @@
                     <button ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="submit(data)">Sign Up</button>
                 </form>
                 Sudah punya akun? Masuk 
-                <a href="#" class="forgot-password">
+                <a href="/login" class="forgot-password">
                     di sini
                 </a>
             </div><!-- /card-container -->

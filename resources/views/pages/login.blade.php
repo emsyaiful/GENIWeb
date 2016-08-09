@@ -23,7 +23,7 @@
                     <button  ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="submit(data)">Sign in</button>
                 </form><!-- /form -->
                 Belum punya akun? Daftar 
-                <a href="#" class="forgot-password">
+                <a href="/register" class="forgot-password">
                     di sini
                 </a>
             </div><!-- /card-container -->

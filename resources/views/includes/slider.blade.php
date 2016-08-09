@@ -12,7 +12,7 @@
           <div class="caption">
             <h1 class="animated fadeInLeftBig">Belum Punya Akun?</h1>
             <p class="animated fadeInRightBig">Silakan Daftar Sekarang</p>
-            <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Daftar</a>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="/register">Daftar</a>
           </div>
         </div>
         <div class="item" style="background-image: url(images/slider/5.jpg)">
