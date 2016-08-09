@@ -22,4 +22,8 @@ app.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'ngView/berita.html',
 		controller: 'beritaController'
 	})
+	.when('/pesanMasuk', {
+		templateUrl: 'ngView/pesanMasuk.html',
+		controller: 'pesanController'
+	})
 }]);

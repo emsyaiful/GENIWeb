@@ -9,6 +9,7 @@ use App\User;
 use JWTAuth;
 use Carbon;
 use App\Models\Payment;
+use App\Models\Pesan;
 
 class AdminController extends Controller
 {
@@ -50,5 +51,17 @@ class AdminController extends Controller
 		$where = array('payment_isconfirmed' => 1);
 		$riwayat = Payment::where($where)->get();
 		return response()->json($riwayat);
+	}
+	public function getPesan() {
+		$where = array('deleted_at' => null);
+		$pesan = Pesan::where($where)->get();
+		return response()->json($pesan);
+	}
+	public function delPesan(Request $request) {
+		$input = $request->all();
+		$id = $input['contact_id'];
+		$pesan = Pesan::find($id);
+		$pesan->deleted_at = Carbon\Carbon::now();
+		$pesan->save();
 	}
 }

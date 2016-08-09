@@ -22,8 +22,12 @@ app.controller('mgUserController', function($scope, $http, $rootScope, ngDialog)
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false },
             function(){
-                $http.put('api/delUser', $user, {}).success(function(data, status, headers, config) {   
-            swal('Sukses', 'Pengguna telah dihapus', 'success');
+                $http.put('api/delUser', $user, {}).success(function(data, status, headers, config) {
+                $http.get('api/getUser', {}).success(function(data, status, headers, config) {
+                    $scope.user = data
+                    $scope.status = status
+                }) 
+                    swal('Sukses', 'Pengguna telah dihapus', 'success');
                 }).error(function(data, status, headers, config){
                     swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
                 });
@@ -34,9 +38,11 @@ app.controller('edtUserController', function($scope, $http, $rootScope, ngDialog
     $scope.submit = function() {
         $http.put('api/alterUser', $scope.editUser, {}).success(function(data, status, headers, config) {   
             swal('Sukses', 'Penyuntingan data berhasil', 'success');
+            ngDialog.close()
         }).error(function(data, status, headers, config){
             swal('Error', 'Ada kesalahan dalam penyuntingan data', 'error');
         });
+
     }
 });
 app.controller('tagihanController', function($scope, $http, $rootScope, ngDialog) {
@@ -76,4 +82,34 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
 });
 app.controller('inputBeritaController', function($scope, $http, $rootScope, ngDialog) {
     $scope.message = 'ini pesan tagihan'
+});
+app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) {
+    $http.get('api/pesan', {}).success(function(data, status, headers, config) {
+        $scope.data = data
+    }).error(function(data, status, headers, config){
+        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    });
+    $scope.detail = function($pesan) {
+        console.log($pesan)
+    };
+    $scope.delete = function($pesan) {
+        swal({
+            title: "Anda yakin?",
+            text: "Pesan dari "+$pesan.contact_name+" akan dihapus!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false },
+            function(){
+                $http.put('api/pesan', $pesan, {}).success(function(data, status, headers, config) {
+                    $http.get('api/pesan', {}).success(function(data, status, headers, config) {
+                        $scope.data = data
+                    })
+                    swal('Sukses', 'Pengguna telah dihapus', 'success');
+                }).error(function(data, status, headers, config){
+                    swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
+                });
+            });
+    }
 });

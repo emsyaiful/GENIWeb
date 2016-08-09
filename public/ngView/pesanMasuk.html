@@ -19,13 +19,13 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr>
-			                <th>1</th>
-			                <td>renanda</td>
-			                <td>renanda@gmail.com</td>
-			                <td>wiuwiwuwiu</td>
+			            <tr ng-repeat="pesan in data">
+			                <th>{{$index+1}}</th>
+			                <td  ng-click="detail(pesan)">{{pesan.contact_name}}</td>
+			                <td  ng-click="detail(pesan)">{{pesan.contact_email}}</td>
+			                <td  ng-click="detail(pesan)">{{pesan.contact_subject}}</td>
 			                <td style="font-size:16px">
-			                	<i ng-click="" class="fa fa-pencil-search" onmouseover='this.style.cursor="pointer"'></i>
+			                	<i ng-click="delete(pesan)" class="fa fa-trash" onmouseover='this.style.cursor="pointer"'></i>
 			                </td>
 			            </tr>
 			        </tbody>
