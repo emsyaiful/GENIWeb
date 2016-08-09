@@ -66,3 +66,14 @@ app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialo
         swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
     });
 });
+app.controller('beritaController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.new = function() {
+        ngDialog.open({
+            template: 'ngView/dialog/inputBeritaDialog.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
+});
+app.controller('inputBeritaController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.message = 'ini pesan tagihan'
+});
