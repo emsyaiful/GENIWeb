@@ -103,7 +103,7 @@ app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialo
 });
 app.controller('beritaController', function($scope, $http, $rootScope, ngDialog) {
     $http.get('api/berita', {}).success(function(data, status, headers, config) {
-        $scope.data = data
+        $rootScope.data = data
     }).error(function(data, status, headers, config){
         swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
     });
@@ -112,19 +112,13 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
         allowedContent: true,
         entities: false
     };
-    $scope.new = function() {
-        ngDialog.open({
-            template: 'ngView/dialog/inputBeritaDialog.html',
-            className: 'ngdialog-theme-default'
-        });
-    }
     $scope.submit = function($berita) {
         $http.post('api/berita', $berita, {}).success(function(data, status, headers, config) {
-            $http.get('api/berita', {}).success(function(data, status, headers, config) {
-            $scope.data = data
-        })
             ngDialog.close()
             swal('Sukses', 'Berita berhasil di publish', 'success');
+             $http.get('api/berita', {}).success(function(data, status, headers, config) {
+                $rootScope.data = data
+            })
         }).error(function(data, status, headers, config){
             swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
         });
@@ -150,7 +144,14 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
             });
     }
     $scope.edit = function($berita) {
-        $rootScope.data = $berita
+        $rootScope.berita = $berita
+        ngDialog.open({
+            template: 'ngView/dialog/inputBeritaDialog.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
+    $scope.new = function() {
+        $rootScope.berita = null
         ngDialog.open({
             template: 'ngView/dialog/inputBeritaDialog.html',
             className: 'ngdialog-theme-default'

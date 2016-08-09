@@ -81,8 +81,8 @@ class AdminController extends Controller
 			$berita->news_content = $input['news_content'];
 			$berita->news_image = $input['news_image'];
 			$berita->news_timecreated = Carbon\Carbon::now();
+			$berita->save();
 		}
-		
 	}
 	public function delBerita($id) {
 		$berita = Berita::find($id);
