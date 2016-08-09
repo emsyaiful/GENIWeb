@@ -29,7 +29,7 @@
                     <a href="#berita"> <i class="fa fa-pencil-square-o"></i> Berita</a>
                 </li>
                 <li>
-                    <a href="forms.html"> <i class="fa fa-envelope-o"></i> Pesan Masuk </a>
+                    <a href="#pesanMasuk"> <i class="fa fa-envelope-o"></i> Pesan Masuk </a>
                 </li>
             </ul>
         </nav>
