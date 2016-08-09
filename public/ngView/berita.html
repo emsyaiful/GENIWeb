@@ -20,16 +20,16 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr>
-			                <th>1</th>
-			                <td>dimakan harimau</td>
-			                <td>hari jumat, pulang dari kbs terus dimakan harimau</td>
-			                <td>d/aa/aa</td>
-			                <td>20-01-16</td>
+			            <tr ng-repeat="berita in data">
+			                <th>{{$index+1}}</th>
+			                <td>{{berita.news_title}}</td>
+			                <td>{{berita.news_content}}</td>
+			                <td>{{berita.news_image}}</td>
+			                <td>{{berita.news_timecreated}}</td>
 			                <td style="font-size:16px">
-			                	<i ng-click="" class="fa fa-pencil-square-o" onmouseover='this.style.cursor="pointer"'></i>
+			                	<i ng-click="edit(berita)" class="fa fa-pencil-square-o" onmouseover='this.style.cursor="pointer"'></i>
 			                	&nbsp;&nbsp;
-			                	<i ng-click="" class="fa fa-trash" onmouseover='this.style.cursor="pointer"'></i>
+			                	<i ng-click="delete(berita)" class="fa fa-trash" onmouseover='this.style.cursor="pointer"'></i>
 			                </td>
 			            </tr>
 			        </tbody>

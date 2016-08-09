@@ -72,6 +72,11 @@ Route::group(['prefix' => 'api'], function()
 
 	Route::get('pesan', 'AdminController@getPesan');
 	Route::put('pesan', 'AdminController@delPesan');
+
+	Route::get('berita', 'AdminController@getBerita');
+	Route::post('berita', 'AdminController@pubBerita');
+	Route::put('berita', 'AdminController@editBerita');
+	Route::put('berita/{id}', 'AdminController@delBerita');
 });
 
 // data

@@ -1,4 +1,4 @@
-var app = angular.module('mainApp', ['ngRoute', 'ngDialog'])
+var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor'])
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
@@ -102,7 +102,55 @@ app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialo
     });
 });
 app.controller('beritaController', function($scope, $http, $rootScope, ngDialog) {
+    $http.get('api/berita', {}).success(function(data, status, headers, config) {
+        $scope.data = data
+    }).error(function(data, status, headers, config){
+        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    });
+    $scope.options = {
+        language: 'en',
+        allowedContent: true,
+        entities: false
+    };
     $scope.new = function() {
+        ngDialog.open({
+            template: 'ngView/dialog/inputBeritaDialog.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
+    $scope.submit = function($berita) {
+        $http.post('api/berita', $berita, {}).success(function(data, status, headers, config) {
+            $http.get('api/berita', {}).success(function(data, status, headers, config) {
+            $scope.data = data
+        })
+            ngDialog.close()
+            swal('Sukses', 'Berita berhasil di publish', 'success');
+        }).error(function(data, status, headers, config){
+            swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+        });
+    }
+    $scope.delete = function($berita) {
+        swal({
+            title: "Anda yakin?",
+            text: "Berita "+$berita.news_title+" akan dihapus!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false },
+            function(){
+                $http.put('api/berita/'+$berita.news_id, {}, {}).success(function(data, status, headers, config) {
+                    $http.get('api/berita', {}).success(function(data, status, headers, config) {
+                        $scope.data = data
+                    })
+                    swal('Sukses', 'Berita berhasil dihapus', 'success');
+                }).error(function(data, status, headers, config){
+                    swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+                });
+            });
+    }
+    $scope.edit = function($berita) {
+        $rootScope.data = $berita
         ngDialog.open({
             template: 'ngView/dialog/inputBeritaDialog.html',
             className: 'ngdialog-theme-default'
@@ -110,7 +158,22 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
     }
 });
 app.controller('inputBeritaController', function($scope, $http, $rootScope, ngDialog) {
-    $scope.message = 'ini pesan tagihan'
+    // $scope.options = {
+    //     language: 'en',
+    //     allowedContent: true,
+    //     entities: false
+    // };
+    // $scope.submit = function($berita) {
+    //     $http.post('api/berita', $berita, {}).success(function(data, status, headers, config) {
+    //         $http.get('api/berita', {}).success(function(data, status, headers, config) {
+    //         $rootScope.data = data
+    //     })
+    //         ngDialog.close()
+    //         swal('Sukses', 'Berita berhasil di publish', 'success');
+    //     }).error(function(data, status, headers, config){
+    //         swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+    //     });
+    // }
 });
 app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) {
     $http.get('api/pesan', {}).success(function(data, status, headers, config) {

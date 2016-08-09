@@ -10,6 +10,7 @@ use JWTAuth;
 use Carbon;
 use App\Models\Payment;
 use App\Models\Pesan;
+use App\Models\Berita;
 
 class AdminController extends Controller
 {
@@ -63,5 +64,29 @@ class AdminController extends Controller
 		$pesan = Pesan::find($id);
 		$pesan->deleted_at = Carbon\Carbon::now();
 		$pesan->save();
+	}
+	public function getBerita() {
+		$where = array('deleted_at' => null);
+		$berita = Berita::where($where)->get();
+		return response()->json($berita);
+	}
+	public function pubBerita(Request $request) {
+		$input = $request->all();
+		if (!isset($input['news_id'])) {
+			Berita::create($input);
+		}else{
+			$id = $input['news_id'];
+			$berita = Berita::find($id);
+			$berita->news_title = $input['news_title'];
+			$berita->news_content = $input['news_content'];
+			$berita->news_image = $input['news_image'];
+			$berita->news_timecreated = Carbon\Carbon::now();
+		}
+		
+	}
+	public function delBerita($id) {
+		$berita = Berita::find($id);
+		$berita->deleted_at = Carbon\Carbon::now();
+		$berita->save();
 	}
 }

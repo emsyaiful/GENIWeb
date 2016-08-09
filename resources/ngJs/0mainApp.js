@@ -1,4 +1,4 @@
-var app = angular.module('mainApp', ['ngRoute', 'ngDialog'])
+var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor'])
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
