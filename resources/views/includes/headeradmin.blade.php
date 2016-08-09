@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" style="position:fixed;">
     <div class="header-block header-block-nav">
         <ul class="nav-profile">
             <li class="profile dropdown">

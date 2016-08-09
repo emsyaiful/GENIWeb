@@ -1,4 +1,4 @@
-<aside class="sidebar">
+<aside class="sidebar" style="position:fixed;">
     <div class="sidebar-container">
         <div class="sidebar-header">
             <div class="brand">

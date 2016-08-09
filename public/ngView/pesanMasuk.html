@@ -1,9 +1,6 @@
 <div class="container">
 	<div class="card">
 		<div class="card-block">
-			<div class="col-md-2 col-md-offset-11" style="margin-bottom: 20px;">
-	            <button ng-click="new()" class="btn btn-outline btn-primary btn-lg " ui-sref="create" uib-tooltip="Create"><i class="fa fa-file-text"></i></button>
-	        </div>
 			<div class="card-title-block">
 				<h3 class="title">Pesan Masuk</h3>
 			</div>
@@ -21,10 +18,12 @@
 			        <tbody style="font-size:13px">
 			            <tr ng-repeat="pesan in data">
 			                <th>{{$index+1}}</th>
-			                <td  ng-click="detail(pesan)">{{pesan.contact_name}}</td>
-			                <td  ng-click="detail(pesan)">{{pesan.contact_email}}</td>
-			                <td  ng-click="detail(pesan)">{{pesan.contact_subject}}</td>
+			                <td>{{pesan.contact_name}}</td>
+			                <td>{{pesan.contact_email}}</td>
+			                <td>{{pesan.contact_subject}}</td>
 			                <td style="font-size:16px">
+			                	<i ng-click="detail(pesan)" class="fa fa-search" onmouseover='this.style.cursor="pointer"'></i>
+			                	&nbsp;&nbsp;
 			                	<i ng-click="delete(pesan)" class="fa fa-trash" onmouseover='this.style.cursor="pointer"'></i>
 			                </td>
 			            </tr>
