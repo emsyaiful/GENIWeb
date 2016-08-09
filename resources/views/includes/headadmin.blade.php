@@ -18,5 +18,18 @@
 <script type="text/javascript" src="app.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
+    {};
+    var themeName = themeSettings.themeName || '';
+    if (themeName)
+    {
+        document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app-' + themeName + '.css">');
+    }
+    else
+    {
+        document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app.css">');
+    }
+</script>
 <script src="admin/js/vendor.js"></script>
 <script src="admin/js/app.js"></script>
