@@ -119,7 +119,11 @@ app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) 
         swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
     });
     $scope.detail = function($pesan) {
-        console.log($pesan)
+        $rootScope.pesan = $pesan
+        ngDialog.open({
+            template: 'ngView/dialog/detailPesan.html',
+            className: 'ngdialog-theme-default'
+        });
     };
     $scope.delete = function($pesan) {
         swal({
@@ -142,6 +146,7 @@ app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) 
             });
     }
 });
+
 
 app.controller('loginController', function($scope, $http) {
 	$scope.submit = function() {
