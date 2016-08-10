@@ -8,7 +8,7 @@
         </div>
         <nav class="menu">
             <ul class="nav metismenu" id="sidebar-menu">
-                <li class="active">
+                <li>
                     <a href=""><i class="fa fa-users"></i> Manajemen User <i class="fa arrow"></i></a>
                     <ul>
                         <li><a href="#mgUser">Pengguna Terdaftar</a></li>
