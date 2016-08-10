@@ -12,7 +12,7 @@
             <!-- <div ng-if="status.result == 'exist'" class="alert alert-danger text-center fadeInUp">Email sudah terdaftar</div> -->
             <h3 align="center">Konfirmasi Pembayaran</h3>
             <form class="form-signin" name="form">
-                <select class="form-control" name="input_bank">
+                <select class="form-control">
                     <option>Select Your Bank Account</option>
                     <option>BRI</option>
                     <option>BNI</option>
