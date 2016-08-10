@@ -9,7 +9,8 @@ app.controller('loginController', function($scope, $http, $rootScope, $localStor
         });
 	};
 });
-app.controller('registerController', function($scope, $http) {
+app.controller('registerController', function($scope, $http, $window, $rootScope, $location) {
+	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$scope.status = ''
 	$scope.submit = function() {
 		$http.post('api/register', $scope.data, {}).success(function(data, status, headers, config) {	
@@ -17,6 +18,7 @@ app.controller('registerController', function($scope, $http) {
 				$scope.status = data
 			} else {
 				swal('Sukses', 'Registrasi berhasil', 'success');
+				$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
 			}
         })
 	};
