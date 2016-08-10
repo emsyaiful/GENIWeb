@@ -24,6 +24,7 @@
     "sweetalert": "^1.1.3",
     "ng-dialog": "^0.6.2",
     "angular-ckeditor": "^1.0.3",
-    "ckeditor": "^4.5.10"
+    "ckeditor": "^4.5.10",
+    "ngstorage": "^0.3.11"
   }
 }

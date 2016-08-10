@@ -1,10 +1,13 @@
-app.controller('mgUserController', function($scope, $http, $rootScope, ngDialog) {
-	$http.get('api/getUser', {}).success(function(data, status, headers, config) {
-		$scope.user = data
-		$scope.status = status
-    }).error(function(data, status, headers, config){
-    	swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    });
+app.controller('mgUserController', function($scope, $rootScope, ngDialog, backend) {
+    $scope.reloadData = function() {
+        backend.get('api/getUser', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.user = response;
+            }
+        });
+    }
+    $scope.reloadData();
     $scope.edit = function($user) {
     	$rootScope.editUser = $user
     	ngDialog.open({
@@ -22,76 +25,85 @@ app.controller('mgUserController', function($scope, $http, $rootScope, ngDialog)
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false },
             function(){
-                $http.put('api/delUser', $user, {}).success(function(data, status, headers, config) {
-                $http.get('api/getUser', {}).success(function(data, status, headers, config) {
-                    $scope.user = data
-                    $scope.status = status
-                }) 
-                    swal('Sukses', 'Pengguna telah dihapus', 'success');
-                }).error(function(data, status, headers, config){
-                    swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
+                backend.put('api/delUser', $user, function(err, data) {
+                    if (err) swal('Error', err.toString(), 'error');
+                    else {
+                        $scope.reloadData()
+                        swal('Sukses', 'Akun telah dihapus', 'success');
+                    }
                 });
             });
     }
 });
-app.controller('edtUserController', function($scope, $http, $rootScope, ngDialog) {
+app.controller('edtUserController', function($scope, backend, $rootScope, ngDialog) {
     $scope.submit = function() {
-        $http.put('api/alterUser', $scope.editUser, {}).success(function(data, status, headers, config) {   
-            swal('Sukses', 'Penyuntingan data berhasil', 'success');
-            ngDialog.close()
-        }).error(function(data, status, headers, config){
-            swal('Error', 'Ada kesalahan dalam penyuntingan data', 'error');
+        backend.put('api/alterUser', $scope.editUser, function(err, data) {
+            if (err) swal('Error', err.toString(), 'error');
+            else {
+                swal('Sukses', 'Penyimpanan data sukses', 'success');
+                ngDialog.close()
+            }
         });
-
     }
 });
-app.controller('tagihanController', function($scope, $http, $rootScope, ngDialog) {
+app.controller('tagihanController', function($scope, backend, $rootScope, ngDialog) {
     $scope.message = 'ini pesan tagihan'
 });
-app.controller('daftarBController', function($scope, $http, $rootScope, ngDialog) {
-    $http.get('api/payment', {}).success(function(data, status, headers, config) {
-        $scope.data = data
-    }).error(function(data, status, headers, config){
-        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    });
+app.controller('daftarBController', function($scope, backend, $rootScope, ngDialog) {
+    $scope.reloadData = function() {
+        backend.get('api/payment', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
     $scope.confirm = function($payment) {
-        $http.put('api/payment', $payment, {}).success(function(data, status, headers, config) {
-            $http.get('api/payment', {}).success(function(data, status, headers, config) {
-                $scope.data = data
-            })
-            swal('Sukses', 'Konfirmasi pembayaran berhasil', 'success');
-        }).error(function(data, status, headers, config){
-            swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+        backend.put('api/payment', $payment, function(err, data) {
+            if (err) swal('Error', err.toString(), 'error');
+            else {
+                $scope.reloadData()
+                swal('Sukses', 'Pembayaran telah dikonfirmasi', 'success');
+            }
         });
     }
 });
-app.controller('riwayatBController', function($scope, $http, $rootScope, ngDialog) {
-    $http.get('api/riwayat', {}).success(function(data, status, headers, config) {
-        $scope.data = data
-    }).error(function(data, status, headers, config){
-        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    });
+app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog) {
+    $scope.reloadData = function() {
+        backend.get('api/riwayat', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
 });
-app.controller('beritaController', function($scope, $http, $rootScope, ngDialog) {
-    $http.get('api/berita', {}).success(function(data, status, headers, config) {
-        $rootScope.data = data
-    }).error(function(data, status, headers, config){
-        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    });
+app.controller('beritaController', function($scope, backend, $rootScope, ngDialog) {
+    $rootScope.reloadBerita = function() {
+        backend.get('api/berita', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $rootScope.data = response;
+            }
+        });
+    }
+    $rootScope.reloadBerita()
     $scope.options = {
         language: 'en',
         allowedContent: true,
         entities: false
     };
     $scope.submit = function($berita) {
-        $http.post('api/berita', $berita, {}).success(function(data, status, headers, config) {
-            ngDialog.close()
-            swal('Sukses', 'Berita berhasil di publish', 'success');
-             $http.get('api/berita', {}).success(function(data, status, headers, config) {
-                $rootScope.data = data
-            })
-        }).error(function(data, status, headers, config){
-            swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+        backend.post('api/berita', $berita, function(err, data) {
+            if (!err) {
+                ngDialog.close()
+                swal('Sukses', 'Penambahan data sukses', 'success');
+                $rootScope.reloadBerita()
+            } else {
+                swal('Error', 'Penambahan data gagal', 'error');
+            }
         });
     }
     $scope.delete = function($berita) {
@@ -104,13 +116,12 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false },
             function(){
-                $http.put('api/berita/'+$berita.news_id, {}, {}).success(function(data, status, headers, config) {
-                    $http.get('api/berita', {}).success(function(data, status, headers, config) {
-                        $scope.data = data
-                    })
-                    swal('Sukses', 'Berita berhasil dihapus', 'success');
-                }).error(function(data, status, headers, config){
-                    swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
+                backend.put('api/berita/'+$berita.news_id, {}, function(err, data) {
+                    if (err) swal('Error', err.toString(), 'error');
+                    else {
+                        $rootScope.reloadBerita()
+                        swal('Sukses', 'Berita dihapus', 'success');
+                    }
                 });
             });
     }
@@ -129,30 +140,21 @@ app.controller('beritaController', function($scope, $http, $rootScope, ngDialog)
         });
     }
 });
-app.controller('inputBeritaController', function($scope, $http, $rootScope, ngDialog) {
-    // $scope.options = {
-    //     language: 'en',
-    //     allowedContent: true,
-    //     entities: false
-    // };
-    // $scope.submit = function($berita) {
-    //     $http.post('api/berita', $berita, {}).success(function(data, status, headers, config) {
-    //         $http.get('api/berita', {}).success(function(data, status, headers, config) {
-    //         $rootScope.data = data
-    //     })
-    //         ngDialog.close()
-    //         swal('Sukses', 'Berita berhasil di publish', 'success');
-    //     }).error(function(data, status, headers, config){
-    //         swal('Error', 'Ada kesalahan dalam pemasukan data', 'error');
-    //     });
-    // }
-});
-app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) {
-    $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-        $scope.data = data
-    }).error(function(data, status, headers, config){
-        swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    });
+app.controller('pesanController', function($scope, backend, $rootScope, ngDialog) {
+    $scope.reloadData = function() {
+        backend.get('api/pesan', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
+    // $http.get('api/pesan', {}).success(function(data, status, headers, config) {
+    //     $scope.data = data
+    // }).error(function(data, status, headers, config){
+    //     swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+    // });
     $scope.detail = function($pesan) {
         $rootScope.pesan = $pesan
         ngDialog.open({
@@ -170,17 +172,24 @@ app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) 
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false },
             function(){
-                $http.put('api/pesan', $pesan, {}).success(function(data, status, headers, config) {
-                    $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-                        $scope.data = data
-                    })
-                    swal('Sukses', 'Pengguna telah dihapus', 'success');
-                }).error(function(data, status, headers, config){
-                    swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
+                backend.put('api/pesan', $pesan, function(err, data) {
+                    if (err) swal('Error', err.toString(), 'error');
+                    else {
+                        $scope.reloadData()
+                        swal('Sukses', 'Pesan dihapus', 'success');
+                    }
                 });
+                // $http.put('api/pesan', $pesan, {}).success(function(data, status, headers, config) {
+                //     $http.get('api/pesan', {}).success(function(data, status, headers, config) {
+                //         $scope.data = data
+                //     })
+                //     swal('Sukses', 'Pengguna telah dihapus', 'success');
+                // }).error(function(data, status, headers, config){
+                //     swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
+                // });
             });
     }
 });
-app.controller('konfirmasiController', function($scope, $http, $rootScope, ngDialog) {
+app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog) {
     $scope.message = 'ini konfirmasi '
 });
