@@ -210,8 +210,9 @@ app.controller('pesanController', function($scope, $http, $rootScope, ngDialog) 
             });
     }
 });
-
-
+app.controller('konfirmasiController', function($scope, $http, $rootScope, ngDialog) {
+    $scope.message = 'ini konfirmasi '
+});
 app.controller('loginController', function($scope, $http) {
 	$scope.submit = function() {
 		$http.post('api/login', $scope.data, {}).success(function(data, status, headers, config) {

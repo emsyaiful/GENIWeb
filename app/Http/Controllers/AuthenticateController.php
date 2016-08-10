@@ -37,7 +37,12 @@ class AuthenticateController extends Controller
             return response()->json(['error' => 'could_not_create_token'], 500);
         }
         $user = JWTAuth::toUser($token);
-        return response()->json($user);
+        if ($user->deleted_at != null) {
+            return response()->json(['error' => 'user not found'], 404);
+        }else{
+            $user->token = $token;
+            return response()->json($user);
+        }
     }
     public function restPass(Request $request)
     {

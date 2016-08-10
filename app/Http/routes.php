@@ -57,26 +57,32 @@ Route::group(['prefix' => 'api'], function()
 	// authentification
 	Route::post('register', 'AuthenticateController@register');
 	Route::post('login', 'AuthenticateController@login');
-	Route::post('reset', 'AuthenticateController@restPass');
-	Route::get('reset', 'AuthenticateController@restPass');
 
-	// admin page
-	Route::get('getUser', 'AdminController@getUser');
-	Route::put('alterUser', 'AdminController@alterUser');
-	Route::put('delUser', 'AdminController@delUser');
+	Route::group(['middleware' => 'jwt.auth'], function(){
+		Route::post('reset', 'AuthenticateController@restPass');
+		Route::get('reset', 'AuthenticateController@restPass');
 
-	Route::get('payment', 'AdminController@getPay');
-	Route::put('payment', 'AdminController@confirmPay');
+		// admin page
+		Route::get('getUser', 'AdminController@getUser');
+		Route::put('alterUser', 'AdminController@alterUser');
+		Route::put('delUser', 'AdminController@delUser');
 
-	Route::get('riwayat', 'AdminController@getRiwayat');
+		Route::get('payment', 'AdminController@getPay');
+		Route::put('payment', 'AdminController@confirmPay');
 
-	Route::get('pesan', 'AdminController@getPesan');
-	Route::put('pesan', 'AdminController@delPesan');
+		Route::get('riwayat', 'AdminController@getRiwayat');
 
-	Route::get('berita', 'AdminController@getBerita');
-	Route::post('berita', 'AdminController@pubBerita');
-	Route::put('berita', 'AdminController@editBerita');
-	Route::put('berita/{id}', 'AdminController@delBerita');
+		Route::get('pesan', 'AdminController@getPesan');
+		Route::put('pesan', 'AdminController@delPesan');
+
+		Route::get('berita', 'AdminController@getBerita');
+		Route::post('berita', 'AdminController@pubBerita');
+		Route::put('berita', 'AdminController@editBerita');
+		Route::put('berita/{id}', 'AdminController@delBerita');
+
+		Route::post('konfirmasi', 'AdminController@setConfirmasi');
+	});
+	
 });
 
 // data
