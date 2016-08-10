@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\User;
 use JWTAuth;
+use Hash;
 
 class AuthenticateController extends Controller
 {

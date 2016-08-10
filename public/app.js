@@ -1,11 +1,16 @@
 var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStorage'])
 
-app.service('backend', function($http, $rootScope, $localStorage) {
+app.service('backend', function($http, $rootScope, $localStorage, $location, $window) {
+	$http.defaults.headers.common['Authorization'] = $localStorage.token
 	this.get = function(address, data, callback) {
-		$http.defaults.headers.common['Authorization'] = $localStorage.token
         $http.get(address, data).success(function(data, status) {
             if (status == 200) {
                 callback(null, data);
+                if (data.error) {
+                	swal('Error', data.error, 'error');
+                	$rootScope.errRedirect = $location.$$host+':'+$location.$$port
+                	$window.location.href = 'http://'+$rootScope.errRedirect+'/login'
+                }
             } else {
                 callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));
             }
@@ -14,10 +19,14 @@ app.service('backend', function($http, $rootScope, $localStorage) {
         })
     };
     this.post = function(address, data, callback, config) {
-    	$http.defaults.headers.common['Authorization'] = $localStorage.token
         $http.post(address, data).success(function(data, status) {
             if (status == 200) {
                 callback(null, data);
+                if (data.error) {
+                	swal('Error', data.error, 'error');
+                	$rootScope.errRedirect = $location.$$host+':'+$location.$$port
+                	$window.location.href = 'http://'+$rootScope.errRedirect+'/login'
+                }
             } else {
                 callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));
             }
@@ -26,10 +35,14 @@ app.service('backend', function($http, $rootScope, $localStorage) {
         })
     };
     this.put = function(address, data, callback) {
-    	$http.defaults.headers.common['Authorization'] = $localStorage.token
         $http.put(address, data).success(function(data, status) {
             if (status == 200) {
                 callback(null, data);
+                if (data.error) {
+                	swal('Error', data.error, 'error');
+                	$rootScope.errRedirect = $location.$$host+':'+$location.$$port
+                	$window.location.href = 'http://'+$rootScope.errRedirect+'/login'
+                }
             } else {
                 callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));
             }
