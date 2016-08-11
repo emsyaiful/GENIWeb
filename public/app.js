@@ -1,4 +1,4 @@
-var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStorage', 'ngFileUpload'])
+var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStorage'])
 
 app.service('fileUpload', function ($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
