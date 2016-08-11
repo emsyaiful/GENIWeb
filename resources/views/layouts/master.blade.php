@@ -15,9 +15,11 @@
 			@include('includes.header')
 		</header>
 		
-
+		<div ng-app="mainApp" ng-controller="viewBerita">
+			@yield('content')
+		</div>
 		<!-- Content -->		
-		@yield('content')
+		
 
 		<!-- Footer -->
 		@include('includes.footer')

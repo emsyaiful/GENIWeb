@@ -124,17 +124,16 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-3" ng-repeat="berita in data">
           <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="folio-image">
-              <img class="img-responsive" src="images/portfolio/1.jpg" alt="">
+              <img class="img-responsive" src={{berita.news_image}} alt="">
             </div>
             <div class="overlay">
               <div class="overlay-content">
                 <div class="overlay-text">
                   <div class="folio-info">
-                    <h3>Time Hours</h3>
-                    <p>Design, Photography</p>
+                    <h3>{{berita.news_title}}</h3>
                   </div>
                   <div class="folio-overview">
                     <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="/detailberita" ><i class="fa fa-link"></i></a></span>

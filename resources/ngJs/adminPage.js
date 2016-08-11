@@ -96,13 +96,14 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
         entities: false
     };
     $scope.submit = function($berita) {
-        backend.post('api/berita', $berita, function(err, data) {
-            if (!err) {
-                ngDialog.close()
-                swal('Sukses', 'Penambahan data sukses', 'success');
+        var file = $scope.myFile;
+        console.dir(file);
+        console.log($scope.berita)
+        fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
+        if (err) swal('Error', err.toString(), 'error');
+            else {
                 $rootScope.reloadBerita()
-            } else {
-                swal('Error', 'Penambahan data gagal', 'error');
+                swal('Sukses', 'Berita diterbitkan', 'success');
             }
         });
     }
@@ -139,19 +140,6 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
             className: 'ngdialog-theme-default'
         });
     }
-
-    $scope.uploadFile = function(){
-       var file = $scope.myFile;
-       console.dir(file);
-       console.log($scope.berita)
-       fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
-        if (err) swal('Error', err.toString(), 'error');
-            else {
-                $rootScope.reloadBerita()
-                swal('Sukses', 'Berita diterbitkan', 'success');
-            }
-        });
-    };
 });
 app.controller('pesanController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {

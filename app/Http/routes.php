@@ -82,7 +82,7 @@ Route::group(['prefix' => 'api'], function()
 
 		Route::post('konfirmasi', 'AdminController@setConfirmasi');
 	});
-	
+	Route::get('beritaView', 'AdminController@getBerita');
 });
 
 // data
