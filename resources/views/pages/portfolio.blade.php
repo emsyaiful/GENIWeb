@@ -9,7 +9,7 @@
 			</div>
 			<div class="col-sm-8">
 				<div class="project-info">
-					<h3>[[ $berita['news_title'] ]]</h3>
+					<h2>[[ $berita['news_title'] ]]</h2>
 					{!! html_entity_decode($berita['news_content']) !!}
 				</div>
 			</div>
