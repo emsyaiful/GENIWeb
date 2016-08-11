@@ -9,6 +9,7 @@ use Hash;
 use App\Http\Requests;
 use App\Models\Userlist;
 use App\Models\ContactModel;
+use App\Models\Berita;
 use App\User;
 
 class UserController extends Controller
@@ -22,6 +23,18 @@ class UserController extends Controller
     			$value->save();
     		}
     	}
+    }
+
+    public function beritaTerbaru() {
+        $where = array('deleted_at' => null);
+        $berita = Berita::where($where)->orderBy('news_timecreated','DESC')->get();
+        return response()->json($berita);
+    }
+
+    public function detailBerita($id) {
+        $where = array('deleted_at' => null, 'news_id' => $id);
+        $berita = Berita::where($where)->get();
+        return view('pages/portfolio')->with('data',$berita);
     }
 
     public function contactUs(Request $request) {

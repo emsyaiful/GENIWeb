@@ -27,9 +27,7 @@ Route::get('/index', function () {
 
 Route::post('/contactus', 'UserController@contactUs');
 
-Route::get('/detailberita', function(){
-	return view('pages/portfolio');
-});
+Route::get('/detailberita/{id}',  'UserController@detailBerita');
 
 Route::get('/faq', function(){
 	return view('pages/faq');
@@ -82,7 +80,7 @@ Route::group(['prefix' => 'api'], function()
 
 		Route::post('konfirmasi', 'AdminController@setConfirmasi');
 	});
-	Route::get('beritaView', 'AdminController@getBerita');
+	Route::get('beritaView', 'UserController@beritaTerbaru');
 });
 
 // data

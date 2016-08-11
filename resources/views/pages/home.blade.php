@@ -124,10 +124,10 @@
     </div>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3" ng-repeat="berita in data">
+        <div class="col-sm-3" ng-repeat="berita in data | limitTo:4">
           <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="folio-image">
-              <img class="img-responsive" src={{berita.news_image}} alt="">
+              <img class="img-responsive" src={{berita.news_image}} alt="" style="height:300px">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -136,8 +136,8 @@
                     <h3>{{berita.news_title}}</h3>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="/detailberita" ><i class="fa fa-link"></i></a></span>
-                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="detailberita/{{berita.news_id}}" ><i class="fa fa-link"></i></a></span>
+                    <span class="folio-expand"><a href={{berita.news_image}} data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                   </div>
                 </div>
               </div>
