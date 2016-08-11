@@ -72,8 +72,17 @@ class AdminController extends Controller
 	}
 	public function pubBerita(Request $request) {
 		$input = $request->all();
+		$destinationPath = 'uploads';
+		$extension = $request->file('file')->getClientOriginalExtension();
+		$fileName = rand(11111,99999).'.'.$extension;
 		if (!isset($input['news_id'])) {
-			Berita::create($input);
+			$insert = array(
+				'news_title' => $request->input('title'),
+				'news_content' => $request->input('content'),
+				'news_image' => $destinationPath.'/'.$fileName,
+				'news_timecreated' => Carbon\Carbon::now()
+			);
+			Berita::create($insert);
 		}else{
 			$id = $input['news_id'];
 			$berita = Berita::find($id);
@@ -83,6 +92,9 @@ class AdminController extends Controller
 			$berita->news_timecreated = Carbon\Carbon::now();
 			$berita->save();
 		}
+		
+		$request->file('file')->move($destinationPath, $fileName);
+		// return response()->json($input);
 	}
 	public function delBerita($id) {
 		$berita = Berita::find($id);

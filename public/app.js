@@ -1,4 +1,47 @@
-var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStorage'])
+var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStorage', 'ngFileUpload'])
+
+app.service('fileUpload', function ($http, $rootScope, $localStorage, $location, $window) {
+	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
+	$http.defaults.headers.common['Authorization'] = $localStorage.token
+	this.uploadFileToUrl = function(title, content, file, uploadUrl, callback){
+		var fd = new FormData()
+		fd.append('file', file)
+		fd.append('title', title)
+		fd.append('content', content)
+		$http.post(uploadUrl, fd, {
+			transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+		}).success(function(data, status) {
+            if (status == 200) {
+                callback(null, data);
+                if (data.error) {
+                	swal('Error', data.error, 'error');
+                	$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
+                }
+            } else {
+                callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));
+            }
+        }).error(function() {
+            callback(new Error('Galat mengakses data karena masalah jaringan. Silahkan refresh.'));
+        })
+	}
+});
+
+app.directive('fileModel', ['$parse', function ($parse) {
+	return {
+		restrict: 'A',
+		link: function(scope, element, attrs) {
+		  var model = $parse(attrs.fileModel);
+		  var modelSetter = model.assign;
+		  
+		  element.bind('change', function(){
+		     scope.$apply(function(){
+		        modelSetter(scope, element[0].files[0]);
+		     });
+		  });
+		}
+	};
+}]);
 
 app.service('backend', function($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
@@ -159,7 +202,7 @@ app.controller('riwayatBController', function($scope, backend, $rootScope, ngDia
     }
     $scope.reloadData()
 });
-app.controller('beritaController', function($scope, backend, $rootScope, ngDialog) {
+app.controller('beritaController', function($scope, backend, $rootScope, ngDialog, fileUpload) {
     $rootScope.reloadBerita = function() {
         backend.get('api/berita', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
@@ -218,6 +261,19 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
             className: 'ngdialog-theme-default'
         });
     }
+
+    $scope.uploadFile = function(){
+       var file = $scope.myFile;
+       console.dir(file);
+       console.log($scope.berita)
+       fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
+        if (err) swal('Error', err.toString(), 'error');
+            else {
+                $rootScope.reloadBerita()
+                swal('Sukses', 'Berita diterbitkan', 'success');
+            }
+        });
+    };
 });
 app.controller('pesanController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
@@ -229,11 +285,6 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
         });
     }
     $scope.reloadData()
-    // $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-    //     $scope.data = data
-    // }).error(function(data, status, headers, config){
-    //     swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    // });
     $scope.detail = function($pesan) {
         $rootScope.pesan = $pesan
         ngDialog.open({
@@ -258,14 +309,6 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
                         swal('Sukses', 'Pesan dihapus', 'success');
                     }
                 });
-                // $http.put('api/pesan', $pesan, {}).success(function(data, status, headers, config) {
-                //     $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-                //         $scope.data = data
-                //     })
-                //     swal('Sukses', 'Pengguna telah dihapus', 'success');
-                // }).error(function(data, status, headers, config){
-                //     swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
-                // });
             });
     }
 });

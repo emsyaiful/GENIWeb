@@ -80,7 +80,7 @@ app.controller('riwayatBController', function($scope, backend, $rootScope, ngDia
     }
     $scope.reloadData()
 });
-app.controller('beritaController', function($scope, backend, $rootScope, ngDialog) {
+app.controller('beritaController', function($scope, backend, $rootScope, ngDialog, fileUpload) {
     $rootScope.reloadBerita = function() {
         backend.get('api/berita', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
@@ -139,6 +139,19 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
             className: 'ngdialog-theme-default'
         });
     }
+
+    $scope.uploadFile = function(){
+       var file = $scope.myFile;
+       console.dir(file);
+       console.log($scope.berita)
+       fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
+        if (err) swal('Error', err.toString(), 'error');
+            else {
+                $rootScope.reloadBerita()
+                swal('Sukses', 'Berita diterbitkan', 'success');
+            }
+        });
+    };
 });
 app.controller('pesanController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
@@ -150,11 +163,6 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
         });
     }
     $scope.reloadData()
-    // $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-    //     $scope.data = data
-    // }).error(function(data, status, headers, config){
-    //     swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
-    // });
     $scope.detail = function($pesan) {
         $rootScope.pesan = $pesan
         ngDialog.open({
@@ -179,14 +187,6 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
                         swal('Sukses', 'Pesan dihapus', 'success');
                     }
                 });
-                // $http.put('api/pesan', $pesan, {}).success(function(data, status, headers, config) {
-                //     $http.get('api/pesan', {}).success(function(data, status, headers, config) {
-                //         $scope.data = data
-                //     })
-                //     swal('Sukses', 'Pengguna telah dihapus', 'success');
-                // }).error(function(data, status, headers, config){
-                //     swal('Error', 'Ada kesalahan dalam penghapusan data', 'error');
-                // });
             });
     }
 });

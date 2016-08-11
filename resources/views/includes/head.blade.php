@@ -29,6 +29,7 @@
   <script type="text/javascript" src="bower_components/ckeditor/ckeditor.js"></script>
   <script type="text/javascript" src="bower_components/angular-ckeditor/angular-ckeditor.min.js"></script>
   <script type="text/javascript" src="bower_components/ngstorage/ngStorage.min.js"></script>
+  <script type="text/javascript" src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
