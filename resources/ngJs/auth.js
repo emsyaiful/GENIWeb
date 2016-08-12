@@ -17,7 +17,7 @@ app.controller('registerController', function($scope, $http, $window, $rootScope
 			if (data == 'exist') {
 				$scope.status = data
 			} else {
-				swal('Sukses', 'Registrasi berhasil', 'success');
+				swal('Sukses', 'Registrasi berhasil. Password Anda adalah \"defaultPass\"', 'success');
 				$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
 			}
         })
