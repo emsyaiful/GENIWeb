@@ -128,6 +128,11 @@ jQuery(function($) {
 		var email = $('#email').val();
 		var subject = $('#subject').val();
 		var message = $('#message').val();
+		$.ajaxSetup({
+	        headers: {
+	            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+	        }
+	    });
 		$.ajax({
 			type: "POST",
 			url: "/contactus",
