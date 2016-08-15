@@ -11,7 +11,7 @@
 
 		<!-- Header -->
 		<header id="home">
-			@include('includes.header')
+			@include('includes.header2')
 		</header>
 		
 

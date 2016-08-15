@@ -4,7 +4,7 @@
 <section id="services">
     <div class="container">
       <div class="row">
-        <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="heading wow" data-wow-duration="1000ms" data-wow-delay="300ms">
           <div class="text-center col-sm-8 col-sm-offset-2">
             <h2>Fitur Dari GEN1</h2>
             <p>Gen1 terdapat modul yang diperlukan untuk finance & Accounting. Anda dapat menggunakannya dimanapun anda berada, karena Gen1 menggunakan Cloud System Integration.</p><br>
@@ -72,48 +72,6 @@
     </div>
   </section><!--/#services-->
 
-  <!-- <section id="about-us" class="parallax">
-    <div class="container">
-      <div class="row"><br><br>
-        <div class="col-sm-6">
-          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <h2>About us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <p class="lead">User Experiances</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="95">95%</div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
-              <p class="lead">Web Design</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="75">75%</div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <p class="lead">Programming</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="60">60%</div>
-              </div>
-            </div>
-            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-              <p class="lead">Fun</p>
-              <div class="progress">
-                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="85">85%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>--> <!--/#about-us-->
-
   <section id="portfolio">
     <div class="container">
       <div class="row">
@@ -152,333 +110,347 @@
     </div><!-- /#portfolio-single-wrap -->
   </section><!--/#portfolio-->
 
-  <!-- <section id="team">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms"><br><br><br>
-          <h2>The Team</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+  <style type="text/css">
+    .linkdoc:hover {
+      cursor:pointer;
+    }
+  </style>
+
+  <section id="dokumentasi" style="padding: 20px 0;">
+      <div class="container" style="margin:5% auto">
+        <div class="row"></div>
+        <div class="row">
+          <div class="text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <h2>Dokumentasi</h2>
+          </div> 
         </div>
-      </div>
-      <div class="team-members">
         <div class="row">
           <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/1.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>CEO &amp; Founder</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
+            <div class="about-info wow">
+              <div class="panel-group">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <a  style="color:#fff" class="linkdoc" data-id="setupcompany">Setup Company</a>
+                  </div>
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    Outstanding Transaction
+                  </div>
+                  <div class="panel-body" style="background-color:#b3d9ff">
+                    <a  style="color:#000066" class="linkdoc" data-id="introoutstanding">Introduction</a>
+                  </div>
+                  <div class="panel-body" style="background-color:#b3d9ff">
+                    <a  style="color:#000066" class="linkdoc" data-id="createmasterdata">Create Master Data</a>
+                  </div>
+                  <div class="panel-body" style="background-color:#b3d9ff">
+                    <a  style="color:#000066" class="linkdoc" data-id="transaction">Transaction</a>
+                  </div>
+                </div>
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    Daily Transaction
+                  </div>
+                  <div class="panel-body" style="background-color:#b3d9ff">
+                    <a  style="color:#000066" class="linkdoc" data-id="masterdata">Master Data</a>
+                  </div>
+                    <div class="panel-body" style="background-color:#b3d9ff">
+                    <a style="color:#000066" data-toggle="collapse" href="#collapse1">
+                      Transaction&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                    </a>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="desc_button">Penjelasan Tombol</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="ap">Account Payable (AP)</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="ar">Account Receivable (AR)</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="payment">Payment</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="receipt">Receipt</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="je">Journal Entry</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="panel-body" style="background-color:#b3d9ff">
+                    <a style="color:#000066" data-toggle="collapse" href="#collapse2">
+                      Report&nbsp;&nbsp;<i class="fa fa-angle-down"></i>
+                    </a>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse">
+                      <ul class="list-group">
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="apaging">AP Aging</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="araging">AR Aging</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="apdue">AP Due</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="ardue">AR Due</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="profit_loss">Profit &amp; Loss</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="balance_sheet">Balance Sheet</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="trial_balance">Trial Balance</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="gl_report">GL Report</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="ap_history">AP History</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="ar_history">AR History</a>
+                        </li>
+                        <li class="list-group-item" style="background-color:#e6f3ff">
+                          <a  style="color:#666666" class="linkdoc" data-id="cashflow">Cash Flow</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/2.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lawrence Lane</h3>
-                <h4>UI/UX Designer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/3.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Lois Clark</h3>
-                <h4>Developer</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-              <div class="member-image">
-                <img class="img-responsive" src="images/team/4.jpg" alt="">
-              </div>
-              <div class="member-info">
-                <h3>Marian Dixon</h3>
-                <h4>Support Manager</h4>
-                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-              </div>
-              <div class="social-icons">
-                <ul>
-                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                  <li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>            
-    </div>
-  </section> --><!--/#team-->
+          <div class="col-sm-9 wow fadeInUp" id="isidoc" style="overflow:auto; height:950px; border:1px; border-style:solid; border-radius:4px; border-color:#003399" width=100%>
+            <div class="panel" id="setupcompany">
+                              <div class="content_section">
+                                  <h1>Setup Company</h1>
 
-<!--   <section id="features" class="parallax">
-    <div class="container">
-      <div class="row count">
-        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
-          <i class="fa fa-user"></i>
-          <h3 class="timer">4000</h3>
-          <p>Happy Clients</p>
+                                  <ul class="list">
+                                      <li>Setelah login pertama kali, anda akan melihat form setup company</li>
+                                      <li>Isi data identitas perusahaan anda dengan minimal required field (*) terisi</li>
+                                      <li>Kemudian klik next</li>
+                                      <li>Tentukan period fiscal anda pada form period fiscal</li>
+                                      <li>Kemudian klik next</li>
+                                      <li>Muncul pop-up konfirmasi untuk menyelesaikan setting awal anda atau tetap melanjutkan untuk menginputkan saldo awal anda. Bila anda ingin menginputkan saldo awal, klik create outstanding transaction. Bila anda merasa tidak memerlukan saldo awal, klik Finish Setup</li>
+                                      <li>Pembuatan Outstanding Transaction hanya berlaku satu kali yaitu di awal ketika anda setup company, dan apabila anda telah memilih finish setup maka anda tidak akan bisa mengisikan saldo awal</li>
+                                  </ul>
+                                  <img src="docimg/img/1CompanySetup.jpg" width="80%" height="80%"><br><br>
+                              </div>
+                          </div> <!-- end of aboutus -->
+          </div>
         </div>
-        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-          <i class="fa fa-desktop"></i>
-          <h3 class="timer">200</h3>                    
-          <p>Modern Websites</p>
+      </div>
+      <br><br>
+    </section> <!--/#about-us-->
+
+  <script>
+    $(".linkdoc").click(function(){
+        var id = $(this).data("id");
+        $("#isidoc").load("detaildoc.txt #"+id);
+        window.location.href = "#"+id;
+    });
+  </script>
+
+<section id="faq" class="parallax">
+    <div class="container" style="margin:5% auto">
+      <div class="row">
+        <div class="text-center wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+          <h2>Pertanyaan Populer</h2>
         </div> 
-        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="700ms">
-          <i class="fa fa-trophy"></i>
-          <h3 class="timer">10</h3>                    
-          <p>WINNING AWARDS</p>
-        </div> 
-        <div class="col-sm-3 col-xs-6 wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="900ms">
-          <i class="fa fa-comment-o"></i>                    
-          <h3>24/7</h3>
-          <p>Fast Support</p>
-        </div>                 
       </div>
-    </div>
-  </section> --><!--/#features-->
-
-<!--   <section id="pricing">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Pricing Table</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
-        </div>
-      </div>
-      <div class="pricing-table">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
-              <h3>Basic</h3>
-              <div class="price">
-                $9<span>/Month</span>                          
+      <div class="row"><br><br>
+        <div class="col-sm-4">
+          <div class="our-skills wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+              <p class="lead"><b><a href="#" class="clickevent" data-id="umum" style="color:#fff">Pertanyaan Umum</a></b></p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="38">38%</div>
               </div>
-              <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
-              </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="500ms">
-              <h3>Standard</h3>
-              <div class="price">
-                $19<span>/Month</span>                                
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="400ms">
+              <p class="lead"><b><a href="#" class="clickevent" data-id="aktif" style="color:#fff">Masa Aktif Akun</a></b></p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="17">17%</div>
               </div>
-              <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
-              </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="single-table featured wow flipInY" data-wow-duration="1000ms" data-wow-delay="800ms">
-              <h3>Featured</h3>
-              <div class="price">
-                $29<span>/Month</span>                                
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
+              <p class="lead"><b><a href="#" class="clickevent" data-id="modul" style="color:#fff">Modul</a></b></p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="30">30%</div>
               </div>
-              <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
-              </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="single-table wow flipInY" data-wow-duration="1000ms" data-wow-delay="1100ms">
-              <h3>Professional</h3>
-              <div class="price">
-                $49<span>/Month</span>                    
+            <div class="single-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <p class="lead"><b><a href="#" class="clickevent" data-id="bayar" style="color:#fff">Pembayaran</a></b></p>
+              <div class="progress">
+                <div class="progress-bar progress-bar-primary six-sec-ease-in-out" role="progressbar"  aria-valuetransitiongoal="15">15%</div>
               </div>
-              <ul>
-                <li>Free Setup</li>
-                <li>10GB Storage</li>
-                <li>100GB Bandwith</li>
-                <li>5 Products</li>
-              </ul>
-              <a href="#" class="btn btn-lg btn-primary">Sign up</a>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section> --><!--/#pricing-->
-
-<!--   <section id="twitter" class="parallax">
-    <div>
-      <a class="twitter-left-control" href="#twitter-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-      <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <div class="twitter-icon text-center">
-              <i class="fa fa-twitter"></i>
-              <h4>Themeum</h4>
-            </div>
-            <div id="twitter-carousel" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+        <div class="col-sm-8">
+          <div class="about-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div id="tag1">
+            <h3>Pertanyaan Umum</h3>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="1" style="color:#fff">
+                    <b>Apa perbedaan Gen1 dengan trial dan berbayar?</b>
+                  </a>
+                </li>
+                <div id="tag11" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Gen1 trial merupakan fasilitas penuh yang dapat anda dapatkan secara gratis dengan berbatas waktu. Untuk perpanjangan periode tersebut akan dikenakan tarif sesuai ketentuan yang berlaku. Caranya, silahkan isi form registrasi dengan menekan tombol SIGN-UP pada menu HOME. Cek email anda, dan ikuti petunjuk verifikasi. Pada Gen1 berbayar, anda dapat segera menikmati fasilitas penuh Gen1 sesuai periode yang dipilih</p>
                 </div>
-                <div class="item">
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="2" style="color:#fff">
+                    <b>Apakah Gen1 hanya bisa di akses pada PC saja?</b>
+                  </a>
+                </li>
+                <div id="tag12" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>System Gen1 berbasis web. Sehingga memudahkan anda dalam mengakses Gen1 tidak hanya melalui PC, namun pada perangkat lain seperti smartphone, cukup dengan menggunakan browser.</p>
                 </div>
-                <div class="item">                                
-                  <p>Introducing Shortcode generator for Helix V2 based templates <a href="#"><span>#helixframework #joomla</span> http://bit.ly/1qlgwav</a></p>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="3" style="color:#fff">
+                    <b>Minimal spesifikasi apa yang dapat mengakses Gen1?</b>
+                  </a>
+                </li>
+                <div id="tag13" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Minimal untuk browser seperti firefox versi 40.0 dan chrome.</p>
                 </div>
-              </div>                        
-            </div>                    
+              </ul>
+            </div>
+            <div id="tag2" hidden>
+              <h3>Masa Aktif Akun</h3>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="4" style="color:#fff">
+                    <b>Apa yang terjadi bila masa trial habis?</b>
+                  </a>
+                </li>
+                <div id="tag24" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Akun anda akan menjadi non-active. Anda tidak akan dapat mengakses ke dalam Gen1 hingga konfirmasi pembayaran dilakukan. Kami akan menyimpan data anda hingga user yang anda miliki telah aktif kembali.</p>
+                </div>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="5" style="color:#fff">
+                    <b>Apa yang terjadi bila masa aktif habis?</b>
+                  </a>
+                </li>
+                <div id="tag25" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Sebelum masa aktif habis, kami akan mengirimkan peringatan kepada anda melalui email bahwa akun yang anda miliki akan segera habis masa aktifnya dan segera diperpanjang. Akun yang tidak diperpanjang, akan memiliki masa tenggang selama 15 hari terhitung batas masa aktif berakhir sebelum akun user benar-benar menjadi non-active.</p>
+                </div>
+              </ul>
+            </div>
+            <div id="tag3" hidden>
+              <h3>Modul</h3>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="7" style="color:#fff">
+                    <b>Apakah terdapat module lain selain Finance &amp; Accounting pada Gen1?</b>
+                  </a>
+                </li>
+                <div id="tag37" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Apabila anda membutuhkan beberapa module lain selain Finance &amp; Accounting, anda dapat menghubungi kami melalui email atau telpon yang tercantum pada halaman about us yang telah tersedia.</p>
+                </div>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="8" style="color:#fff">
+                    <b>Pada modul Finance &amp; Accounting Gen1 report apa saja yang dapat dihasilkan?</b>
+                  </a>
+                </li>
+                <div id="tag38" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Pada modul Finance &amp; Accounting Gen1, anda dapat melihat : </p>
+                            <ul style="list-style: circle;">
+                                <li>  Laporan Aging pada report Account Payable/Account Receivable Aging, </li>
+                                <li>  Laporan Due pada report Account Payable/Account Receivable Due, </li>
+                                <li>  Laporan history penerimaan dan pembayaran pada report Account Payable/Account Receivable History, </li>
+                                <li>  Laporan Balance Sheet, </li>
+                                <li>  Laporan Trial Balance, </li>
+                                <li>  Laporan Profit &amp; Loss, </li>
+                                <li>  Laporan Cash Flow dan</li>
+                                <li>  GL Report.</li>
+                            </ul>
+                </div>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="9" style="color:#fff">
+                    <b>Apa yang harus dipersiapkan untuk memulai awal system Gen1 modul Finance &amp; Accounting?</b>
+                  </a>
+                </li>
+                <div id="tag39" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Terdapat 2 cara pada saat anda memulai awal modul Finance &amp; Accounting, yaitu pertama dengan menggunakan setup saldo awal maka anda perlu memasukkan outstanding transaction perusahaan, dan atau yang kedua anda tidak perlu menggunakan saldo awal.</p>
+                </div>
+              </ul>
+            </div>
+            <div id="tag4" hidden>
+              <h3>Pembayaran</h3>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="10" style="color:#fff">
+                    <b>Bagaimana cara melakukan pembayarannya?</b>
+                  </a>
+                </li>
+                <div id="tag410" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Silahkan melakukan registrasi terlebih dahulu, dan anda akan mendapatkan email info cara pembayaran dari kami. Kemudian lakukan pembayaran sesuai pilihan anda pada ATM atau Bank yang tersedia. Photo atau screenshoot bukti pembayaran, klik pada Payment Confirmation dan attach bukti pembayaran tersebut. Kami akan segera menginformasikan melalui email anda bahwa akun user anda telah aktif.</p>
+                </div>
+                <li class="list-group-item list-group-item-action list-group-item-info" style="background-color:rgb(2, 143, 204)">
+                  <a href="#" class="listtanya" data-id="11" style="color:#fff">
+                    <b>Apabila telah melakukan pembayaran, apakah masa aktif pada akun saya jadi bertambah?</b>
+                  </a>
+                </li>
+                <div id="tag411" hidden class="list-group-item list-group-item-action list-group-item-info hidden">
+                  <p>Setelah kami melakukan verifikasi maka masa aktif pada akun anda akan segera aktif. Dan kami akan menginformasikan melalui email anda bahwa akun user anda telah diperpanjang.</p>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section> --><!--/#twitter-->
+    <br><br>
+  </section> <!--/#about-us-->
 
-<!--   <section id="blog">
-    <div class="container">
-      <div class="row">
-        <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-          <h2>Blog Posts</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
-        </div>
-      </div>
-      <div class="blog-posts">
-        <div class="row">
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a> 
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-pencil"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="images/blog/2.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/1.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-                  </div>
-                </div>                               
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
-              </div>                            
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-picture-o"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="images/blog/3.jpg" alt=""></a>
-              <div class="post-meta">
-                <span><i class="fa fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fa fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fa fa-video-camera"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit</a></h3>
-              <span class="date">June 26, 2014</span>
-              <span class="cetagory">in <strong>Photography</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-          </div>                    
-        </div>
-        <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-          <a href="#" class="btn-loadmore"><i class="fa fa-repeat"></i> Load More</a>
-        </div>                
-      </div>
-    </div>
-  </section> --><!--/#blog-->
+<script>
+  $(".clickevent").click(function(){
+    var id = $(this).data("id");
+    if(id=="umum"){
+      $("#tag1").show();
+      $("#tag2").hide();
+      $("#tag3").hide();
+      $("#tag4").hide();
+    }else if(id=="aktif"){
+      $("#tag2").show();
+      $("#tag1").hide();
+      $("#tag3").hide();
+      $("#tag4").hide();
+    }else if(id=="modul"){
+      $("#tag3").show();
+      $("#tag2").hide();
+      $("#tag1").hide();
+      $("#tag4").hide();
+    }else if(id=="bayar"){
+      $("#tag4").show();
+      $("#tag2").hide();
+      $("#tag3").hide();
+      $("#tag1").hide();
+    }
+  });
+
+  $(".listtanya").click(function(){
+    var id = $(this).data("id");
+    var tag = $(this).closest("div").attr("id");
+    var kode = "#"+tag+id;
+    if($(kode).is(":visible")){
+      $(kode).hide();
+    }else{
+      $(kode).show();
+      $(kode).removeClass("hidden");
+    }
+  });
+</script>
 
   <section id="contact">
     <!-- <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div> -->

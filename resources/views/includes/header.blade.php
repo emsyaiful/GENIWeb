@@ -15,12 +15,13 @@
           <ul class="nav navbar-nav navbar-right">                 
             <li class="scroll"><a href="/index">Beranda</a></li>
             <li class="scroll"><a href="/index#services">Fitur</a></li> 
-            <li class="scroll"><a href="/index#portfolio">Berita</a></li>                     
+            <li class="scroll"><a href="/index#portfolio">Berita</a></li>
+            <li class="scroll"><a href="/konfirmasi">Pembayaran</a></li>
             <li class="scroll dropdown navbar-rightlagi">
-                    <a href="#">Bantuan & Dukungan</a>
+                    <a href="#">Bantuan &nbsp;<i class="fa fa-angle-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a class="scroll" href="/doc">Dokumentasi</a></li>
-                        <li><a class="scroll" href="/faq">FAQ</a></li>
+                        <li><a class="scroll" href="/index#dokumentasi">Dokumentasi</a></li>
+                        <li><a class="scroll" href="/index#faq">FAQ</a></li>
                         <li><a class="scroll" href="/index#contact">Kontak</a></li>
                     </ul>
             </li>

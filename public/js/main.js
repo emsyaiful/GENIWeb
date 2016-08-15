@@ -1,5 +1,10 @@
 jQuery(function($) {
 
+	$.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
 	//Preloader
 	var preloader = $('.preloader');
 	$(window).load(function(){
@@ -64,7 +69,7 @@ jQuery(function($) {
 	smoothScroll.init();
 	
 	// Progress Bar
-	$('#about-us').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
+	$('#faq').bind('inview', function(event, visible, visiblePartX, visiblePartY) {
 		if (visible) {
 			$.each($('div.progress-bar'),function(){
 				$(this).css('width', $(this).attr('aria-valuetransitiongoal')+'%');
