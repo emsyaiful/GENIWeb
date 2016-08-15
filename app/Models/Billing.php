@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
 
 class Billing extends Model
 {
@@ -19,6 +18,6 @@ class Billing extends Model
         'billing_isactive',
     ];
     public function user() {
-    	return $this->hasOne('User', 'id', 'fk_user_id');
+    	return $this->hasOne('App\User', 'id', 'fk_user_id');
     }
 }

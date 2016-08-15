@@ -21,17 +21,18 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr>
-			                <th>1</th>
-			                <td>wiuwiu</td>
-			                <td>sasa</td>
-			                <td>sasa</td>
-			                <td>lek iso datepicker</td>
-			                <td>lek iso datepicker</td>
-			                <td>119</td>
-			                <td>11</td>
-			                <td>lek iso select box</td>
-			                <td>lek iso toggle switch</td>
+			            <tr ng-repeat="tagihan in data">
+			                <th>{{$index+1}}</th>
+			                <td>{{tagihan.user.user_name}}</td>
+			                <td>{{tagihan.user.user_email}}</td>
+			                <td>{{tagihan.user.user_company}}</td>
+			                <td>{{tagihan.billing_date}}</td>
+			                <td>{{tagihan.billing_duedate}}</td>
+			                <td>{{tagihan.billing_activeperiod}}</td>
+			                <td>{{tagihan.billing_remainingperiod}}</td>
+			                <td>{{tagihan.billing_status}}</td>
+			                <td ng-if="tagihan.billing_isactive ==1 ">Active</td>
+			                <td ng-if="tagihan.billing_isactive !=1 ">Inactive</td>
 			            </tr>
 			        </tbody>
 			    </table>

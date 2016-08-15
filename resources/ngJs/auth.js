@@ -1,15 +1,15 @@
-app.controller('loginController', function($scope, $http, $rootScope, $localStorage, $rootScope, $location, $window) {
+app.controller('loginController', function($scope, $http, $rootScope, $localStorage, $location, $window) {
 	$scope.submit = function() {
 		$http.post('api/login', $scope.data, {}).success(function(data, status, headers, config) {
 			$scope.status = status
-			$rootScope.logged = data
+			$scope.logged = data
 			$localStorage.token = data.token
-			if ($rootScope.logged.user_isadmin == 1) {
+			if ($scope.logged.user_isadmin == 1) {
 				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#/mgUser'
 			}
 			else{
 				var pesan;
-				$pesan = 'Selamat datang '+$rootScope.logged.user_name;
+				$pesan = 'Selamat datang '+$scope.logged.user_name;
 				swal('Sukses', $pesan, 'success')
 			}
         }).error(function(data, status, headers, config){

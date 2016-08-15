@@ -61,12 +61,15 @@ Route::group(['prefix' => 'api'], function()
 		Route::get('reset', 'AuthenticateController@restPass');
 
 		// admin page
+		Route::get('userLogged', 'AdminController@getLogged');
 		Route::get('getUser', 'AdminController@getUser');
 		Route::put('alterUser', 'AdminController@alterUser');
 		Route::put('delUser', 'AdminController@delUser');
 
 		Route::get('payment', 'AdminController@getPay');
 		Route::put('payment', 'AdminController@confirmPay');
+
+		Route::get('tagihan', 'AdminController@getTagihan');
 
 		Route::get('riwayat', 'AdminController@getRiwayat');
 

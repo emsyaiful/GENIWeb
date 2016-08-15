@@ -11,9 +11,14 @@ use Carbon;
 use App\Models\Payment;
 use App\Models\Pesan;
 use App\Models\Berita;
+use App\Models\Billing;
 
 class AdminController extends Controller
 {
+	public function getLogged(Request $request) {
+		$user = JWTAuth::toUser($request->header('Authorization'));
+		return response()->json($user);
+	}
 	public function getUser() {
 		$where = array('deleted_at' => null);
 		$user = User::where($where)->get();
@@ -100,5 +105,9 @@ class AdminController extends Controller
 		$berita = Berita::find($id);
 		$berita->deleted_at = Carbon\Carbon::now();
 		$berita->save();
+	}
+	public function getTagihan() {
+		$tagihan = Billing::with('user')->get();
+		return response()->json($tagihan);
 	}
 }
