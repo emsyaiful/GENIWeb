@@ -319,7 +319,7 @@ app.controller('registerController', function($scope, $http, $window, $rootScope
 	$scope.status = ''
 	$scope.submit = function() {
 		$http.post('api/register', $scope.data, {}).success(function(data, status, headers, config) {	
-			if (data == 'exist') {
+			if (data.result == 'exist') {
 				$scope.status = data
 			} else {
 				swal('Sukses', 'Registrasi berhasil', 'success');
