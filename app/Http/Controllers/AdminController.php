@@ -11,6 +11,7 @@ use Carbon;
 use App\Models\Payment;
 use App\Models\Pesan;
 use App\Models\Berita;
+use App\Models\Billing;
 
 class AdminController extends Controller
 {
@@ -100,5 +101,9 @@ class AdminController extends Controller
 		$berita = Berita::find($id);
 		$berita->deleted_at = Carbon\Carbon::now();
 		$berita->save();
+	}
+	public function getTagihan() {
+		$tagihan = Billing::with('user')->get();
+		return response()->json($tagihan);
 	}
 }

@@ -68,6 +68,8 @@ Route::group(['prefix' => 'api'], function()
 		Route::get('payment', 'AdminController@getPay');
 		Route::put('payment', 'AdminController@confirmPay');
 
+		Route::get('tagihan', 'AdminController@getTagihan');
+
 		Route::get('riwayat', 'AdminController@getRiwayat');
 
 		Route::get('pesan', 'AdminController@getPesan');

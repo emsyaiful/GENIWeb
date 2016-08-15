@@ -172,7 +172,15 @@ app.controller('edtUserController', function($scope, backend, $rootScope, ngDial
     }
 });
 app.controller('tagihanController', function($scope, backend, $rootScope, ngDialog) {
-    $scope.message = 'ini pesan tagihan'
+    $scope.reloadData = function() {
+        backend.get('api/tagihan', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
 });
 app.controller('daftarBController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
