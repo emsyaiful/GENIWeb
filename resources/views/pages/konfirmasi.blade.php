@@ -77,8 +77,3 @@
         };
     </script>
 </html>
-
-                   <div class="col-sm-3">
-                        <label>Jumlah Bulan</label>
-                        <input type="number" name="bulan" class="form-control" value="0">
-                    </div>
