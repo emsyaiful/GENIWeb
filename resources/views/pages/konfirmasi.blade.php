@@ -8,8 +8,8 @@
             .fileUpload {
                 position: relative;
                 overflow: hidden;
-                margin: 5px;
-                width: 95%;
+                margin: 15px;
+                width: 45%;
             }
             .fileUpload input.upload {
                 position: absolute;
@@ -37,13 +37,13 @@
                         <input ng-model="conf.name" type="text" name="input_name" placeholder="Your Name" id="inputName" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
-                        <select class="form-control">
-                            <option>Select Your Bank Account</option>
-                            <option>BRI</option>
-                            <option>BNI</option>
-                            <option>Mandiri</option>
-                            <option>BCA</option>
-                        </select>
+                            <select class="form-control">
+                                <option>Select Your Bank Account</option>
+                                <option>BRI</option>
+                                <option>BNI</option>
+                                <option>Mandiri</option>
+                                <option>BCA</option>
+                            </select>
                     </div>
                 </div>
                 <div class="row">
@@ -51,14 +51,21 @@
                         <input ng-model="conf.email" type="text" name="input_email" placeholder="Your Email" id="inputEmail" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
-                        <div class="fileUpload btn btn-primary">
-                            <span>Upload Payslip</span>
-                            <input id="uploadBtn" type="file" class="upload" name="input_payslip" required />
-                        </div>
-                        <label id="uploadFile"></label>
+                        <input type="number" name="bulan" class="form-control" placeholder="Jumlah Bulan">
                     </div>
                 </div>
-                <textarea ng-model="conf.desc" placeholder="Your Description" id="inputDesc" name="input_desc" class="form-control" required style="height:44px"></textarea>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <textarea ng-model="conf.desc" placeholder="Your Description" id="inputDesc" name="input_desc" class="form-control" required style="height:44px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fileUpload btn btn-primary">
+                        <span>Upload Payslip</span>
+                        <input id="uploadBtn" type="file" class="upload" name="input_payslip" required />
+                    </div>
+                    <label id="uploadFile"></label>
+                </div>
                 <button ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="">Konfirmasi</button>
             </form>
         </div><!-- /card-container -->
@@ -70,3 +77,8 @@
         };
     </script>
 </html>
+
+                   <div class="col-sm-3">
+                        <label>Jumlah Bulan</label>
+                        <input type="number" name="bulan" class="form-control" value="0">
+                    </div>
