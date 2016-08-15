@@ -1,3 +1,6 @@
+app.controller('headController', function($scope, backend, $localStorage, $rootScope) {
+    console.log($rootScope.logged)
+});
 app.controller('mgUserController', function($scope, $rootScope, ngDialog, backend) {
     $scope.reloadData = function() {
         backend.get('api/getUser', {}, function(err, response) {
