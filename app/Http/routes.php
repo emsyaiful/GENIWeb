@@ -21,6 +21,10 @@ Route::get('/dashboard', function () {
     return view('pages/dashboard');
 });
 
+Route::get('/notfound', function () {
+    return view('pages/404');
+});
+
 Route::get('/index', function () {
     return view('pages/home');
 });
