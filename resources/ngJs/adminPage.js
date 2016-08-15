@@ -204,6 +204,3 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
             });
     }
 });
-app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog) {
-    $scope.message = 'ini konfirmasi '
-});

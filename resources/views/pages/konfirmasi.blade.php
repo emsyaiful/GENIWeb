@@ -34,39 +34,39 @@
             <form class="form-signin" name="form">
                 <div class="row">
                     <div class="col-sm-6">
-                        <input ng-model="conf.name" type="text" name="input_name" placeholder="Your Name" id="inputName" class="form-control" required>
+                        <input ng-model="conf.payment_user" type="text" name="input_name" placeholder="Your Name" id="inputName" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
-                            <select class="form-control">
-                                <option>Select Your Bank Account</option>
-                                <option>BRI</option>
-                                <option>BNI</option>
-                                <option>Mandiri</option>
-                                <option>BCA</option>
+                            <select ng-model="conf.payment_bank" class="form-control">
+                                <option value="?">Select Your Bank Account</option>
+                                <option value="BRI">BRI</option>
+                                <option value="BNI">BNI</option>
+                                <option value="Mandiri">Mandiri</option>
+                                <option value="BCA">BCA</option>
                             </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <input ng-model="conf.email" type="text" name="input_email" placeholder="Your Email" id="inputEmail" class="form-control" required>
+                        <input ng-model="conf.payment_email" type="text" name="input_email" placeholder="Your Email" id="inputEmail" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
-                        <input type="number" name="bulan" class="form-control" placeholder="Jumlah Bulan">
+                        <input ng-model="conf.payment_month" type="number" name="bulan" class="form-control" placeholder="Jumlah Bulan">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <textarea ng-model="conf.desc" placeholder="Your Description" id="inputDesc" name="input_desc" class="form-control" required style="height:44px"></textarea>
+                        <textarea ng-model="conf.payment_description" placeholder="Your Description" id="inputDesc" name="input_desc" class="form-control" required style="height:44px"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <div class="fileUpload btn btn-primary">
                         <span>Upload Payslip</span>
-                        <input id="uploadBtn" type="file" class="upload" name="input_payslip" required />
+                        <input file-model="myFile" id="uploadBtn" type="file" class="upload" name="input_payslip" required />
                     </div>
                     <label id="uploadFile"></label>
                 </div>
-                <button ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="">Konfirmasi</button>
+                <button ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="submit()">Konfirmasi</button>
             </form>
         </div><!-- /card-container -->
 	</div>

@@ -15,7 +15,7 @@
 			                <th>Description</th>
 			                <th>Payslip</th>
 			                <th>Payment Date</th>
-                            <!-- <th>Status</th> -->
+                            <th>Month</th>
                             <th>Action</th>
 			            </tr>
 			        </thead>
@@ -28,6 +28,7 @@
 			                <td>{{pay.payment_description}}</td>
 			                <td>{{pay.payment_payslip}}</td>
 			                <td>{{pay.payment_timecreated}}</td>
+			                <td>{{pay.payment_month}} Bulan</td>
 			                <td ng-if="pay.payment_isconfirmed == 0" ng-click="confirm(pay)"><button class="btn btn-danger">Not Confirmed</button></td>
 			                <td ng-if="pay.payment_isconfirmed != 0"><button class="btn btn-success" disabled>Confirmed</button></td>
 			            </tr>
