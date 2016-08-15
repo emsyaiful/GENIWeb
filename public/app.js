@@ -376,16 +376,24 @@ app.controller('viewBerita', function($scope, backend, $rootScope) {
     }
     $scope.reloadBerita()
 });
-app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog) {
+app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog, fileUpload, $http) {
     $scope.submit = function() {
     	console.dir($scope.myFile)
     	console.log($scope.conf)
-    	// fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
-     //    if (err) swal('Error', err.toString(), 'error');
-     //        else {
-     //            $rootScope.reloadBerita()
-     //            swal('Sukses', 'Konfirmasi telat terkirim', 'success');
-     //        }
-     //    });
+    	var fd = new FormData()
+		fd.append('payment_email', $scope.conf.payment_email)
+		fd.append('payment_username', $scope.conf.payment_username)
+		fd.append('payment_bank', $scope.conf.payment_bank)
+		fd.append('payment_description', $scope.conf.payment_description)
+		fd.append('payment_month', $scope.conf.payment_month)
+		fd.append('file', $scope.myFile)
+		$http.post('api/konfirmasi', fd, {
+			transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+		}).success(function(data, status) {
+			if (status == 200) {
+				swal('Success', 'Konfirmasi telah dikirim', 'success');
+			}
+		});
     }
 });
