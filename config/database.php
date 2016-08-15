@@ -54,9 +54,23 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '192.168.21.4'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'geni_web'),
+            'username' => env('DB_USERNAME', 'minifa'),
+            'password' => env('DB_PASSWORD', 'AdminFA'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+        'geni_saas' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '192.168.21.4'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'geni_saas'),
             'username' => env('DB_USERNAME', 'minifa'),
             'password' => env('DB_PASSWORD', 'AdminFA'),
             'charset' => 'utf8',
