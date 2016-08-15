@@ -1,4 +1,4 @@
-<header class="header" style="position:fixed;">
+<header class="header" style="position:fixed;" ng-controller="headController">
     <div class="header-block header-block-nav">
         <ul class="nav-profile">
             <li class="profile dropdown">

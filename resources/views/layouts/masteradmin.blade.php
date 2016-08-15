@@ -5,12 +5,12 @@
 		@include('includes.headadmin')
 	</head>
 	<body>
-		<div class="main-wrapper">
+		<div class="main-wrapper"  ng-app="mainApp">
             <div class="app" id="app">
             	@include('includes.headeradmin')
             	@include('includes.sidebaradmin')
             	<!-- Content -->
-            	<article class="content dashboard-page" ng-app="mainApp">
+            	<article class="content dashboard-page">
 					@yield('content')
 				</article>
 

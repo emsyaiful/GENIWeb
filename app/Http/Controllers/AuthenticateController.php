@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\User;
+use App\Models\Billing;
 use JWTAuth;
 use Hash;
 
@@ -22,12 +23,24 @@ class AuthenticateController extends Controller
             $genRest = $input['user_email'].'defaultPass';
             $input['user_tokenrest'] = Hash::make($genRest);
             User::create($input);
-            return response()->json(['result'=>true]);
+            $where = array('user_email' => $input['user_email'], 'user_name' => $input['user_name']);
+            $user = User::where($where)->first();
+            $billing = new Billing;
+            $billing->fk_user_id = $user->id;
+            $billing->billing_date = date('Y-m-d');
+            $billing->billing_duedate = Date('Y-m-d', strtotime("+15 days"));
+            $billing->billing_activeperiod = 15;
+            $billing->billing_remainingperiod = 15;
+            $billing->billing_status = 'Trial';
+            $billing->billing_isactive = 1;
+            $billing->save();
+
+            return response()->json(['result' => 'success']);
         }
     }
     public function login(Request $request)
     {
-        $input = $request->all();
+        $input = $request->only('user_email', 'password');
         try {
             // verify the credentials and create a token for the user
             if (! $token = JWTAuth::attempt($input)) {
