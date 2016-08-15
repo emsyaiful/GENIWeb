@@ -1,5 +1,17 @@
-app.controller('headController', function($scope, backend, $localStorage, $rootScope) {
-    console.log($rootScope.logged)
+app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope) {
+    $scope.reloadData = function() {
+        backend.get('api/userLogged', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData();
+    $scope.logout = function() {
+        delete $localStorage.token
+        $window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
+    }
 });
 app.controller('mgUserController', function($scope, $rootScope, ngDialog, backend) {
     $scope.reloadData = function() {

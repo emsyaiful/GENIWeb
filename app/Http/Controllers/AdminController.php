@@ -15,6 +15,10 @@ use App\Models\Billing;
 
 class AdminController extends Controller
 {
+	public function getLogged(Request $request) {
+		$user = JWTAuth::toUser($request->header('Authorization'));
+		return response()->json($user);
+	}
 	public function getUser() {
 		$where = array('deleted_at' => null);
 		$user = User::where($where)->get();

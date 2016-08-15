@@ -120,8 +120,20 @@ app.config(['$routeProvider', function($routeProvider, $window) {
 		controller: 'pesanController'
 	})
 }]);
-app.controller('headController', function($scope, backend, $localStorage, $rootScope) {
-    console.log($rootScope.logged)
+app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope) {
+    $scope.reloadData = function() {
+        backend.get('api/userLogged', {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData();
+    $scope.logout = function() {
+        delete $localStorage.token
+        $window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
+    }
 });
 app.controller('mgUserController', function($scope, $rootScope, ngDialog, backend) {
     $scope.reloadData = function() {
@@ -314,18 +326,18 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
 app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog) {
     $scope.message = 'ini konfirmasi '
 });
-app.controller('loginController', function($scope, $http, $rootScope, $localStorage, $rootScope, $location, $window) {
+app.controller('loginController', function($scope, $http, $rootScope, $localStorage, $location, $window) {
 	$scope.submit = function() {
 		$http.post('api/login', $scope.data, {}).success(function(data, status, headers, config) {
 			$scope.status = status
-			$rootScope.logged = data
+			$scope.logged = data
 			$localStorage.token = data.token
-			if ($rootScope.logged.user_isadmin == 1) {
+			if ($scope.logged.user_isadmin == 1) {
 				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#/mgUser'
 			}
 			else{
 				var pesan;
-				$pesan = 'Selamat datang '+$rootScope.logged.user_name;
+				$pesan = 'Selamat datang '+$scope.logged.user_name;
 				swal('Sukses', $pesan, 'success')
 			}
         }).error(function(data, status, headers, config){
