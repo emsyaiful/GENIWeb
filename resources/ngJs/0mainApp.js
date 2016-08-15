@@ -119,4 +119,10 @@ app.config(['$routeProvider', function($routeProvider, $window) {
 		templateUrl: 'ngView/pesanMasuk.html',
 		controller: 'pesanController'
 	})
+    .when('/notFound', {
+        templateUrl: 'ngView/404.html'
+    })
+    .otherwise({
+        redirect: '/notFound'
+    });
 }]);

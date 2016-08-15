@@ -5,7 +5,7 @@ app.controller('loginController', function($scope, $http, $rootScope, $localStor
 			$scope.logged = data
 			$localStorage.token = data.token
 			if ($scope.logged.user_isadmin == 1) {
-				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#/mgUser'
+				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#'
 			}
 			else{
 				var pesan;

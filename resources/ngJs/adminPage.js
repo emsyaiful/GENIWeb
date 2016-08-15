@@ -1,9 +1,12 @@
-app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope) {
+app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope, $location) {
     $scope.reloadData = function() {
         backend.get('api/userLogged', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
             else {
                 $scope.data = response;
+                if ($scope.data.user_isadmin == 0) {
+                    $window.location.href = 'http://'+$rootScope.loginRedirect+'/notfound'
+                }
             }
         });
     }

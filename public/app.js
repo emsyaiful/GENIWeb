@@ -119,13 +119,22 @@ app.config(['$routeProvider', function($routeProvider, $window) {
 		templateUrl: 'ngView/pesanMasuk.html',
 		controller: 'pesanController'
 	})
+    .when('/notFound', {
+        templateUrl: 'ngView/404.html'
+    })
+    .otherwise({
+        redirect: '/notFound'
+    });
 }]);
-app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope) {
+app.controller('headController', function($scope, backend, $localStorage, $window, $rootScope, $location) {
     $scope.reloadData = function() {
         backend.get('api/userLogged', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
             else {
                 $scope.data = response;
+                if ($scope.data.user_isadmin == 0) {
+                    $window.location.href = 'http://'+$rootScope.loginRedirect+'/notfound'
+                }
             }
         });
     }
@@ -333,7 +342,7 @@ app.controller('loginController', function($scope, $http, $rootScope, $localStor
 			$scope.logged = data
 			$localStorage.token = data.token
 			if ($scope.logged.user_isadmin == 1) {
-				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#/mgUser'
+				$window.location.href = 'http://'+$location.$$host+':'+$location.$$port+'/dashboard#'
 			}
 			else{
 				var pesan;
