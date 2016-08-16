@@ -3,11 +3,7 @@ var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStora
 app.service('fileUpload', function ($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$http.defaults.headers.common['Authorization'] = $localStorage.token
-	this.uploadFileToUrl = function(title, content, file, uploadUrl, callback){
-		var fd = new FormData()
-		fd.append('file', file)
-		fd.append('title', title)
-		fd.append('content', content)
+	this.uploadFileToUrl = function(uploadUrl, fd, callback){
 		$http.post(uploadUrl, fd, {
 			transformRequest: angular.identity,
             headers: {'Content-Type': undefined}
@@ -16,7 +12,6 @@ app.service('fileUpload', function ($http, $rootScope, $localStorage, $location,
                 callback(null, data);
                 if (data.error) {
                 	swal('Error', data.error, 'error');
-                	$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
                 }
             } else {
                 callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));
@@ -222,6 +217,14 @@ app.controller('daftarBController', function($scope, backend, $rootScope, ngDial
             }
         });
     }
+    $scope.show = function($payment) {
+        $rootScope.detail = $payment
+        console.log($scope.detail)
+        ngDialog.open({
+            template: 'ngView/dialog/detailPayslip.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
 });
 app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
@@ -251,9 +254,11 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
     };
     $scope.submit = function($berita) {
         var file = $scope.myFile;
-        console.dir(file);
-        console.log($scope.berita)
-        fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
+        var fd = new FormData()
+        fd.append('file', file)
+        fd.append('title', $scope.berita.news_title)
+        fd.append('content', $scope.berita.news_content)
+        fileUpload.uploadFileToUrl('api/berita', fd, function(err, data) {
         if (err) swal('Error', err.toString(), 'error');
             else {
                 $rootScope.reloadBerita()
@@ -376,24 +381,20 @@ app.controller('viewBerita', function($scope, backend, $rootScope) {
     }
     $scope.reloadBerita()
 });
-app.controller('konfirmasiController', function($scope, backend, $rootScope, ngDialog, fileUpload, $http) {
+app.controller('konfirmasiController', function($scope, backend, $rootScope, $http, fileUpload) {
     $scope.submit = function() {
-    	console.dir($scope.myFile)
-    	console.log($scope.conf)
     	var fd = new FormData()
-		fd.append('payment_email', $scope.conf.payment_email)
-		fd.append('payment_username', $scope.conf.payment_username)
-		fd.append('payment_bank', $scope.conf.payment_bank)
-		fd.append('payment_description', $scope.conf.payment_description)
-		fd.append('payment_month', $scope.conf.payment_month)
-		fd.append('file', $scope.myFile)
-		$http.post('api/konfirmasi', fd, {
-			transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-		}).success(function(data, status) {
-			if (status == 200) {
-				swal('Success', 'Konfirmasi telah dikirim', 'success');
-			}
-		});
+        fd.append('file', $scope.myFile)
+        fd.append('payment_username', $scope.conf.payment_username)
+        fd.append('payment_email', $scope.conf.payment_email)
+        fd.append('payment_bank', $scope.conf.payment_bank)
+        fd.append('payment_month', $scope.conf.payment_month)
+        fd.append('payment_description', $scope.conf.payment_description)
+        fileUpload.uploadFileToUrl('api/konfirmasi', fd, function(err, data) {
+        if (err) swal('Error', err.toString(), 'error');
+            else {
+                swal('Sukses', 'Konfirmasi berhasil dikirim', 'success');
+            }
+        });
     }
 });

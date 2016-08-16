@@ -59,6 +59,8 @@ Route::group(['prefix' => 'api'], function()
 	// authentification
 	Route::post('register', 'AuthenticateController@register');
 	Route::post('login', 'AuthenticateController@login');
+	Route::get('beritaView', 'UserController@beritaTerbaru');
+	Route::post('konfirmasi', 'AdminController@postConfirm');
 
 	Route::group(['middleware' => 'jwt.auth'], function(){
 		Route::post('reset', 'AuthenticateController@restPass');
@@ -85,9 +87,8 @@ Route::group(['prefix' => 'api'], function()
 		Route::put('berita', 'AdminController@editBerita');
 		Route::put('berita/{id}', 'AdminController@delBerita');
 
-		Route::post('konfirmasi', 'AdminController@setConfirmasi');
+		// Route::post('konfirmasi', 'AdminController@setConfirmasi');
 	});
-	Route::get('beritaView', 'UserController@beritaTerbaru');
 });
 
 // data

@@ -94,6 +94,14 @@ app.controller('daftarBController', function($scope, backend, $rootScope, ngDial
             }
         });
     }
+    $scope.show = function($payment) {
+        $rootScope.detail = $payment
+        console.log($scope.detail)
+        ngDialog.open({
+            template: 'ngView/dialog/detailPayslip.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
 });
 app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
@@ -123,9 +131,11 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
     };
     $scope.submit = function($berita) {
         var file = $scope.myFile;
-        console.dir(file);
-        console.log($scope.berita)
-        fileUpload.uploadFileToUrl($scope.berita.news_title, $scope.berita.news_content, file, 'api/berita', function(err, data) {
+        var fd = new FormData()
+        fd.append('file', file)
+        fd.append('title', $scope.berita.news_title)
+        fd.append('content', $scope.berita.news_content)
+        fileUpload.uploadFileToUrl('api/berita', fd, function(err, data) {
         if (err) swal('Error', err.toString(), 'error');
             else {
                 $rootScope.reloadBerita()

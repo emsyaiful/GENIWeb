@@ -34,10 +34,10 @@
             <form class="form-signin" name="form">
                 <div class="row">
                     <div class="col-sm-6">
-                        <input ng-model="conf.payment_user" type="text" name="input_name" placeholder="Your Name" id="inputName" class="form-control" required>
+                        <input ng-model="conf.payment_username" type="text" name="input_name" placeholder="Your Name" id="inputName" class="form-control" required>
                     </div>
                     <div class="col-sm-6">
-                            <select ng-model="conf.payment_bank" class="form-control">
+                            <select ng-model="conf.payment_bank" class="form-control" required>
                                 <option value="?">Select Your Bank Account</option>
                                 <option value="BRI">BRI</option>
                                 <option value="BNI">BNI</option>
@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="fileUpload btn btn-primary">
                         <span>Upload Payslip</span>
-                        <input file-model="myFile" id="uploadBtn" type="file" class="upload" name="input_payslip" required />
+                        <input file-model="myFile" id="uploadBtn" type="file" class="upload" name="input_payslip"/>
                     </div>
                     <label id="uploadFile"></label>
                 </div>

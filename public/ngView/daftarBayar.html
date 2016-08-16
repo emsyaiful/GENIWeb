@@ -26,7 +26,9 @@
 			                <td>{{pay.payment_email}}</td>
 			                <td>{{pay.payment_bank}}</td>
 			                <td>{{pay.payment_description}}</td>
-			                <td>{{pay.payment_payslip}}</td>
+			                <td>
+			                	<a ng-click="show(pay)" onmouseover='this.style.cursor="pointer"'>{{pay.payment_payslip}}</a>
+			                </td>
 			                <td>{{pay.payment_timecreated}}</td>
 			                <td>{{pay.payment_month}} Bulan</td>
 			                <td ng-if="pay.payment_isconfirmed == 0" ng-click="confirm(pay)"><button class="btn btn-danger">Not Confirmed</button></td>

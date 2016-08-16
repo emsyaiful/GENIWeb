@@ -3,11 +3,7 @@ var app = angular.module('mainApp', ['ngRoute', 'ngDialog', 'ckeditor', 'ngStora
 app.service('fileUpload', function ($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$http.defaults.headers.common['Authorization'] = $localStorage.token
-	this.uploadFileToUrl = function(title, content, file, uploadUrl, callback){
-		var fd = new FormData()
-		fd.append('file', file)
-		fd.append('title', title)
-		fd.append('content', content)
+	this.uploadFileToUrl = function(uploadUrl, fd, callback){
 		$http.post(uploadUrl, fd, {
 			transformRequest: angular.identity,
             headers: {'Content-Type': undefined}
@@ -16,7 +12,6 @@ app.service('fileUpload', function ($http, $rootScope, $localStorage, $location,
                 callback(null, data);
                 if (data.error) {
                 	swal('Error', data.error, 'error');
-                	$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
                 }
             } else {
                 callback(new Error('Galat mengakses data karena masalah backend. Hubungi administrator.'));

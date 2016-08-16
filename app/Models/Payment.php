@@ -16,6 +16,7 @@ class Payment extends Model
         'payment_description',
         'payment_isconfirmed',
         'payment_payslip',
+        'payment_month',
         'payment_timecreated',
     ];
 }

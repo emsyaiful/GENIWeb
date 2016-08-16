@@ -254,7 +254,7 @@
     $(".linkdoc").click(function(){
         var id = $(this).data("id");
         $("#isidoc").load("detaildoc.txt #"+id);
-        window.location.href = "#"+id;
+        // window.location.href = "#"+id;
     });
   </script>
 
@@ -414,7 +414,8 @@
   </section> <!--/#about-us-->
 
 <script>
-  $(".clickevent").click(function(){
+  $(".clickevent").click(function(event){
+    event.preventDefault();
     var id = $(this).data("id");
     if(id=="umum"){
       $("#tag1").show();
@@ -439,7 +440,8 @@
     }
   });
 
-  $(".listtanya").click(function(){
+  $(".listtanya").click(function(event){
+    event.preventDefault();
     var id = $(this).data("id");
     var tag = $(this).closest("div").attr("id");
     var kode = "#"+tag+id;
