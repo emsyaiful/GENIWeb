@@ -22,6 +22,9 @@
                     </div> -->
                     <button  ng-disabled="form.$invalid" class="btn btn-lg btn-primary btn-block btn-signin" ng-click="submit(data)">Sign in</button>
                 </form><!-- /form -->
+                <a href="/lupapassword" class="forgot-password">
+                    Lupa Password?
+                </a><br>
                 Belum punya akun? Daftar 
                 <a href="/register" class="forgot-password">
                     di sini

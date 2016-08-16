@@ -53,6 +53,10 @@ Route::get('/konfirmasi', function() {
 	return view('pages/konfirmasi');
 });
 
+Route::get('/lupapassword', function() {
+	return view('pages/lupapassword');
+});
+
 // api
 Route::group(['prefix' => 'api'], function()
 {
