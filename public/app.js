@@ -258,11 +258,13 @@ app.controller('beritaController', function($scope, backend, $rootScope, ngDialo
         fd.append('file', file)
         fd.append('title', $scope.berita.news_title)
         fd.append('content', $scope.berita.news_content)
+        fd.append('news_id', $scope.berita.news_id)
         fileUpload.uploadFileToUrl('api/berita', fd, function(err, data) {
         if (err) swal('Error', err.toString(), 'error');
             else {
                 $rootScope.reloadBerita()
                 swal('Sukses', 'Berita diterbitkan', 'success');
+                ngDialog.close()
             }
         });
     }

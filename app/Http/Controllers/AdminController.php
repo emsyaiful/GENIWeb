@@ -96,27 +96,58 @@ class AdminController extends Controller
 	public function pubBerita(Request $request) {
 		$input = $request->all();
 		$destinationPath = 'uploads';
-		$extension = $request->file('file')->getClientOriginalExtension();
-		$fileName = rand(11111,99999).'.'.$extension;
+		$file = $request->file('file');
+	    $fileArray = array('image' => $file);
+	    $rules = array(
+	      'image' => 'mimes:jpeg,jpg,png|required|max:1000'
+	    );
+	    // return response()->json($input);
+	    $validator = Validator::make($fileArray, $rules);
 		if (!isset($input['news_id'])) {
-			$insert = array(
-				'news_title' => $request->input('title'),
-				'news_content' => $request->input('content'),
-				'news_image' => $destinationPath.'/'.$fileName,
-				'news_timecreated' => Carbon\Carbon::now()
-			);
-			Berita::create($insert);
+			if ($validator->fails()){
+		        $insert = array(
+					'news_title' => $request->input('title'),
+					'news_content' => $request->input('content'),
+					'news_image' => null,
+					'news_timecreated' => Carbon\Carbon::now()
+				);
+				Berita::create($insert);
+		    }else{
+				$extension = $request->file('file')->getClientOriginalExtension();
+				$fileName = rand(11111,99999).'.'.$extension;
+		        $insert = array(
+					'news_title' => $request->input('title'),
+					'news_content' => $request->input('content'),
+					'news_image' => $destinationPath.'/'.$fileName,
+					'news_timecreated' => Carbon\Carbon::now()
+				);
+				Berita::create($insert);
+				$request->file('file')->move($destinationPath, $fileName);
+		    };
 		}else{
-			$id = $input['news_id'];
-			$berita = Berita::find($id);
-			$berita->news_title = $input['news_title'];
-			$berita->news_content = $input['news_content'];
-			$berita->news_image = $input['news_image'];
-			$berita->news_timecreated = Carbon\Carbon::now();
-			$berita->save();
+			if ($validator->fails()){
+		        $id = $input['news_id'];
+				$berita = Berita::find($id);
+				$berita->news_title = $request->input('title');
+				$berita->news_content = $request->input('content');
+				$berita->news_timecreated = Carbon\Carbon::now();
+				$berita->save();
+				return response()->json(['success' => 'masuk sini']);
+		    }else{
+		    	$extension = $request->file('file')->getClientOriginalExtension();
+				$fileName = rand(11111,99999).'.'.$extension;
+		        $id = $input['news_id'];
+				$berita = Berita::find($id);
+				$berita->news_title = $request->input('title');
+				$berita->news_content = $request->input('content');
+				$berita->news_image = $destinationPath.'/'.$fileName;
+				$berita->news_timecreated = Carbon\Carbon::now();
+				$berita->save();
+				$request->file('file')->move($destinationPath, $fileName);
+		    };
 		}
 		
-		$request->file('file')->move($destinationPath, $fileName);
+		// $request->file('file')->move($destinationPath, $fileName);
 		// return response()->json($input);
 	}
 	public function delBerita($id) {
