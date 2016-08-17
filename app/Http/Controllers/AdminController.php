@@ -103,7 +103,7 @@ class AdminController extends Controller
 	    );
 	    // return response()->json($input);
 	    $validator = Validator::make($fileArray, $rules);
-		if (!isset($input['news_id'])) {
+		if ($request->input('news_id') == 'undefined') {
 			if ($validator->fails()){
 		        $insert = array(
 					'news_title' => $request->input('title'),
