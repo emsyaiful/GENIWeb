@@ -18,10 +18,10 @@
 			        <tbody style="font-size:13px">
 			            <tr ng-repeat="data in data">
 			                <th>{{$index+1}}</th>
-			                <td>{{data.payment_username}}</td>
-			                <td>sasa</td>
-			                <td>waawlalwal</td>
-			                <td>link buka modal detail</td>
+			                <td>{{data.user_name}}</td>
+			                <td>{{data.user_email}}</td>
+			                <td>{{data.user_company}}</td>
+			                <td><i ng-click="detail(data)" class="fa fa-search" onmouseover='this.style.cursor="pointer"'></i></td>
 			            </tr>
 			        </tbody>
 			    </table>

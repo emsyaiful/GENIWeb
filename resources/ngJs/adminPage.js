@@ -105,7 +105,7 @@ app.controller('daftarBController', function($scope, backend, $rootScope, ngDial
 });
 app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog) {
     $scope.reloadData = function() {
-        backend.get('api/riwayat', {}, function(err, response) {
+        backend.get('api/getUser', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
             else {
                 $scope.data = response;
@@ -113,6 +113,9 @@ app.controller('riwayatBController', function($scope, backend, $rootScope, ngDia
         });
     }
     $scope.reloadData()
+    $scope.detail = function($data) {
+
+    };
 });
 app.controller('beritaController', function($scope, backend, $rootScope, ngDialog, fileUpload) {
     $rootScope.reloadBerita = function() {

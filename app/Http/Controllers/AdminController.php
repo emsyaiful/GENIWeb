@@ -72,9 +72,9 @@ class AdminController extends Controller
 		// return response()->json($billing);
 	}
 	public function getRiwayat() {
-		$where = array('payment_isconfirmed' => 1);
-		$riwayat = Payment::where($where)->get();
-		return response()->json($riwayat);
+		// $riwayat = Billing::with('user')->join('gen_0102_payment', 'payment_email', '=', 'gen_0101_user.user_email')->get();
+		// $where = array('payment_isconfirmed' => 1);
+		// return response()->json($riwayat);
 	}
 	public function getPesan() {
 		$where = array('deleted_at' => null);
@@ -198,3 +198,4 @@ class AdminController extends Controller
 		return response()->json($tagihan);
 	}
 }
+
