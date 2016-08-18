@@ -16,7 +16,7 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr ng-repeat="data in data">
+			            <tr ng-repeat="data in data" ng-if="data.user_email != 'admin@gmail.com'">
 			                <th>{{$index+1}}</th>
 			                <td>{{data.user_name}}</td>
 			                <td>{{data.user_email}}</td>
