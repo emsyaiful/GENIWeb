@@ -38,6 +38,21 @@ app.directive('fileModel', ['$parse', function ($parse) {
 	};
 }]);
 
+app.factory('store', function() {
+    var savedData
+    function set(data) {
+        savedData = data;
+    }
+    function get() {
+        return savedData;
+    }
+    return {
+        set: set,
+        get: get
+    }
+
+});
+
 app.service('backend', function($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$http.defaults.headers.common['Authorization'] = $localStorage.token
@@ -114,6 +129,10 @@ app.config(['$routeProvider', function($routeProvider, $window) {
 		templateUrl: 'ngView/pesanMasuk.html',
 		controller: 'pesanController'
 	})
+    .when('/detailRiwayat', {
+        templateUrl: 'ngView/detailriwayat.html',
+        controller: 'detailRiwayatController'
+    })
     .when('/notFound', {
         templateUrl: 'ngView/404.html'
     })

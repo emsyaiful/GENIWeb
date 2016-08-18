@@ -2,7 +2,7 @@
 	<div class="card">
 		<div class="card-block">
 			<div class="card-title-block">
-				<h3 class="title">Riwayat Pembayaran {{pay.payment_username}} | {{pay.payment_email}}</h3>
+				<h3 class="title">Riwayat Pembayaran {{data.payment_username}} | {{data.payment_email}}</h3>
 			</div>
 			<section class="example">
 			    <table class="table table-hover">
@@ -17,15 +17,15 @@
 			            </tr>
 			        </thead>
 			        <tbody style="font-size:13px">
-			            <tr ng-repeat="pay in data">
+			            <tr ng-repeat="data in data">
 			                <th>{{$index+1}}</th>
-			                <td>{{pay.payment_username}}</td>
-			                <td>{{pay.payment_description}}</td>
+			                <td>{{data.payment_username}}</td>
+			                <td>{{data.payment_description}}</td>
 			                <td>
-			                	<a ng-click="show(pay)" onmouseover='this.style.cursor="pointer"'>{{pay.payment_payslip}}</a>
+			                	<a ng-click="show(data)" onmouseover='this.style.cursor="pointer"'>{{data.payment_payslip}}</a>
 			                </td>
-			                <td>{{pay.payment_timecreated}}</td>
-			                <td>{{pay.payment_month}} Bulan</td>
+			                <td>{{data.payment_timecreated}}</td>
+			                <td>{{data.payment_month}} Bulan</td>
 			            </tr>
 			        </tbody>
 			    </table>

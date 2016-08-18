@@ -38,6 +38,21 @@ app.directive('fileModel', ['$parse', function ($parse) {
 	};
 }]);
 
+app.factory('store', function() {
+    var savedData
+    function set(data) {
+        savedData = data;
+    }
+    function get() {
+        return savedData;
+    }
+    return {
+        set: set,
+        get: get
+    }
+
+});
+
 app.service('backend', function($http, $rootScope, $localStorage, $location, $window) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$http.defaults.headers.common['Authorization'] = $localStorage.token
@@ -114,6 +129,10 @@ app.config(['$routeProvider', function($routeProvider, $window) {
 		templateUrl: 'ngView/pesanMasuk.html',
 		controller: 'pesanController'
 	})
+    .when('/detailRiwayat', {
+        templateUrl: 'ngView/detailriwayat.html',
+        controller: 'detailRiwayatController'
+    })
     .when('/notFound', {
         templateUrl: 'ngView/404.html'
     })
@@ -219,14 +238,14 @@ app.controller('daftarBController', function($scope, backend, $rootScope, ngDial
     }
     $scope.show = function($payment) {
         $rootScope.detail = $payment
-        console.log($scope.detail)
+        // console.log($scope.detail)
         ngDialog.open({
             template: 'ngView/dialog/detailPayslip.html',
             className: 'ngdialog-theme-default'
         });
     }
 });
-app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog) {
+app.controller('riwayatBController', function($scope, backend, $rootScope, ngDialog, store, $location) {
     $scope.reloadData = function() {
         backend.get('api/getUser', {}, function(err, response) {
             if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
@@ -236,9 +255,30 @@ app.controller('riwayatBController', function($scope, backend, $rootScope, ngDia
         });
     }
     $scope.reloadData()
-    $scope.detail = function($data) {
-
+    $scope.detail = function($path, $data) {
+        store.set($data.user_email)
+        $location.path($path)
     };
+});
+app.controller('detailRiwayatController', function($scope, backend, $rootScope, ngDialog, store) {
+    $scope.reloadData = function() {
+        backend.get('api/riwayat/'+store.get(), {}, function(err, response) {
+            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            else {
+                // console.log(response)
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
+    $scope.show = function($data) {
+        $rootScope.detail = $data
+        // console.log($scope.detail)
+        ngDialog.open({
+            template: 'ngView/dialog/detailPayslip.html',
+            className: 'ngdialog-theme-default'
+        });
+    }
 });
 app.controller('beritaController', function($scope, backend, $rootScope, ngDialog, fileUpload) {
     $rootScope.reloadBerita = function() {

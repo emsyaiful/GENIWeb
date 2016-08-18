@@ -71,10 +71,16 @@ class AdminController extends Controller
 		$billing->save();
 		// return response()->json($billing);
 	}
-	public function getRiwayat() {
-		// $riwayat = Billing::with('user')->join('gen_0102_payment', 'payment_email', '=', 'gen_0101_user.user_email')->get();
-		// $where = array('payment_isconfirmed' => 1);
-		// return response()->json($riwayat);
+	public function getRiwayat($email) {
+		$where = array('payment_email' => $email);
+		$detail = Payment::join('gen_0101_user', 'payment_email', '=', 'gen_0101_user.user_email')
+				->join('gen_0301_billing', 'gen_0101_user.id', '=', 'gen_0301_billing.fk_user_id')
+				->where($where)->get();
+		if (count($detail) == 0) {
+			return response()->json(['success' => 'Tidak ada riwayat pembayaran']);
+		}else{
+			return response()->json($detail);
+		}
 	}
 	public function getPesan() {
 		$where = array('deleted_at' => null);
