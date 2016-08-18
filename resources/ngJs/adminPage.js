@@ -121,10 +121,12 @@ app.controller('riwayatBController', function($scope, backend, $rootScope, ngDia
 app.controller('detailRiwayatController', function($scope, backend, $rootScope, ngDialog, store) {
     $scope.reloadData = function() {
         backend.get('api/riwayat/'+store.get(), {}, function(err, response) {
-            if (err) swal('Error', 'Ada kesalahan dalam pengambilan data', 'error');
+            if (err) swal('Warning', 'Ada kesalahan dalam pengambilan data', 'warning');
             else {
-                // console.log(response)
-                $scope.data = response;
+                if (response.success) {
+                    $scope.status = response.success
+                }else
+                    $scope.data = response;
             }
         });
     }

@@ -77,7 +77,7 @@ class AdminController extends Controller
 				->join('gen_0301_billing', 'gen_0101_user.id', '=', 'gen_0301_billing.fk_user_id')
 				->where($where)->get();
 		if (count($detail) == 0) {
-			return response()->json(['success' => 'Tidak ada riwayat pembayaran']);
+			return response()->json(['success' => 'Tidak ada riwayat pembayaran '.$email]);
 		}else{
 			return response()->json($detail);
 		}
