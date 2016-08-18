@@ -61,17 +61,21 @@ Route::get('/restpassword', function() {
 	return view('pages/resetpass');
 });
 // api
+Route::get('reset/{email}/{token}', 'AuthenticateController@getFormPass');
+
 Route::group(['prefix' => 'api'], function()
 {
 	// authentification
 	Route::post('register', 'AuthenticateController@register');
 	Route::post('login', 'AuthenticateController@login');
+
 	Route::get('beritaView', 'UserController@beritaTerbaru');
 	Route::post('konfirmasi', 'AdminController@postConfirm');
 
+	Route::put('reset', 'AuthenticateController@restPass');
+	
+
 	Route::group(['middleware' => 'jwt.auth'], function(){
-		Route::post('reset', 'AuthenticateController@restPass');
-		Route::get('reset', 'AuthenticateController@restPass');
 
 		// admin page
 		Route::get('userLogged', 'AdminController@getLogged');

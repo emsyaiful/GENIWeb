@@ -9,6 +9,8 @@ use App\User;
 use App\Models\Billing;
 use JWTAuth;
 use Hash;
+use Redirect;
+use Session;
 
 class AuthenticateController extends Controller
 {
@@ -58,18 +60,26 @@ class AuthenticateController extends Controller
             return response()->json($user);
         }
     }
-    public function restPass(Request $request)
-    {
-        if ($request->isMethod('get')) {
-            $input = $request->all();
-            $where = array('user_email' => $input['email'], 'user_tokenrest' => $input['token']);
-            $user = User::where($where)->first();
-            if (!$user) {
-                return response()->json(['error' => 'error token missmatch'], 401);
-            }else
-                return response()->json(['result'=>true]);
-        }else {
-            
+    public function restPass(Request $request) {
+        $email = Session::get('user_email');
+        Session::forget('user_email');
+        $where = array('user_email' => $email);
+        $user = User::where($where)->first();
+        $user->user_tokenrest = Hash::make($email.$request->input('password'));
+        $user->password = Hash::make($request->input('password'));
+        $user->save();
+        // return response()->json($user);
+    }
+    public function getFormPass($email, $token) {
+        $where = array('user_email' => $email);
+        $user = User::where($where)->first();
+        if ($user->user_tokenrest == $token) {
+            // session()->flash('user_email', $email);
+            Session::set('user_email', $email);
+            return redirect('/restpassword');
+            // return response()->json(['success' => 'redirect']);
+        }else{
+            return response()->json(['error' => 'invalid link'], 401);
         }
     }
 }

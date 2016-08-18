@@ -455,12 +455,10 @@ app.controller('registerController', function($scope, $http, $window, $rootScope
 app.controller('resetController', function($scope, $http, $window, $rootScope, $location) {
 	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
 	$scope.submit = function() {
-		if ($scope.data.password != $scope.data.confPassword) {
-			$scope.IsMatch=true;
-    		return false;
-		}else{
-			$scope.IsMatch=false;
-		}
+		$http.put('api/reset', $scope.data, {}).success(function(data, status, headers, config) {	
+			swal('Sukses', 'Penggantian password berhasil', 'success');
+			$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
+        })
 	};
 });
 app.controller('viewBerita', function($scope, backend, $rootScope) {
