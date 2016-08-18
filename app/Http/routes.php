@@ -57,6 +57,9 @@ Route::get('/lupapassword', function() {
 	return view('pages/lupapassword');
 });
 
+Route::get('/restpassword', function() {
+	return view('pages/resetpass');
+});
 // api
 Route::group(['prefix' => 'api'], function()
 {

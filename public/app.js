@@ -22,6 +22,41 @@ app.service('fileUpload', function ($http, $rootScope, $localStorage, $location,
 	}
 });
 
+
+app.directive("passwordVerify", function() {
+    return {
+        require: "ngModel",
+        scope: {
+            passwordVerify: '='
+        },
+        link: function(scope, element, attrs, ctrl) {
+            scope.$watch(function() {
+                var combined;
+                if (scope.passwordVerify || ctrl.$viewValue) {
+                   combined = scope.passwordVerify + '_' + ctrl.$viewValue; 
+                }                    
+                return combined;
+            }, function(value) {
+                if (value) {
+                    ctrl.$parsers.unshift(function(viewValue) {
+                        var origin = scope.passwordVerify;
+                        if (origin !== viewValue) {
+                            ctrl.$setValidity("passwordVerify", false);
+                            return undefined;
+                        } else {
+                            ctrl.$setValidity("passwordVerify", true);
+                            return viewValue;
+                        }
+                    });
+                }else{
+                    ctrl.$setValidity("passwordVerify", false);
+                    return undefined;
+                }
+            });
+        }
+    };
+});
+
 app.directive('fileModel', ['$parse', function ($parse) {
 	return {
 		restrict: 'A',
@@ -415,6 +450,17 @@ app.controller('registerController', function($scope, $http, $window, $rootScope
 				$window.location.href = 'http://'+$rootScope.loginRedirect+'/login'
 			}
         })
+	};
+});
+app.controller('resetController', function($scope, $http, $window, $rootScope, $location) {
+	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
+	$scope.submit = function() {
+		if ($scope.data.password != $scope.data.confPassword) {
+			$scope.IsMatch=true;
+    		return false;
+		}else{
+			$scope.IsMatch=false;
+		}
 	};
 });
 app.controller('viewBerita', function($scope, backend, $rootScope) {

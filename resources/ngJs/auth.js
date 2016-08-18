@@ -31,3 +31,14 @@ app.controller('registerController', function($scope, $http, $window, $rootScope
         })
 	};
 });
+app.controller('resetController', function($scope, $http, $window, $rootScope, $location) {
+	$rootScope.loginRedirect = $location.$$host+':'+$location.$$port
+	$scope.submit = function() {
+		if ($scope.data.password != $scope.data.confPassword) {
+			$scope.IsMatch=true;
+    		return false;
+		}else{
+			$scope.IsMatch=false;
+		}
+	};
+});
