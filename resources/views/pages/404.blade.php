@@ -4,27 +4,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> ModularAdmin - Free Dashboard Theme | HTML Version </title>
+        <title>Page Not Found</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="admin/css/vendor.css">
         <link rel="stylesheet" id="theme-style" href="admin/css/app.css">
+        <link rel="stylesheet" href="../../admin/css/vendor.css">
+        <link rel="stylesheet" id="theme-style" href="../../admin/css/app.css">
         <!-- Theme initialization -->
-        <script>
-            var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
-            {};
-            var themeName = themeSettings.themeName || '';
-            if (themeName)
-            {
-                document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app-' + themeName + '.css">');
-            }
-            else
-            {
-                document.write('<link rel="stylesheet" id="theme-style" href="admin/css/app.css">');
-            }
-        </script>
     </head>
 
     <body>
@@ -37,15 +26,7 @@
 			Sorry, page not found
 		</h2> </div>
                     <div class="error-container">
-                        <p>You better try our awesome search:</p>
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <div class="input-group"> <input type="text" class="form-control"> <span class="input-group-btn">
-		                <button class="btn btn-primary" type="button">Search</button>
-		              </span> </div>
-                            </div>
-                        </div> <br>
-                        <a class="btn btn-primary" href="index.html"> <i class="fa fa-angle-left"></i> Back to Dashboard </a>
+                        <p>You better go back to previous page.</p>
                     </div>
                 </div>
             </article>
@@ -60,6 +41,8 @@
         </div>
         <script src="admin/js/vendor.js"></script>
         <script src="admin/js/app.js"></script>
+        <script src="../../admin/js/vendor.js"></script>
+        <script src="../../admin/js/app.js"></script>
     </body>
 
 </html>

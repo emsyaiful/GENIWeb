@@ -11,6 +11,8 @@ use JWTAuth;
 use Hash;
 use Redirect;
 use Session;
+use URL;
+use Mail;
 
 class AuthenticateController extends Controller
 {
@@ -79,7 +81,19 @@ class AuthenticateController extends Controller
             return redirect('/restpassword');
             // return response()->json(['success' => 'redirect']);
         }else{
-            return response()->json(['error' => 'invalid link'], 401);
+            // return response()->json(['error' => 'invalid link'], 401);
+            return response()->view('pages/404');
         }
+    }
+    public function sendmail(Request $request) {
+        $where = array('user_email' => $request->input('user_email'));
+        $user = User::where($where)->first();
+        $base = URL::to("/");
+        $link = $base.'/'.$request->input('user_email').'/'.$user->user_tokenrest;
+        Mail::send('emails.send', ['title' => 'Reset Password', 'content' => $link], function ($m) use ($user) {
+            $m->from('noreply@geni.co.id', 'GENI SAAS Support');
+            $m->to($user->user_email, $user->user_name)->subject('Link for reset password');
+        });
+        return response()->json($link);
     }
 }

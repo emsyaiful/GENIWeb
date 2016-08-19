@@ -461,6 +461,14 @@ app.controller('resetController', function($scope, $http, $window, $rootScope, $
         })
 	};
 });
+app.controller('sendEmailController', function($scope, $http, $window, $rootScope, $location) {
+	$scope.submit = function() {
+		$http.post('api/sendmail', $scope.data, {}).success(function(data, status, headers, config) {	
+			swal('Sukses', 'Silahkan cek pesan masuk di email anda', 'success');
+        })
+	};
+});
+
 app.controller('viewBerita', function($scope, backend, $rootScope) {
     $scope.reloadBerita = function() {
         backend.get('api/beritaView', {}, function(err, response) {

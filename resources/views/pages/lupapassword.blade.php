@@ -6,7 +6,7 @@
 		<link href="css/login.css" rel="stylesheet">
 	</head>
 	<body ng-app="mainApp">
-	<div class="container" ng-controller="loginController">
+	<div class="container" ng-controller="sendEmailController">
 		<div class="card card-container">
                 <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
                 <img id="profile-img" class="profile-img-card" src="images/logo_geni3.png" />
