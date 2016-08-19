@@ -168,6 +168,10 @@ app.config(['$routeProvider', function($routeProvider, $window) {
         templateUrl: 'ngView/detailriwayat.html',
         controller: 'detailRiwayatController'
     })
+    .when('/userDemo', {
+        templateUrl: 'ngView/userDemo.html',
+        controller: 'demoController'
+    })
     .when('/notFound', {
         templateUrl: 'ngView/404.html'
     })
@@ -418,6 +422,17 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
                 });
             });
     }
+});
+app.controller('demoController', function($scope, backend, $rootScope, ngDialog, store) {
+    $scope.reloadData = function() {
+        backend.get('api/demo', {}, function(err, response) {
+            if (err) swal('Warning', 'Ada kesalahan dalam pengambilan data', 'warning');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
 });
 app.controller('loginController', function($scope, $http, $rootScope, $localStorage, $location, $window) {
 	$scope.submit = function() {

@@ -74,7 +74,9 @@ Route::group(['prefix' => 'api'], function()
 
 	Route::put('reset', 'AuthenticateController@restPass');
 	Route::post('sendmail', 'AuthenticateController@sendmail');
-	
+
+	Route::get('demo', 'AdminController@getDemo');
+
 	Route::group(['middleware' => 'jwt.auth'], function(){
 
 		// admin page

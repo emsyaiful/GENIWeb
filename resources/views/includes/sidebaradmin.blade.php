@@ -12,7 +12,7 @@
                     <a href=""><i class="fa fa-users"></i> Manajemen User <i class="fa arrow"></i></a>
                     <ul>
                         <li><a href="#mgUser">Pengguna Terdaftar</a></li>
-                        <li><a href="#">Pengguna Demo</a></li>
+                        <li><a href="#userDemo">Pengguna Demo</a></li>
                     </ul>
                 </li>
                 <li>

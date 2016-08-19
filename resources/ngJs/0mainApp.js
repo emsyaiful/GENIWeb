@@ -168,6 +168,10 @@ app.config(['$routeProvider', function($routeProvider, $window) {
         templateUrl: 'ngView/detailriwayat.html',
         controller: 'detailRiwayatController'
     })
+    .when('/userDemo', {
+        templateUrl: 'ngView/userDemo.html',
+        controller: 'demoController'
+    })
     .when('/notFound', {
         templateUrl: 'ngView/404.html'
     })

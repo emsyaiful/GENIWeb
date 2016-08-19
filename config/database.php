@@ -66,6 +66,20 @@ return [
             'engine' => null,
         ],
 
+        'mysql2' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST2', '192.168.21.4'),
+            'port' => env('DB_PORT2', '3306'),
+            'database' => env('DB_DATABASE2', 'geni_demo_saas'),
+            'username' => env('DB_USERNAME2', 'minifa'),
+            'password' => env('DB_PASSWORD2', 'AdminFA'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
         'geni_saas' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '192.168.21.4'),

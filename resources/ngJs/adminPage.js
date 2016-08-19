@@ -242,3 +242,14 @@ app.controller('pesanController', function($scope, backend, $rootScope, ngDialog
             });
     }
 });
+app.controller('demoController', function($scope, backend, $rootScope, ngDialog, store) {
+    $scope.reloadData = function() {
+        backend.get('api/demo', {}, function(err, response) {
+            if (err) swal('Warning', 'Ada kesalahan dalam pengambilan data', 'warning');
+            else {
+                $scope.data = response;
+            }
+        });
+    }
+    $scope.reloadData()
+});

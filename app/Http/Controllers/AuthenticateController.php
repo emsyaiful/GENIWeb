@@ -90,10 +90,10 @@ class AuthenticateController extends Controller
         $user = User::where($where)->first();
         $base = URL::to("/");
         $link = $base.'/'.$request->input('user_email').'/'.$user->user_tokenrest;
-        Mail::send('emails.send', ['title' => 'Reset Password', 'content' => $link], function ($m) use ($user) {
+        Mail::send('emails.gantipass', ['user' => $user, 'link' => $link], function ($m) use ($user, $link) {
             $m->from('noreply@geni.co.id', 'GENI SAAS Support');
             $m->to($user->user_email, $user->user_name)->subject('Link for reset password');
         });
-        return response()->json($link);
+        return response()->json(['success' => 'sent']);
     }
 }

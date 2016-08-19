@@ -9,10 +9,12 @@ use App\User;
 use JWTAuth;
 use Carbon;
 use Validator;
+use DB;
 use App\Models\Payment;
 use App\Models\Pesan;
 use App\Models\Berita;
 use App\Models\Billing;
+use App\Models\Demo;
 
 class AdminController extends Controller
 {
@@ -202,6 +204,10 @@ class AdminController extends Controller
 			$value->billing_remainingperiod = $diff->format("%a")+1;
  		}
 		return response()->json($tagihan);
+	}
+	public function getDemo() {
+		$demo = Demo::all();
+		return response()->json($demo);
 	}
 }
 
